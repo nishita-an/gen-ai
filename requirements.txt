@@ -1,0 +1,8 @@
+streamlit
+openai
+google-generativeai
+groq
+tiktoken
+pandas
+python-dotenv
+huggingface-hub

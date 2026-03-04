@@ -1,92 +1,51 @@
 import streamlit as st
-import tiktoken
-import random
-import html
+import pandas as pd
+import json
 
-st.set_page_config(page_title="LLM Tokenizer Visualizer", layout="wide")
+from llm_clients import call_deepseek, call_qwen, call_groq
+from cost_calculator import estimate_cost
+from evaluator import evaluate_response
 
-st.title("🔎 LLM Tokenizer Visualizer")
-st.markdown("Understand how models actually *see* your text.")
+st.title("LLM Benchmark Dashboard")
 
-# -----------------------------
-# Model Selection
-# -----------------------------
-model_name = st.selectbox(
-    "Choose Tokenizer Model",
-    ["gpt-4o-mini", "gpt-4", "gpt-3.5-turbo"]
-)
+prompt = st.text_area("Enter Prompt")
+criteria = st.text_input("Evaluation Criteria", "accuracy, brevity, tone")
 
-encoding = tiktoken.encoding_for_model(model_name)
+if st.button("Run Benchmark"):
 
-# -----------------------------
-# Text Input
-# -----------------------------
-user_input = st.text_area(
-    "Enter text (paragraph, tweet, code snippet, anything):",
-    height=200
-)
+    results = []
+    models = [call_qwen, call_deepseek, call_groq]
 
-if user_input:
+    for model_func in models:
+        result = model_func(prompt)
 
-    # -----------------------------
-    # Tokenization
-    # -----------------------------
-    tokens = encoding.encode(user_input)
-    decoded_tokens = [encoding.decode([token]) for token in tokens]
+        cost = estimate_cost(
+            result["model"],
+            result["input_tokens"],
+            result["output_tokens"]
+        )
 
-    token_count = len(tokens)
-    char_count = len(user_input)
-    ratio = round(char_count / token_count, 2) if token_count > 0 else 0
+        try:
+            evaluation = evaluate_response(
+                prompt,
+                result["response"],
+                criteria
+            )
+            scores = json.loads(evaluation)
+        except Exception as e:
+            st.error(f"Evaluation failed for {result['model']}: {e}")
+            scores = {"accuracy": 0, "brevity": 0, "tone": 0, "overall": 0}
 
-    st.subheader("📊 Statistics")
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Characters", char_count)
-    col2.metric("Tokens", token_count)
-    col3.metric("Char / Token Ratio", ratio)
+        results.append({
+            "Model": result["model"],
+            "Latency (s)": round(result["latency"], 2),
+            "Estimated Cost ($)": round(cost, 6),
+            "Accuracy": scores["accuracy"],
+            "Brevity": scores["brevity"],
+            "Tone": scores["tone"],
+            "Overall Score": scores["overall"],
+            "Response": result["response"]
+        })
 
-    # -----------------------------
-    # Cost Estimation (example pricing)
-    # -----------------------------
-    cost_per_1k_tokens = 0.002  # Example price
-    estimated_cost = (token_count / 1000) * cost_per_1k_tokens
-
-    st.info(f"Estimated Cost (@$0.002 / 1K tokens): ${estimated_cost:.6f}")
-
-    # -----------------------------
-    # Color-coded Token Visualization
-    # -----------------------------
-    st.subheader("🎨 Token Visualization")
-
-    html_tokens = ""
-    for token_text in decoded_tokens:
-        color = "#{:06x}".format(random.randint(0, 0xFFFFFF))
-        safe_text = html.escape(token_text)
-        html_tokens += f"""
-        <span style="
-            background-color:{color};
-            padding:4px;
-            margin:2px;
-            border-radius:4px;
-            display:inline-block;
-        ">
-            {safe_text}
-        </span>
-        """
-
-    st.markdown(html_tokens, unsafe_allow_html=True)
-
-    # -----------------------------
-    # Detailed Token Breakdown
-    # -----------------------------
-    st.subheader("🧩 Token Breakdown")
-
-    token_data = [
-        {
-            "Token Index": i,
-            "Token ID": token_id,
-            "Decoded Text": repr(decoded_tokens[i])
-        }
-        for i, token_id in enumerate(tokens)
-    ]
-
-    st.dataframe(token_data, use_container_width=True)
+    df = pd.DataFrame(results)
+    st.dataframe(df)
