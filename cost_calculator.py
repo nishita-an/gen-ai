@@ -1,7 +1,9 @@
+
+
 MODEL_PRICING = {
-    "OpenAI": {"input": 0.0005/1000, "output": 0.0015/1000},
-    "Groq": {"input": 0.0003/1000, "output": 0.0006/1000},
-    "Gemini": {"input": 0.00035/1000, "output": 0.0007/1000}
+    "DeepSeek-V3": {"input": 0.00014/1000, "output": 0.00028/1000}, # HF/DeepSeek Rates
+    "Qwen-72B": {"input": 0.0003/1000, "output": 0.0006/1000},
+    "Groq (Llama 3.3)": {"input": 0.00059/1000, "output": 0.00079/1000},
 }
 
 

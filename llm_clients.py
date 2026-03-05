@@ -4,7 +4,7 @@ import logging
 from huggingface_hub import InferenceClient
 from groq import Groq
 from config import HUGGINGFACE_API_TOKEN
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 # Setup basic logging to see retry attempts in your console
 logging.basicConfig(level=logging.INFO)
@@ -84,23 +84,31 @@ def call_qwen(prompt):
         return format_error(model_name, e)
 
 def call_groq(prompt):
-    """Call Groq model and return response with metrics."""
     start_time = time.time()
-    model_name = "Groq (Mixtral)"
+    # Recommended replacement for Mixtral 8x7B (high speed, versatile)
+    model_id = "llama-3.3-70b-versatile" 
+    model_name = "Groq (Llama 3.3)"
+    
     try:
         response = groq_client.chat.completions.create(
-            model="mixtral-8x7b-32768",
+            model=model_id,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
-            max_tokens=1000
+            max_tokens=1000,
         )
+        
         latency = time.time() - start_time
+        usage = getattr(response, 'usage', None)
+        input_tokens = usage.prompt_tokens if usage else 0
+        output_tokens = usage.completion_tokens if usage else 0
+
         return {
             "model": model_name,
             "response": response.choices[0].message.content,
-            "input_tokens": response.usage.prompt_tokens,
-            "output_tokens": response.usage.completion_tokens,
+            "input_tokens": input_tokens,
+            "output_tokens": output_tokens,
             "latency": latency
         }
     except Exception as e:
+        logging.error(f"Groq API Error: {str(e)}") 
         return format_error(model_name, e)
