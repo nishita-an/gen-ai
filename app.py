@@ -1,82 +1,71 @@
 import streamlit as st
 import pandas as pd
 import json
-
-from llm_clients import call_deepseek, call_qwen, call_groq
+# Updated imports to match the new llm_clients.py functions
+from llm_clients import call_gpt_oss, call_llama, call_qwen
 from cost_calculator import estimate_cost
 from evaluator import evaluate_response
 
-# Set page to wide mode to give the table more room
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="LLM Benchmarker", layout="wide")
 
-st.title("LLM Benchmark Dashboard")
+st.title("🚀 LLM Benchmark Dashboard")
+st.markdown("Compare performance, cost, and quality across GPT-OSS, Llama 3.3, and Qwen 3 on Groq.")
 
-prompt = st.text_area("Enter Prompt", height=150)
-criteria = st.text_input("Evaluation Criteria", "accuracy, brevity, tone")
+# UI Layout
+col1, col2 = st.columns([2, 1])
+with col1:
+    prompt = st.text_area("Enter Test Prompt", height=150, placeholder="e.g. Write a Python script to scrape a website...")
+with col2:
+    criteria = st.text_input("Evaluation Criteria", "Technical accuracy, code efficiency, helpful tone")
+    run_btn = st.button("Run Benchmark", type="primary", use_container_width=True)
 
-if st.button("Run Benchmark", type="primary"):
+if run_btn:
     results = []
-    # Note: Ensure these functions are returning the expected dictionaries
-    models = [call_qwen, call_deepseek, call_groq]
-
-    # Create a placeholder to show progress
-    progress_bar = st.progress(0)
-    status_text = st.empty()
-
-    for idx, model_func in enumerate(models):
-        status_text.text(f"Running inference for model {idx+1}/{len(models)}...")
+    models = [call_gpt_oss, call_llama, call_qwen]
+    
+    status = st.status("Running models...", expanded=True)
+    
+    for model_func in models:
+        # 1. Inference
+        res = model_func(prompt)
+        status.write(f"✅ Received response from {res['model']}")
         
-        result = model_func(prompt)
-
-        cost = estimate_cost(
-            result["model"],
-            result["input_tokens"],
-            result["output_tokens"]
-        )
-
-        try:
-            status_text.text(f"Evaluating {result['model']}...")
-            evaluation = evaluate_response(
-                prompt,
-                result["response"],
-                criteria
-            )
-            # Handle both string and dict returns from evaluator
-            scores = json.loads(evaluation) if isinstance(evaluation, str) else evaluation
-        except Exception as e:
-            st.error(f"Evaluation failed for {result['model']}: {e}")
-            scores = {"accuracy": 0, "brevity": 0, "tone": 0, "overall": 0}
+        # 2. Cost Calculation
+        cost = estimate_cost(res["model"], res["input_tokens"], res["output_tokens"])
+        
+        # 3. Evaluation
+        scores = evaluate_response(prompt, res["response"], criteria)
+        status.write(f"⚖️ Evaluated {res['model']}")
 
         results.append({
-            "Model": result["model"],
-            "Latency (s)": round(result["latency"], 2),
-            "Estimated Cost ($)": f"{cost:.6f}",
+            "Model": res["model"],
+            "Latency (s)": round(res["latency"], 2),
+            "Cost ($)": f"{cost:.6f}",
             "Accuracy": scores.get("accuracy", 0),
             "Brevity": scores.get("brevity", 0),
             "Tone": scores.get("tone", 0),
             "Overall": scores.get("overall", 0),
-            "Response": result["response"]
+            "Reasoning": scores.get("reasoning", "N/A"),
+            "Full Response": res["response"]
         })
-        progress_bar.progress((idx + 1) / len(models))
+    
+    status.update(label="Benchmark Complete!", state="complete", expanded=False)
 
-    status_text.empty()
-    progress_bar.empty()
-
-    # --- THE PART THAT MAKES IT BIG ---
-    st.subheader("Benchmark Results")
+    # --- LARGE DISPLAY TABLE ---
+    st.subheader("Leaderboard")
     df = pd.DataFrame(results)
-
-    # 1. Use st.dataframe with custom height and full width
-    # 2. Add styling to highlight the highest 'Overall' score
+    
+    # Stylized DataFrame
     st.dataframe(
-        df.style.highlight_max(axis=0, subset=['Overall'], color='#1d4ed8'), 
-        use_container_width=True, 
-        height=400  # Adjust this number to make it taller
+        df.drop(columns=["Full Response"]).style.highlight_max(axis=0, subset=['Overall'], color='#004d00'),
+        use_container_width=True,
+        height=300
     )
 
-    # Optional: Display full responses in expanders below the table
+    # --- DETAILED RESPONSES ---
     st.divider()
-    st.subheader("Full Responses")
-    for res in results:
-        with st.expander(f"View full response from {res['Model']}"):
-            st.write(res["Response"])
+    st.subheader("Detailed Model Outputs")
+    for r in results:
+        with st.expander(f"View Output: {r['Model']} (Score: {r['Overall']}/10)"):
+            st.info(f"**Evaluator Reasoning:** {r['Reasoning']}")
+            st.code(r["Full Response"], language="markdown")
