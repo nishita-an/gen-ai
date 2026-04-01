@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Memory Study Assistant</title>
+<style>
+  /* ── Reset & base ───────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --surface2:  #22263a;
+    --border:    #2e3250;
+    --accent:    #6c63ff;
+    --accent2:   #a78bfa;
+    --user-bg:   #6c63ff;
+    --bot-bg:    #1e2235;
+    --text:      #e2e4f0;
+    --text-dim:  #7b82a8;
+    --green:     #22c55e;
+    --orange:    #f97316;
+    --red:       #ef4444;
+    --radius:    14px;
+    --font:      'Segoe UI', system-ui, sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 280px 1fr 260px;
+    grid-template-rows: 56px 1fr;
+    overflow: hidden;
+  }
+
+  /* ── Top bar ────────────────────────────────────────────────── */
+  header {
+    grid-column: 1 / -1;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 12px;
+  }
+  header .logo {
+    width: 32px; height: 32px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  header h1 { font-size: 15px; font-weight: 600; letter-spacing: .3px; }
+  header .subtitle { font-size: 12px; color: var(--text-dim); margin-top: 1px; }
+  header .status-dot {
+    margin-left: auto;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+  }
+  header .status-label { font-size: 12px; color: var(--text-dim); }
+
+  /* ── Left sidebar — session ─────────────────────────────────── */
+  .sidebar-left {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+  }
+  .sidebar-left h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); }
+
+  .session-box {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .session-box label { font-size: 12px; color: var(--text-dim); }
+  .session-box input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    padding: 7px 10px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color .2s;
+  }
+  .session-box input:focus { border-color: var(--accent); }
+
+  .btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity .2s, transform .1s;
+  }
+  .btn:hover { opacity: .88; }
+  .btn:active { transform: scale(.97); }
+  .btn.secondary {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .btn.danger { background: #7f1d1d; color: #fca5a5; }
+
+  /* Memory stats */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .stat-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  .stat-card .val {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent2);
+  }
+  .stat-card .lbl {
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+
+  /* ── Chat area ──────────────────────────────────────────────── */
+  .chat-area {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    scroll-behavior: smooth;
+  }
+  .messages::-webkit-scrollbar { width: 4px; }
+  .messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .msg-row {
+    display: flex;
+    gap: 10px;
+    max-width: 780px;
+    animation: fadeUp .25s ease;
+  }
+  .msg-row.user { align-self: flex-end; flex-direction: row-reverse; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; flex-shrink: 0;
+  }
+  .avatar.user-av { background: var(--user-bg); }
+  .avatar.bot-av  { background: var(--surface2); border: 1px solid var(--border); }
+
+  .bubble {
+    padding: 11px 15px;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 680px;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+  .bubble.user {
+    background: var(--user-bg);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+  }
+  .bubble.bot {
+    background: var(--bot-bg);
+    border: 1px solid var(--border);
+    border-bottom-left-radius: 4px;
+  }
+  .bubble .meta {
+    font-size: 11px;
+    color: rgba(255,255,255,.45);
+    margin-top: 6px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .bubble.bot .meta { color: var(--text-dim); }
+  .badge {
+    padding: 1px 7px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .4px;
+  }
+  .badge.compressed { background: #422006; color: var(--orange); }
+  .badge.normal     { background: #14532d; color: var(--green); }
+
+  /* Code blocks inside bot replies */
+  .bubble code {
+    background: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 5px;
+    font-family: 'Cascadia Code', 'Fira Code', monospace;
+    font-size: 12.5px;
+  }
+  .bubble pre {
+    background: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    overflow-x: auto;
+    margin: 8px 0;
+  }
+  .bubble pre code { border: none; padding: 0; background: none; }
+
+  /* Typing indicator */
+  .typing-row { align-items: center; }
+  .typing-dots span {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--text-dim);
+    margin: 0 2px;
+    animation: bounce .9s infinite;
+  }
+  .typing-dots span:nth-child(2) { animation-delay: .15s; }
+  .typing-dots span:nth-child(3) { animation-delay: .30s; }
+  @keyframes bounce {
+    0%,60%,100% { transform: translateY(0); }
+    30%          { transform: translateY(-6px); }
+  }
+
+  /* Input bar */
+  .input-bar {
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  .input-bar textarea {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    padding: 11px 14px;
+    font-size: 14px;
+    font-family: var(--font);
+    resize: none;
+    outline: none;
+    max-height: 140px;
+    line-height: 1.5;
+    transition: border-color .2s;
+  }
+  .input-bar textarea:focus { border-color: var(--accent); }
+  .input-bar textarea::placeholder { color: var(--text-dim); }
+  .send-btn {
+    width: 44px; height: 44px;
+    background: var(--accent);
+    border: none; border-radius: 12px;
+    color: #fff; font-size: 18px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity .2s, transform .1s;
+    flex-shrink: 0;
+  }
+  .send-btn:hover { opacity: .85; }
+  .send-btn:active { transform: scale(.93); }
+  .send-btn:disabled { opacity: .35; cursor: not-allowed; }
+
+  /* ── Right sidebar — profile ────────────────────────────────── */
+  .sidebar-right {
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+  }
+  .sidebar-right h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); }
+
+  .profile-section {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
+  }
+  .profile-section h3 {
+    font-size: 12px;
+    color: var(--accent2);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .profile-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .profile-section li {
+    font-size: 12px;
+    color: var(--text-dim);
+    padding-left: 12px;
+    position: relative;
+  }
+  .profile-section li::before {
+    content: '•';
+    position: absolute; left: 0;
+    color: var(--accent);
+  }
+  .profile-empty { font-size: 12px; color: var(--text-dim); font-style: italic; }
+
+  /* Compression log */
+  .log-item {
+    font-size: 11px;
+    color: var(--text-dim);
+    padding: 6px 8px;
+    background: var(--bg);
+    border-radius: 6px;
+    border-left: 2px solid var(--accent);
+    margin-bottom: 4px;
+  }
+
+  /* Welcome screen */
+  .welcome {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-dim);
+    text-align: center;
+    padding: 40px;
+  }
+  .welcome .icon { font-size: 48px; }
+  .welcome h2 { font-size: 18px; color: var(--text); }
+  .welcome p { font-size: 13px; max-width: 380px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <div class="logo">🧠</div>
+  <div>
+    <h1>Memory Study Assistant</h1>
+    <div class="subtitle">4-layer persistent memory · Groq LLM</div>
+  </div>
+  <div class="status-dot" id="statusDot"></div>
+  <div class="status-label" id="statusLabel">Connecting…</div>
+</header>
+
+<!-- ── Left sidebar ── -->
+<aside class="sidebar-left">
+  <h2>Session</h2>
+
+  <div class="session-box">
+    <label>Session ID</label>
+    <input type="text" id="sessionId" value="default" placeholder="e.g. alice" />
+    <button class="btn" onclick="loadStatus()">Connect</button>
+    <button class="btn danger" onclick="resetSession()">Reset Memory</button>
+  </div>
+
+  <h2>Memory Status</h2>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="val" id="statTurns">0</div><div class="lbl">Turns</div></div>
+    <div class="stat-card"><div class="val" id="statSTM">0</div><div class="lbl">STM</div></div>
+    <div class="stat-card"><div class="val" id="statEpisodic">0</div><div class="lbl">Episodic</div></div>
+    <div class="stat-card"><div class="val" id="statSemantic">0</div><div class="lbl">Semantic</div></div>
+  </div>
+  <div>
+    <div class="stat-card" style="text-align:left; padding:10px;">
+      <div class="lbl" style="margin-bottom:4px;">Token estimate</div>
+      <div style="font-size:14px; color:var(--accent2);" id="statTokens">— tokens</div>
+    </div>
+  </div>
+
+  <h2>Compression Log</h2>
+  <div id="compressionLog"></div>
+</aside>
+
+<!-- ── Chat area ── -->
+<main class="chat-area">
+  <div class="messages" id="messages">
+    <div class="welcome" id="welcome">
+      <div class="icon">🎓</div>
+      <h2>Start learning</h2>
+      <p>Ask anything about ML, transformers, Python, or any topic. Your memory persists across turns — the assistant remembers everything you discuss.</p>
+    </div>
+  </div>
+
+  <div class="input-bar">
+    <textarea
+      id="msgInput"
+      rows="1"
+      placeholder="Ask a question… (Enter to send, Shift+Enter for new line)"
+      oninput="autoResize(this)"
+      onkeydown="handleKey(event)"
+    ></textarea>
+    <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="Send">➤</button>
+  </div>
+</main>
+
+<!-- ── Right sidebar ── -->
+<aside class="sidebar-right">
+  <h2>User Profile</h2>
+  <div id="profileGoals" class="profile-section" style="display:none">
+    <h3>🎯 Goals</h3>
+    <ul id="goalsList"></ul>
+  </div>
+  <div id="profileProjects" class="profile-section" style="display:none">
+    <h3>🛠 Projects</h3>
+    <ul id="projectsList"></ul>
+  </div>
+  <div id="profileInterests" class="profile-section" style="display:none">
+    <h3>⚡ Interests</h3>
+    <ul id="interestsList"></ul>
+  </div>
+  <div id="profileConstraints" class="profile-section" style="display:none">
+    <h3>⚠️ Constraints</h3>
+    <ul id="constraintsList"></ul>
+  </div>
+  <div id="profileEmpty" class="profile-empty">
+    Profile will build up as you chat…
+  </div>
+
+  <h2 style="margin-top:8px">Quick Topics</h2>
+  <div style="display:flex; flex-direction:column; gap:6px;">
+    <button class="btn secondary" onclick="quickSend('Explain transformer attention mechanism')">Attention Mechanism</button>
+    <button class="btn secondary" onclick="quickSend('What is backpropagation through time?')">BPTT</button>
+    <button class="btn secondary" onclick="quickSend('How do LSTMs solve vanishing gradients?')">LSTM Gradients</button>
+    <button class="btn secondary" onclick="quickSend('Compare BERT vs GPT architectures')">BERT vs GPT</button>
+    <button class="btn secondary" onclick="quickSend('How does RAG work?')">RAG</button>
+  </div>
+</aside>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+const BASE = window.location.origin;
+let isLoading = false;
+
+// ── Utilities ─────────────────────────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+
+function getSession() {
+  return $('sessionId').value.trim() || 'default';
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 140) + 'px';
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage();
+  }
+}
+
+function scrollToBottom() {
+  const el = $('messages');
+  el.scrollTop = el.scrollHeight;
+}
+
+function formatText(text) {
+  // Convert markdown-ish code blocks and inline code to HTML
+  text = text
+    .replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) =>
+      `<pre><code>${escHtml(code.trim())}</code></pre>`)
+    .replace(/`([^`]+)`/g, (_, c) => `<code>${escHtml(c)}</code>`)
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+  return text;
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function timeNow() {
+  return new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+}
+
+// ── Health check ──────────────────────────────────────────────────────────────
+async function checkHealth() {
+  try {
+    const r = await fetch(`${BASE}/health`);
+    if (r.ok) {
+      $('statusDot').style.background = 'var(--green)';
+      $('statusDot').style.boxShadow = '0 0 6px var(--green)';
+      $('statusLabel').textContent = 'Connected';
+      loadStatus();
+    }
+  } catch {
+    $('statusDot').style.background = 'var(--red)';
+    $('statusDot').style.boxShadow = '0 0 6px var(--red)';
+    $('statusLabel').textContent = 'Offline';
+  }
+}
+
+// ── Load memory status ────────────────────────────────────────────────────────
+async function loadStatus() {
+  try {
+    const r = await fetch(`${BASE}/status/${getSession()}`);
+    if (!r.ok) return;
+    const d = await r.json();
+    $('statTurns').textContent    = d.turn_count;
+    $('statSTM').textContent      = d.stm_turns;
+    $('statEpisodic').textContent = d.episodic_entries;
+    $('statSemantic').textContent = d.semantic_facts;
+    $('statTokens').textContent   = `${d.stm_token_estimate} tokens`;
+  } catch {}
+
+  try {
+    const r2 = await fetch(`${BASE}/profile/${getSession()}`);
+    if (!r2.ok) return;
+    const { profile } = await r2.json();
+    renderProfile(profile);
+  } catch {}
+}
+
+function renderProfile(profile) {
+  const sections = [
+    { key: 'goals',               id: 'profileGoals',       listId: 'goalsList' },
+    { key: 'projects',            id: 'profileProjects',    listId: 'projectsList' },
+    { key: 'technical_interests', id: 'profileInterests',   listId: 'interestsList' },
+    { key: 'constraints',         id: 'profileConstraints', listId: 'constraintsList' },
+  ];
+
+  let anyVisible = false;
+  sections.forEach(({ key, id, listId }) => {
+    const items = profile[key] || [];
+    if (items.length > 0) {
+      $(id).style.display = 'block';
+      $(listId).innerHTML = items.map(i => `<li>${escHtml(i)}</li>`).join('');
+      anyVisible = true;
+    } else {
+      $(id).style.display = 'none';
+    }
+  });
+  $('profileEmpty').style.display = anyVisible ? 'none' : 'block';
+}
+
+// ── Render messages ───────────────────────────────────────────────────────────
+function appendUserMsg(text) {
+  $('welcome').style.display = 'none';
+  const row = document.createElement('div');
+  row.className = 'msg-row user';
+  row.innerHTML = `
+    <div class="avatar user-av">👤</div>
+    <div class="bubble user">
+      ${escHtml(text)}
+      <div class="meta"><span>${timeNow()}</span></div>
+    </div>`;
+  $('messages').appendChild(row);
+  scrollToBottom();
+}
+
+function appendTyping() {
+  const row = document.createElement('div');
+  row.className = 'msg-row typing-row';
+  row.id = 'typingIndicator';
+  row.innerHTML = `
+    <div class="avatar bot-av">🧠</div>
+    <div class="bubble bot">
+      <div class="typing-dots"><span></span><span></span><span></span></div>
+    </div>`;
+  $('messages').appendChild(row);
+  scrollToBottom();
+  return row;
+}
+
+function removeTyping() {
+  const el = $('typingIndicator');
+  if (el) el.remove();
+}
+
+function appendBotMsg(text, meta) {
+  const row = document.createElement('div');
+  row.className = 'msg-row';
+  const badge = meta.compression_triggered
+    ? '<span class="badge compressed">⚡ compressed</span>'
+    : '<span class="badge normal">✓ stored</span>';
+  row.innerHTML = `
+    <div class="avatar bot-av">🧠</div>
+    <div class="bubble bot">
+      ${formatText(text)}
+      <div class="meta">
+        <span>${timeNow()}</span>
+        <span>turn ${meta.turn_count}</span>
+        <span>≈${meta.token_estimate} tok</span>
+        <span>${meta.latency_ms.toFixed(0)}ms</span>
+        ${badge}
+      </div>
+    </div>`;
+  $('messages').appendChild(row);
+  scrollToBottom();
+}
+
+function logCompression(turn, session) {
+  const log = $('compressionLog');
+  const item = document.createElement('div');
+  item.className = 'log-item';
+  item.textContent = `Turn ${turn} · ${session} · chunk compressed`;
+  log.insertBefore(item, log.firstChild);
+  if (log.children.length > 8) log.removeChild(log.lastChild);
+}
+
+// ── Send message ──────────────────────────────────────────────────────────────
+async function sendMessage() {
+  const input = $('msgInput');
+  const text = input.value.trim();
+  if (!text || isLoading) return;
+
+  isLoading = true;
+  $('sendBtn').disabled = true;
+  input.value = '';
+  input.style.height = 'auto';
+
+  appendUserMsg(text);
+  const typing = appendTyping();
+
+  try {
+    const res = await fetch(`${BASE}/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text, session_id: getSession() }),
+    });
+
+    removeTyping();
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ detail: res.statusText }));
+      appendBotMsg(`⚠️ Error ${res.status}: ${err.detail || 'Unknown error'}`,
+        { turn_count: '?', token_estimate: 0, latency_ms: 0, compression_triggered: false });
+      return;
+    }
+
+    const data = await res.json();
+    appendBotMsg(data.response, data);
+
+    if (data.compression_triggered) logCompression(data.turn_count, data.session_id);
+
+    // Refresh stats and profile after each message
+    await loadStatus();
+
+  } catch (e) {
+    removeTyping();
+    appendBotMsg(`⚠️ Could not reach the server. Is it running?\n\n${e}`,
+      { turn_count: '?', token_estimate: 0, latency_ms: 0, compression_triggered: false });
+  } finally {
+    isLoading = false;
+    $('sendBtn').disabled = false;
+    input.focus();
+  }
+}
+
+function quickSend(text) {
+  $('msgInput').value = text;
+  sendMessage();
+}
+
+// ── Reset session ─────────────────────────────────────────────────────────────
+async function resetSession() {
+  if (!confirm(`Reset short-term memory for session "${getSession()}"?\n\nEpisodic and semantic memory are preserved.`)) return;
+  try {
+    await fetch(`${BASE}/session/${getSession()}`, { method: 'DELETE' });
+    $('messages').innerHTML = `<div class="welcome" id="welcome">
+      <div class="icon">🔄</div>
+      <h2>Session reset</h2>
+      <p>Short-term memory cleared. Long-term memory (episodic & semantic) is preserved.</p>
+    </div>`;
+    await loadStatus();
+  } catch (e) {
+    alert('Reset failed: ' + e);
+  }
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+checkHealth();
+setInterval(loadStatus, 15000);   // refresh stats every 15 seconds
+$('msgInput').focus();
+</script>
+</body>
+</html>
