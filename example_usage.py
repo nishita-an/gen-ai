@@ -5,7 +5,7 @@ Demonstrates the MemoryAgent running a 15-turn study conversation
 without the FastAPI server layer.
 
 Requirements:
-  export GROK_API_KEY=<your key>
+  export GROQ_API_KEY=<your key>
   pip install -r requirements.txt
   cd memory_agent
   python example_usage.py
@@ -15,7 +15,14 @@ import os
 import sys
 import logging
 from pathlib import Path
+import os
+import sys
+import logging
+from pathlib import Path
+from dotenv import load_dotenv  # <--- Add this
 
+# Load variables from .env into the system environment
+load_dotenv()
 # Allow running from the repo root
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -47,9 +54,9 @@ def run_demo():
     print("  Persistent Memory Study Assistant — Demo")
     print("=" * 65)
 
-    # Check for API key
-    if not os.getenv("GROK_API_KEY"):
-        print("\n⚠  GROK_API_KEY not set.")
+    
+    if not os.getenv("GROQ_API_KEY"):        
+        print("\n⚠  GROQ_API_KEY not set.")
         print("   Running in MOCK mode — responses will be placeholder text.\n")
         _patch_llm_for_demo()
 
@@ -88,7 +95,7 @@ def _patch_llm_for_demo():
 
     mock_llm = MagicMock()
     mock_llm.chat.return_value = (
-        "Great question! [MOCK RESPONSE — set GROK_API_KEY for real answers] "
+        "Great question! [MOCK RESPONSE — set GROQ_API_KEY for real answers] "
         "This is a placeholder response that demonstrates the memory system is "
         "working correctly. The actual LLM would provide a detailed, context-aware "
         "answer here, drawing on your profile, past summaries, and semantic memory."

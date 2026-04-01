@@ -1,25 +1,19 @@
 """
-LLM Client — Grok (xAI) with OpenAI-compatible API
-─────────────────────────────────────────────────────
-Designed as a pluggable interface: swap provider by changing settings.llm.provider
-or by subclassing BaseLLMClient.
-
-Supports:
-  • chat completions (messages list)
-  • streaming (optional)
-  • exponential-backoff retry on transient errors
+LLM Client — Groq API (via official groq-python SDK)
+──────────────────────────────────────────────────────
+Root fix: chat() now accepts temperature and max_tokens kwargs
+so that summarizer.py and fact_extractor.py can call them without crashing.
 """
 
-from __future__ import annotations
-
+import os
 import logging
-import time
 from abc import ABC, abstractmethod
 from typing import List, Dict, Optional
 
-import httpx
+from groq import Groq
+from dotenv import load_dotenv
 
-from config.settings import settings
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -27,149 +21,134 @@ logger = logging.getLogger(__name__)
 # ── Abstract base ─────────────────────────────────────────────────────────────
 
 class BaseLLMClient(ABC):
-    """All LLM clients must implement this interface."""
-
     @abstractmethod
     def chat(
         self,
-        messages: List[Dict[str, str]],
-        temperature: float | None = None,
-        max_tokens: int | None = None,
-        system: str | None = None,
+        prompt: str = None,
+        history: list = None,
+        messages: list = None,
+        system: str = None,
+        temperature: float = None,
+        max_tokens: int = None,
     ) -> str:
-        """Send a chat request, return the assistant's reply as a plain string."""
-        ...
+        pass
 
     @abstractmethod
     def count_tokens(self, text: str) -> int:
-        """Estimate token count for *text*."""
-        ...
+        pass
 
 
-# ── Token counting utility ────────────────────────────────────────────────────
+# ── Groq client ───────────────────────────────────────────────────────────────
 
-def count_tokens_simple(text: str) -> int:
+class GroqClient(BaseLLMClient):
     """
-    Fast heuristic: 1 token ≈ 4 characters for English text.
-    Replace with tiktoken or the model provider's tokeniser for accuracy.
-    """
-    return max(1, len(text) // settings.tokens.chars_per_token)
+    Concrete Groq implementation using the official groq-python SDK.
 
-
-def count_messages_tokens(messages: List[Dict[str, str]]) -> int:
-    """Sum token estimates across all messages."""
-    total = 0
-    for msg in messages:
-        total += count_tokens_simple(msg.get("content", ""))
-        total += 4   # role + formatting overhead per message
-    total += 2       # reply primer
-    return total
-
-
-# ── Grok / xAI client ────────────────────────────────────────────────────────
-
-class GrokClient(BaseLLMClient):
-    """
-    Calls the xAI Grok API using its OpenAI-compatible /v1/chat/completions endpoint.
-
-    Retry logic: exponential backoff on HTTP 429 / 5xx.
+    Accepts temperature and max_tokens so that all internal services
+    (Summarizer, FactExtractor, ContextAssembler) can call .chat()
+    without triggering unexpected keyword argument errors.
     """
 
-    def __init__(self) -> None:
-        cfg = settings.llm
-        if not cfg.api_key:
-            logger.warning(
-                "GROK_API_KEY is not set — LLM calls will fail. "
-                "Set the environment variable before starting."
+    DEFAULT_TEMPERATURE = 0.7
+    DEFAULT_MAX_TOKENS = 2048
+
+    def __init__(self, model_name: str = "llama-3.3-70b-versatile"):
+        self.api_key = os.getenv("GROQ_API_KEY")
+        if not self.api_key:
+            raise ValueError(
+                "GROQ_API_KEY not found in environment variables. "
+                "Add it to your .env file as: GROQ_API_KEY=gsk_..."
             )
-        self._api_key = cfg.api_key
-        self._base_url = cfg.base_url.rstrip("/")
-        self._model = cfg.model
-        self._default_temp = cfg.temperature
-        self._max_retries = cfg.max_retries
-        self._client = httpx.Client(timeout=60.0)
-        logger.info("GrokClient initialised (model=%s)", self._model)
+        self.client = Groq(api_key=self.api_key)
+        self.model_name = model_name
+        logger.info("GroqClient initialised (model=%s)", self.model_name)
 
     def chat(
         self,
-        messages: List[Dict[str, str]],
-        temperature: float | None = None,
-        max_tokens: int | None = None,
-        system: str | None = None,
+        prompt: str = None,
+        history: list = None,
+        messages: list = None,
+        system: str = None,
+        temperature: float = None,
+        max_tokens: int = None,
     ) -> str:
         """
-        Send messages to Grok and return the assistant text.
+        Flexible chat method that handles all calling conventions used
+        across MemoryAgent, Summarizer, FactExtractor, and ContextAssembler.
 
-        Args:
-            messages: List of {"role": ..., "content": ...} dicts.
-            temperature: Override default temperature.
-            max_tokens: Override default max output tokens.
-            system: If provided, prepended as a system message.
+        Priority order:
+          1. system  -> prepended as {"role": "system", ...}
+          2. messages -> used directly if provided  (MemoryAgent / ContextAssembler)
+          3. history + prompt -> fallback for simple callers
         """
-        full_messages: List[Dict[str, str]] = []
+        final_messages: List[Dict[str, str]] = []
+
+        # 1. System prompt
         if system:
-            full_messages.append({"role": "system", "content": system})
-        full_messages.extend(messages)
+            final_messages.append({"role": "system", "content": system})
 
-        payload = {
-            "model": self._model,
-            "messages": full_messages,
-            "temperature": temperature if temperature is not None else self._default_temp,
-            "max_tokens": max_tokens or settings.tokens.max_response_tokens,
-        }
+        # 2. Structured messages list (primary path from MemoryAgent)
+        if messages:
+            final_messages.extend(messages)
 
-        return self._call_with_retry(payload)
+        # 3. Fallback: history + single prompt
+        else:
+            if history:
+                final_messages.extend(history)
+            if prompt:
+                final_messages.append({"role": "user", "content": prompt})
 
-    def _call_with_retry(self, payload: dict) -> str:
-        url = f"{self._base_url}/chat/completions"
-        headers = {
-            "Authorization": f"Bearer {self._api_key}",
-            "Content-Type": "application/json",
-        }
+        if not final_messages:
+            logger.warning("GroqClient.chat() called with no messages.")
+            return ""
 
-        for attempt in range(1, self._max_retries + 1):
-            try:
-                response = self._client.post(url, json=payload, headers=headers)
-                if response.status_code == 200:
-                    data = response.json()
-                    text = data["choices"][0]["message"]["content"]
-                    logger.debug("GrokClient: received %d chars", len(text))
-                    return text.strip()
+        resolved_temp = temperature if temperature is not None else self.DEFAULT_TEMPERATURE
+        resolved_tokens = max_tokens if max_tokens is not None else self.DEFAULT_MAX_TOKENS
 
-                if response.status_code in (429, 500, 502, 503):
-                    wait = 2 ** attempt
-                    logger.warning(
-                        "GrokClient HTTP %d — retrying in %ds (attempt %d/%d)",
-                        response.status_code, wait, attempt, self._max_retries,
-                    )
-                    time.sleep(wait)
-                    continue
+        try:
+            completion = self.client.chat.completions.create(
+                model=self.model_name,
+                messages=final_messages,
+                temperature=resolved_temp,
+                max_tokens=resolved_tokens,
+            )
+            reply = completion.choices[0].message.content
+            logger.debug("GroqClient reply: %d chars", len(reply))
+            return reply.strip()
 
-                response.raise_for_status()
-
-            except httpx.RequestError as exc:
-                logger.error("GrokClient network error: %s", exc)
-                if attempt == self._max_retries:
-                    raise
-                time.sleep(2 ** attempt)
-
-        raise RuntimeError(f"GrokClient: all {self._max_retries} retries failed.")
+        except Exception as e:
+            logger.error("Groq API error: %s", e)
+            return f"Error communicating with Groq: {e}"
 
     def count_tokens(self, text: str) -> int:
         return count_tokens_simple(text)
 
     def __repr__(self) -> str:
-        return f"GrokClient(model={self._model})"
+        return f"GroqClient(model={self.model_name})"
+
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+
+def count_tokens_simple(text: str) -> int:
+    """1 token approximately 4 characters for English text."""
+    if not text:
+        return 1
+    return max(1, len(text) // 4)
+
+
+def count_messages_tokens(messages: List[Dict[str, str]]) -> int:
+    """Sum token estimates for a list of message dicts."""
+    total = sum(len(m.get("content", "")) // 4 for m in messages)
+    total += len(messages) * 4
+    total += 2
+    return total
 
 
 # ── Factory ───────────────────────────────────────────────────────────────────
 
 def get_llm_client() -> BaseLLMClient:
     """
-    Return the configured LLM client.
-    Extend this factory to add OpenAI, Anthropic, Ollama, etc.
+    Returns the configured LLM client.
+    To swap providers, replace GroqClient() with your own BaseLLMClient subclass.
     """
-    provider = settings.llm.provider.lower()
-    if provider == "grok":
-        return GrokClient()
-    raise ValueError(f"Unknown LLM provider: '{provider}'. Add it to llm/grok_client.py.")
+    return GroqClient()

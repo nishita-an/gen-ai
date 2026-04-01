@@ -1,0 +1,892 @@
+[
+  {
+    "fact_id": "d959a2b0-61c4-4d06-8207-4951581a0427",
+    "session_id": "demo-session",
+    "text": "The self-attention mechanism in transformer architectures allows the model to weigh the importance of different input elements relative to each other.",
+    "category": "technical",
+    "importance": 0.5166999999999999,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 4
+  },
+  {
+    "fact_id": "7fd4570b-cf8b-46ae-93ae-ad55f19a9b84",
+    "session_id": "demo-session",
+    "text": "The self-attention mechanism in transformer architectures involves query, key, and value vectors.",
+    "category": "technical",
+    "importance": 0.5499999999999999,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 4
+  },
+  {
+    "fact_id": "8527e791-6e1c-48f0-949a-cc8c6f2e136f",
+    "session_id": "demo-session",
+    "text": "Transformers typically consist of an encoder and a decoder.",
+    "category": "technical",
+    "importance": 0.4722,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 3
+  },
+  {
+    "fact_id": "329c5957-51bf-4f84-94e2-7a33b34deb08",
+    "session_id": "demo-session",
+    "text": "The encoder in a transformer takes in a sequence of tokens and outputs a sequence of vectors.",
+    "category": "technical",
+    "importance": 0.4147,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 3
+  },
+  {
+    "fact_id": "4f257917-4482-4d15-a01b-859c89b324eb",
+    "session_id": "demo-session",
+    "text": "The decoder in a transformer generates output tokens based on the vectors from the encoder.",
+    "category": "technical",
+    "importance": 0.4633,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 2
+  },
+  {
+    "fact_id": "0e5876c7-5f82-4f10-8b03-6ad74f5200b0",
+    "session_id": "demo-session",
+    "text": "Multi-head attention is an extension of the self-attention mechanism that allows the model to jointly attend to information from different representation subspaces at different positions.",
+    "category": "technical",
+    "importance": 0.47400000000000003,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 2
+  },
+  {
+    "fact_id": "290dbeb7-251f-410d-9bca-e6c1e22acbf8",
+    "session_id": "demo-session",
+    "text": "Positional encoding is used in transformers to add information about the position of each token in the sequence.",
+    "category": "technical",
+    "importance": 0.4944,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 2
+  },
+  {
+    "fact_id": "ca6def76-e5f8-4dd6-9370-a76062a219eb",
+    "session_id": "demo-session",
+    "text": "Many transformer models are pre-trained on large datasets and then fine-tuned for specific tasks.",
+    "category": "technical",
+    "importance": 0.5357,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 5
+  },
+  {
+    "fact_id": "30dac2fa-e643-4386-8946-a8730f184cf7",
+    "session_id": "demo-session",
+    "text": "The user is studying machine learning and wants to master transformer architectures within a month.",
+    "category": "goal",
+    "importance": 0.5166999999999999,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 3
+  },
+  {
+    "fact_id": "5d7aeb6c-3224-4b4f-b7d3-bf7ab52f7d01",
+    "session_id": "demo-session",
+    "text": "The user should read the original transformer paper by Vaswani et al. to understand the basics of transformer architectures.",
+    "category": "technical",
+    "importance": 0.5025999999999999,
+    "source_turn": 3,
+    "created_at": 1774981187.072347,
+    "access_count": 2
+  },
+  {
+    "fact_id": "bab83896-722c-4b11-9142-f0185a57ee46",
+    "session_id": "demo-session",
+    "text": "The self-attention mechanism in transformers allows the model to weigh the importance of different input elements relative to each other.",
+    "category": "technical",
+    "importance": 0.51,
+    "source_turn": 5,
+    "created_at": 1774981189.940921,
+    "access_count": 1
+  },
+  {
+    "fact_id": "db8c16be-25d8-466c-aea8-887e39ea3f22",
+    "session_id": "demo-session",
+    "text": "The self-attention mechanism involves query, key, and value vectors.",
+    "category": "technical",
+    "importance": 0.5610999999999999,
+    "source_turn": 5,
+    "created_at": 1774981189.940921,
+    "access_count": 2
+  },
+  {
+    "fact_id": "4d5a6250-dab9-4890-bf3a-2720059e28a0",
+    "session_id": "demo-session",
+    "text": "The self-attention mechanism calculates the attention weights by taking the dot product of the query and key vectors and applying a softmax function.",
+    "category": "technical",
+    "importance": 0.5934999999999999,
+    "source_turn": 5,
+    "created_at": 1774981189.940921,
+    "access_count": 2
+  },
+  {
+    "fact_id": "a7b84065-2b22-49fe-9ed9-f064b42cb7d7",
+    "session_id": "demo-session",
+    "text": "The attention weights are used to compute a weighted sum of the value vectors, which produces the output of the self-attention mechanism.",
+    "category": "technical",
+    "importance": 0.4864,
+    "source_turn": 5,
+    "created_at": 1774981189.940921,
+    "access_count": 2
+  },
+  {
+    "fact_id": "e2cc5e64-e809-4b91-9b1e-6f57b9afe538",
+    "session_id": "demo-session",
+    "text": "Understanding the self-attention mechanism is crucial for mastering transformer architectures.",
+    "category": "goal",
+    "importance": 0.5299999999999999,
+    "source_turn": 5,
+    "created_at": 1774981189.940921,
+    "access_count": 1
+  },
+  {
+    "fact_id": "5468e0a1-10b0-4ae2-8ca9-5cadc17ec51a",
+    "session_id": "demo-session",
+    "text": "The original transformer paper by Vaswani et al. provides a deeper understanding of the basics of transformer architectures.",
+    "category": "technical",
+    "importance": 0.34440000000000004,
+    "source_turn": 5,
+    "created_at": 1774981189.940921,
+    "access_count": 1
+  },
+  {
+    "fact_id": "11c4916a-21a5-4725-b6a6-4c89ec0fc5c3",
+    "session_id": "demo-session",
+    "text": "Self-attention allows the model to attend to different parts of the input sequence simultaneously and weigh their importance.",
+    "category": "technical",
+    "importance": 0.5166999999999999,
+    "source_turn": 7,
+    "created_at": 1774981196.3416884,
+    "access_count": 3
+  },
+  {
+    "fact_id": "3f389d58-09b5-4f3a-a662-18f5b301b66f",
+    "session_id": "demo-session",
+    "text": "Self-attention involves query, key, and value vectors derived from the input sequence itself.",
+    "category": "technical",
+    "importance": 0.5577,
+    "source_turn": 7,
+    "created_at": 1774981196.3416884,
+    "access_count": 2
+  },
+  {
+    "fact_id": "17912828-df98-4fcc-a9ac-fe7a3e52b323",
+    "session_id": "demo-session",
+    "text": "Cross-attention is used in the decoder part of the transformer model during training to attend to the output of the encoder.",
+    "category": "technical",
+    "importance": 0.3095,
+    "source_turn": 7,
+    "created_at": 1774981196.3416884,
+    "access_count": 2
+  },
+  {
+    "fact_id": "c2902805-94be-4606-88db-23c6724cdca0",
+    "session_id": "demo-session",
+    "text": "Cross-attention attends to the encoded representation of the input sequence from the encoder to the decoder.",
+    "category": "technical",
+    "importance": 0.45,
+    "source_turn": 7,
+    "created_at": 1774981196.3416884,
+    "access_count": 4
+  },
+  {
+    "fact_id": "6c2d5e1f-ac85-48a4-b659-bbf6e9d1765c",
+    "session_id": "demo-session",
+    "text": "The user is learning PyTorch for transformer models, specifically for implementing scaled dot-product attention.",
+    "category": "preference",
+    "importance": 0.5357,
+    "source_turn": 7,
+    "created_at": 1774981196.3416884,
+    "access_count": 3
+  },
+  {
+    "fact_id": "d6b06edd-c669-4b37-a3a8-9fcc1de86b25",
+    "session_id": "demo-session",
+    "text": "Understanding the nuances of both self-attention and cross-attention is essential for mastering transformer architectures.",
+    "category": "goal",
+    "importance": 0.15710000000000007,
+    "source_turn": 7,
+    "created_at": 1774981196.3416884,
+    "access_count": 1
+  },
+  {
+    "fact_id": "37dce747-4412-477e-b667-71960cf2a4a2",
+    "session_id": "demo-session",
+    "text": "The user has a goal to master transformer architectures in a month.",
+    "category": "goal",
+    "importance": 0.44999999999999996,
+    "source_turn": 7,
+    "created_at": 1774981196.3416884,
+    "access_count": 2
+  },
+  {
+    "fact_id": "fc9d980e-9ffb-4117-bd30-0e8b3a07d1d6",
+    "session_id": "demo-session",
+    "text": "The user has a current understanding of the self-attention mechanism.",
+    "category": "preference",
+    "importance": 0.45,
+    "source_turn": 7,
+    "created_at": 1774981196.3416884,
+    "access_count": 1
+  },
+  {
+    "fact_id": "4611eb54-e180-468d-b751-57002a184474",
+    "session_id": "demo-session",
+    "text": "The user is working on mastering transformer architectures, specifically focusing on self-attention and cross-attention mechanisms.",
+    "category": "goal",
+    "importance": 0.06670000000000001,
+    "source_turn": 9,
+    "created_at": 1774981216.6706855,
+    "access_count": 0
+  },
+  {
+    "fact_id": "9b7fac57-4d99-429b-8329-274f413a8af9",
+    "session_id": "demo-session",
+    "text": "The user is implementing scaled dot-product attention in PyTorch.",
+    "category": "technical",
+    "importance": 0.5166999999999999,
+    "source_turn": 9,
+    "created_at": 1774981216.6706855,
+    "access_count": 1
+  },
+  {
+    "fact_id": "8dda63ec-6ffa-465f-b6bd-70838107ff80",
+    "session_id": "demo-session",
+    "text": "The ScaledDotProductAttention class in PyTorch computes the scaled dot-product attention by taking in query, key, and value tensors.",
+    "category": "technical",
+    "importance": 0.5166999999999999,
+    "source_turn": 9,
+    "created_at": 1774981216.6706855,
+    "access_count": 1
+  },
+  {
+    "fact_id": "ce844586-f8c1-454c-9bb2-5788e37c1e1d",
+    "session_id": "demo-session",
+    "text": "The scaled dot-product attention mechanism applies a scaling factor of 1/sqrt(d_k) to the attention scores.",
+    "category": "technical",
+    "importance": 0.49000000000000005,
+    "source_turn": 9,
+    "created_at": 1774981216.6706855,
+    "access_count": 1
+  },
+  {
+    "fact_id": "4a1c157c-a700-4406-8bf9-01443a6107da",
+    "session_id": "demo-session",
+    "text": "The user is exploring the encoder and decoder parts of transformer models.",
+    "category": "technical",
+    "importance": 0.4333,
+    "source_turn": 9,
+    "created_at": 1774981216.6706855,
+    "access_count": 2
+  },
+  {
+    "fact_id": "1dec7f1b-824c-441d-b2b3-a347e1681636",
+    "session_id": "demo-session",
+    "text": "The ScaledDotProductAttention class applies linear transformations to the query, key, and value tensors before computing attention scores.",
+    "category": "technical",
+    "importance": 0.5559,
+    "source_turn": 9,
+    "created_at": 1774981216.6706855,
+    "access_count": 1
+  },
+  {
+    "fact_id": "77028d15-9db6-4c70-9c5a-9f0653430e77",
+    "session_id": "demo-session",
+    "text": "The ScaledDotProductAttention class uses a dropout layer with a dropout rate of 0.1.",
+    "category": "technical",
+    "importance": 0.4654,
+    "source_turn": 9,
+    "created_at": 1774981216.6706855,
+    "access_count": 2
+  },
+  {
+    "fact_id": "c9e9681a-9072-4884-81e5-2bffc768babe",
+    "session_id": "demo-session",
+    "text": "The user is interested in understanding the purpose of the scaling factor 1/sqrt(d_k) in the scaled dot-product attention mechanism.",
+    "category": "preference",
+    "importance": 0.4816,
+    "source_turn": 9,
+    "created_at": 1774981216.6706855,
+    "access_count": 1
+  },
+  {
+    "fact_id": "7eae41da-3d54-4461-a7bc-896d6016f596",
+    "session_id": "demo-session",
+    "text": "The scaling factor 1/sqrt(d_k) in the scaled dot-product attention mechanism counteracts the effect of large dot products",
+    "category": "technical",
+    "importance": 0.13240000000000007,
+    "source_turn": 11,
+    "created_at": 1774981229.6419342,
+    "access_count": 0
+  },
+  {
+    "fact_id": "b3235787-4e37-405c-a6f8-1f1ea3d81cb5",
+    "session_id": "demo-session",
+    "text": "The scaling factor 1/sqrt(d_k) helps avoid vanishing gradients during backpropagation in transformer models",
+    "category": "technical",
+    "importance": 0.3884999999999999,
+    "source_turn": 11,
+    "created_at": 1774981229.6419342,
+    "access_count": 2
+  },
+  {
+    "fact_id": "1945642f-163c-4679-a44b-ae9b4ef60964",
+    "session_id": "demo-session",
+    "text": "The dimensionality of the key vectors is denoted by d_k in the scaled dot-product attention mechanism",
+    "category": "technical",
+    "importance": 0.175,
+    "source_turn": 11,
+    "created_at": 1774981229.6419342,
+    "access_count": 0
+  },
+  {
+    "fact_id": "873ca1b9-7d27-41f9-890b-344f2ff704be",
+    "session_id": "demo-session",
+    "text": "The user is building a text summarisation model for scientific papers",
+    "category": "goal",
+    "importance": 0.5045,
+    "source_turn": 11,
+    "created_at": 1774981229.6419342,
+    "access_count": 3
+  },
+  {
+    "fact_id": "23d05734-b12b-45a4-bba6-56cffce4f441",
+    "session_id": "demo-session",
+    "text": "The user is considering using a transformer variant for their project",
+    "category": "preference",
+    "importance": 0.5045,
+    "source_turn": 11,
+    "created_at": 1774981229.6419342,
+    "access_count": 1
+  },
+  {
+    "fact_id": "8ce32cba-cc93-44f5-b6e4-6b936316e554",
+    "session_id": "demo-session",
+    "text": "The scaling factor 1/sqrt(d_k) is used to counteract large dot products in the scaled dot-product attention mechanism.",
+    "category": "technical",
+    "importance": 0.18240000000000006,
+    "source_turn": 13,
+    "created_at": 1774981240.5145855,
+    "access_count": 0
+  },
+  {
+    "fact_id": "94adf749-b22a-4685-a7a7-41f99ea8becf",
+    "session_id": "demo-session",
+    "text": "The scaled dot-product attention mechanism helps prevent vanishing gradients during backpropagation.",
+    "category": "technical",
+    "importance": 0.41359999999999986,
+    "source_turn": 13,
+    "created_at": 1774981240.5145855,
+    "access_count": 3
+  },
+  {
+    "fact_id": "c5df5444-629f-4030-af0c-c00db0d671e7",
+    "session_id": "demo-session",
+    "text": "Transformer architectures include self-attention and cross-attention mechanisms.",
+    "category": "technical",
+    "importance": 0.2429,
+    "source_turn": 13,
+    "created_at": 1774981240.5145855,
+    "access_count": 0
+  },
+  {
+    "fact_id": "0dd015bf-9bf4-4172-aa7e-e6f5d74fe48d",
+    "session_id": "demo-session",
+    "text": "The user is building a text summarisation model for scientific papers using a transformer variant.",
+    "category": "goal",
+    "importance": 0.2167,
+    "source_turn": 13,
+    "created_at": 1774981240.5145855,
+    "access_count": 1
+  },
+  {
+    "fact_id": "5f16233a-48ac-4375-8640-729b51046d01",
+    "session_id": "demo-session",
+    "text": "The user is considering using PyTorch for implementing the scaled dot-product attention mechanism.",
+    "category": "preference",
+    "importance": 0.1769,
+    "source_turn": 13,
+    "created_at": 1774981240.5145855,
+    "access_count": 0
+  },
+  {
+    "fact_id": "8f639640-dee8-4ec6-bfc3-ed34336a52b9",
+    "session_id": "demo-session",
+    "text": "The user is building a text summarization model for scientific papers using transformer architectures.",
+    "category": "goal",
+    "importance": 0.2857,
+    "source_turn": 15,
+    "created_at": 1774981250.1548793,
+    "access_count": 1
+  },
+  {
+    "fact_id": "ce8bef6f-d9fd-4892-9cf0-c92af8a55af5",
+    "session_id": "demo-session",
+    "text": "The scaled dot-product attention mechanism in transformer models uses a scaling factor of 1/sqrt(d_k) to counteract large dot products.",
+    "category": "technical",
+    "importance": 0.24470000000000003,
+    "source_turn": 15,
+    "created_at": 1774981250.1548793,
+    "access_count": 0
+  },
+  {
+    "fact_id": "8c747c4d-9b3b-47c2-ba98-9d25ac1c117a",
+    "session_id": "demo-session",
+    "text": "The scaling factor 1/sqrt(d_k) in the scaled dot-product attention mechanism helps prevent vanishing gradients during backpropagation.",
+    "category": "technical",
+    "importance": 0.42499999999999993,
+    "source_turn": 15,
+    "created_at": 1774981250.1548793,
+    "access_count": 3
+  },
+  {
+    "fact_id": "0252d471-0a6c-4d6e-aadc-5e1723949bb7",
+    "session_id": "demo-session",
+    "text": "Choosing a suitable transformer variant is important for a text summarization model.",
+    "category": "preference",
+    "importance": 0.36669999999999986,
+    "source_turn": 15,
+    "created_at": 1774981250.1548793,
+    "access_count": 1
+  },
+  {
+    "fact_id": "a3ec7712-d20f-4bb9-a75c-0e78382f77f3",
+    "session_id": "demo-session",
+    "text": "The user is experiencing NaN losses during training of their text summarization model.",
+    "category": "constraint",
+    "importance": 0.5577,
+    "source_turn": 15,
+    "created_at": 1774981250.1548793,
+    "access_count": 1
+  },
+  {
+    "fact_id": "978880c5-ca62-4229-834c-c9ea5e06b8ad",
+    "session_id": "demo-session",
+    "text": "Hyperparameter tuning is crucial for an encoder-decoder model in a text summarization task.",
+    "category": "technical",
+    "importance": 0.44620000000000004,
+    "source_turn": 15,
+    "created_at": 1774981250.1548793,
+    "access_count": 2
+  },
+  {
+    "fact_id": "bda08879-2a31-46fe-a907-502125dca27d",
+    "session_id": "demo-session",
+    "text": "The user is building a text summarization model using transformer architectures",
+    "category": "goal",
+    "importance": 0.3409,
+    "source_turn": 17,
+    "created_at": 1774981260.0189335,
+    "access_count": 1
+  },
+  {
+    "fact_id": "8ed0bd07-5455-463a-9ee5-be0d683b0e60",
+    "session_id": "demo-session",
+    "text": "The user is experiencing NaN losses during training of their text summarization model",
+    "category": "technical",
+    "importance": 0.3077,
+    "source_turn": 17,
+    "created_at": 1774981260.0199394,
+    "access_count": 0
+  },
+  {
+    "fact_id": "45604ca0-eaca-4f21-bbc0-f82e37cd383e",
+    "session_id": "demo-session",
+    "text": "The user's model must run inference on a laptop CPU in under 2 seconds per document",
+    "category": "constraint",
+    "importance": 0.6499999999999999,
+    "source_turn": 17,
+    "created_at": 1774981260.0199394,
+    "access_count": 2
+  },
+  {
+    "fact_id": "a029a208-c0e3-40a6-8375-58d9b8b3bc98",
+    "session_id": "demo-session",
+    "text": "The user is considering hyperparameter tuning for an encoder-decoder model",
+    "category": "technical",
+    "importance": 0.49000000000000005,
+    "source_turn": 17,
+    "created_at": 1774981260.0199394,
+    "access_count": 2
+  },
+  {
+    "fact_id": "bcaefad1-1f4c-4a31-b830-fba06fafdf5b",
+    "session_id": "demo-session",
+    "text": "The user is exploring the use of transformer variants for their text summarization model",
+    "category": "technical",
+    "importance": 0.30710000000000004,
+    "source_turn": 17,
+    "created_at": 1774981260.0199394,
+    "access_count": 1
+  },
+  {
+    "fact_id": "57cfba7e-80f1-4082-8839-176c5b9c3085",
+    "session_id": "demo-session",
+    "text": "The scaled dot-product attention mechanism helps prevent vanishing gradients during backpropagation",
+    "category": "definition",
+    "importance": 0.5135999999999998,
+    "source_turn": 17,
+    "created_at": 1774981260.0199394,
+    "access_count": 3
+  },
+  {
+    "fact_id": "990794f9-b169-4e0d-8c3f-7dd0617e48ad",
+    "session_id": "demo-session",
+    "text": "The user is building a text summarization model using transformer architectures.",
+    "category": "goal",
+    "importance": 0.39089999999999997,
+    "source_turn": 19,
+    "created_at": 1774981270.8988497,
+    "access_count": 1
+  },
+  {
+    "fact_id": "c023b2dd-2132-45c4-b7ba-243720510301",
+    "session_id": "demo-session",
+    "text": "The user is experiencing NaN losses during training of their text summarization model.",
+    "category": "constraint",
+    "importance": 0.35769999999999996,
+    "source_turn": 19,
+    "created_at": 1774981270.8988497,
+    "access_count": 0
+  },
+  {
+    "fact_id": "767aec63-484c-4a58-baf6-bc8d8c14df98",
+    "session_id": "demo-session",
+    "text": "The user has considered the scaled dot-product attention mechanism for their transformer model.",
+    "category": "technical",
+    "importance": 0.32689999999999997,
+    "source_turn": 19,
+    "created_at": 1774981270.8988497,
+    "access_count": 0
+  },
+  {
+    "fact_id": "5c4ba5cc-72ce-4e14-bea8-04e88ba36b7b",
+    "session_id": "demo-session",
+    "text": "The user has considered hyperparameter tuning for an encoder-decoder model.",
+    "category": "technical",
+    "importance": 0.49000000000000005,
+    "source_turn": 19,
+    "created_at": 1774981270.8988497,
+    "access_count": 1
+  },
+  {
+    "fact_id": "47239205-c229-4622-9299-e1bbf6fae9b5",
+    "session_id": "demo-session",
+    "text": "Preventing vanishing gradients during backpropagation is important for the user's model.",
+    "category": "technical",
+    "importance": 0.6408999999999999,
+    "source_turn": 19,
+    "created_at": 1774981270.8988497,
+    "access_count": 4
+  },
+  {
+    "fact_id": "0ea13e91-a9a6-43f0-9f4e-d1b9de447cfd",
+    "session_id": "demo-session",
+    "text": "The user is considering using distillation to reduce model size.",
+    "category": "preference",
+    "importance": 0.5299999999999999,
+    "source_turn": 19,
+    "created_at": 1774981270.8988497,
+    "access_count": 1
+  },
+  {
+    "fact_id": "3d88a180-e9c1-42d5-b677-e26b341e1a39",
+    "session_id": "demo-session",
+    "text": "The user is considering using pruning to reduce model size.",
+    "category": "preference",
+    "importance": 0.5299999999999999,
+    "source_turn": 19,
+    "created_at": 1774981270.8988497,
+    "access_count": 1
+  },
+  {
+    "fact_id": "c15e5888-dfba-4add-b598-4a5d48edc6a9",
+    "session_id": "demo-session",
+    "text": "The user is building a text summarization model using transformer architectures",
+    "category": "goal",
+    "importance": 0.44089999999999996,
+    "source_turn": 21,
+    "created_at": 1774981282.7394636,
+    "access_count": 1
+  },
+  {
+    "fact_id": "46b5a96f-7035-4f02-8950-0f41d87b0cb9",
+    "session_id": "demo-session",
+    "text": "The user is experiencing NaN losses during training of their text summarization model",
+    "category": "constraint",
+    "importance": 0.40769999999999995,
+    "source_turn": 21,
+    "created_at": 1774981282.7394636,
+    "access_count": 0
+  },
+  {
+    "fact_id": "be42bb90-15f9-43b5-a8f5-8fc7009651fa",
+    "session_id": "demo-session",
+    "text": "The user is considering using backpropagation through time for their model",
+    "category": "technical",
+    "importance": 0.5408999999999999,
+    "source_turn": 21,
+    "created_at": 1774981282.7394636,
+    "access_count": 3
+  },
+  {
+    "fact_id": "8c0db361-5ec2-4091-8d72-6f331e810d96",
+    "session_id": "demo-session",
+    "text": "Backpropagation through time is a technique used for training recurrent neural networks",
+    "category": "definition",
+    "importance": 0.5499999999999999,
+    "source_turn": 21,
+    "created_at": 1774981282.7394636,
+    "access_count": 3
+  },
+  {
+    "fact_id": "3b701b63-b5fd-40d5-9f09-a0fb936bafb6",
+    "session_id": "demo-session",
+    "text": "The user has discussed hyperparameter tuning for their text summarization model",
+    "category": "technical",
+    "importance": 0.39089999999999997,
+    "source_turn": 21,
+    "created_at": 1774981282.7394636,
+    "access_count": 0
+  },
+  {
+    "fact_id": "91b4444c-af30-43b7-b53f-e9c714d82fcb",
+    "session_id": "demo-session",
+    "text": "The user has explored techniques like distillation and pruning to reduce model size",
+    "category": "technical",
+    "importance": 0.37689999999999996,
+    "source_turn": 21,
+    "created_at": 1774981282.7394636,
+    "access_count": 0
+  },
+  {
+    "fact_id": "5ac88761-8cf7-434d-9461-296bf6b1d985",
+    "session_id": "demo-session",
+    "text": "Backpropagation through time (BPTT) suffers from vanishing gradients for long sequences.",
+    "category": "technical",
+    "importance": 0.5772999999999999,
+    "source_turn": 23,
+    "created_at": 1774981290.1905463,
+    "access_count": 2
+  },
+  {
+    "fact_id": "c10af7ac-9dbb-4d9b-a711-51b539eeffc3",
+    "session_id": "demo-session",
+    "text": "The user is developing a text summarization model using transformer architectures.",
+    "category": "goal",
+    "importance": 0.49089999999999995,
+    "source_turn": 23,
+    "created_at": 1774981290.1905463,
+    "access_count": 1
+  },
+  {
+    "fact_id": "e5d9c489-ec82-4d4c-ae43-362ed87adbbd",
+    "session_id": "demo-session",
+    "text": "The user is experiencing NaN losses during training of their text summarization model.",
+    "category": "constraint",
+    "importance": 0.45769999999999994,
+    "source_turn": 23,
+    "created_at": 1774981290.1905463,
+    "access_count": 0
+  },
+  {
+    "fact_id": "13244901-8aed-44ae-83c4-fa045d1dabc7",
+    "session_id": "demo-session",
+    "text": "The user's text summarization model needs to run inference on a laptop CPU in under 2 seconds per document.",
+    "category": "constraint",
+    "importance": 0.4947,
+    "source_turn": 23,
+    "created_at": 1774981290.1905463,
+    "access_count": 1
+  },
+  {
+    "fact_id": "fb7a9fd9-8ecf-41fa-9fed-0cf4f9dbb5cf",
+    "session_id": "demo-session",
+    "text": "Transformer architectures can help mitigate the vanishing gradient issue in backpropagation through time (BPTT) for long sequences.",
+    "category": "technical",
+    "importance": 0.5293999999999999,
+    "source_turn": 27,
+    "created_at": 1774981321.8354125,
+    "access_count": 0
+  },
+  {
+    "fact_id": "5fe73174-8004-4f94-8f50-708555477da7",
+    "session_id": "demo-session",
+    "text": "The scaled dot-product attention mechanism in transformer architectures helps stabilize gradients during backpropagation.",
+    "category": "technical",
+    "importance": 0.5384999999999999,
+    "source_turn": 27,
+    "created_at": 1774981321.8354125,
+    "access_count": 0
+  },
+  {
+    "fact_id": "8ff9c1ec-deca-4b11-b37d-c5b7f165cc6c",
+    "session_id": "demo-session",
+    "text": "Model distillation and pruning can reduce model size while preserving performance, making it feasible to run on less powerful hardware.",
+    "category": "technical",
+    "importance": 0.49999999999999994,
+    "source_turn": 27,
+    "created_at": 1774981321.8354125,
+    "access_count": 0
+  },
+  {
+    "fact_id": "57fed1c4-28d0-49c5-9563-a68a89d60796",
+    "session_id": "demo-session",
+    "text": "LSTM networks are designed to address the vanishing gradient problem in traditional RNNs during backpropagation through time (BPTT).",
+    "category": "technical",
+    "importance": 0.6110999999999999,
+    "source_turn": 27,
+    "created_at": 1774981321.8365026,
+    "access_count": 0
+  },
+  {
+    "fact_id": "0b7a74b3-64fc-430b-982a-3f17e6534e12",
+    "session_id": "demo-session",
+    "text": "LSTMs use memory cells and gates to control the flow of information and mitigate the vanishing gradient problem.",
+    "category": "technical",
+    "importance": 0.46669999999999995,
+    "source_turn": 27,
+    "created_at": 1774981321.8365026,
+    "access_count": 0
+  },
+  {
+    "fact_id": "b5544c0a-f63e-4f2b-9f36-67ec502a5836",
+    "session_id": "demo-session",
+    "text": "The goal of the project is to resolve NaN losses and select a suitable transformer variant for text summarization.",
+    "category": "goal",
+    "importance": 0.5316,
+    "source_turn": 27,
+    "created_at": 1774981321.8365026,
+    "access_count": 0
+  },
+  {
+    "fact_id": "52ccbf3f-75ee-4306-847e-cfba9b79bd07",
+    "session_id": "demo-session",
+    "text": "Running inference on a laptop CPU within a specific time limit is a constraint for the project.",
+    "category": "constraint",
+    "importance": 0.5352999999999999,
+    "source_turn": 27,
+    "created_at": 1774981321.8365026,
+    "access_count": 0
+  },
+  {
+    "fact_id": "6b98a7e3-a202-46f8-9506-331964a2dd8f",
+    "session_id": "demo-session",
+    "text": "Model size and computational efficiency are crucial factors in the project due to the constraint of running on a laptop CPU.",
+    "category": "constraint",
+    "importance": 0.5286,
+    "source_turn": 27,
+    "created_at": 1774981321.8365026,
+    "access_count": 0
+  },
+  {
+    "fact_id": "405f88e7-b84c-4573-8aa7-9a0973e0e982",
+    "session_id": "demo-session",
+    "text": "Exploring different hyperparameter settings and experimenting with various transformer architectures can help achieve the project's goals.",
+    "category": "technical",
+    "importance": 0.5249999999999999,
+    "source_turn": 27,
+    "created_at": 1774981321.8365026,
+    "access_count": 0
+  },
+  {
+    "fact_id": "6c854b0e-4cc7-4845-bb41-3a0f8928cb48",
+    "session_id": "demo-session",
+    "text": "Transformer models can be used to further mitigate the vanishing gradient issue in LSTMs for very long sequences.",
+    "category": "technical",
+    "importance": 0.48889999999999995,
+    "source_turn": 27,
+    "created_at": 1774981321.8365026,
+    "access_count": 0
+  },
+  {
+    "fact_id": "7f24ceeb-2fa5-4649-ae99-60afeb28f5f5",
+    "session_id": "demo-session",
+    "text": "Adjusting hyperparameters such as learning rate, batch size, and optimizer can help mitigate NaN losses during training.",
+    "category": "technical",
+    "importance": 0.6029,
+    "source_turn": 29,
+    "created_at": 1774981335.5441074,
+    "access_count": 0
+  },
+  {
+    "fact_id": "d0edf97b-e570-4f51-bc1b-13a8b6f151aa",
+    "session_id": "demo-session",
+    "text": "Techniques like gradient clipping and weight normalization can help stabilize the training process.",
+    "category": "technical",
+    "importance": 0.5884999999999999,
+    "source_turn": 29,
+    "created_at": 1774981335.5441074,
+    "access_count": 0
+  },
+  {
+    "fact_id": "785ba138-d41f-4896-9434-dd569556acf0",
+    "session_id": "demo-session",
+    "text": "Transformer architecture variants like BERT, RoBERTa, or DistilBERT have shown promising results in text summarization tasks.",
+    "category": "technical",
+    "importance": 0.6749999999999999,
+    "source_turn": 29,
+    "created_at": 1774981335.5441074,
+    "access_count": 0
+  },
+  {
+    "fact_id": "98dfd713-40fb-4354-b798-3dc2d0dabdca",
+    "session_id": "demo-session",
+    "text": "Model distillation or pruning can reduce model size while preserving performance to achieve faster inference times.",
+    "category": "technical",
+    "importance": 0.575,
+    "source_turn": 29,
+    "created_at": 1774981335.5441074,
+    "access_count": 0
+  },
+  {
+    "fact_id": "97e3cc62-3b48-4eae-b5a7-ae5b17af8d0c",
+    "session_id": "demo-session",
+    "text": "LSTM networks or gated recurrent units (GRUs) can handle long-term dependencies and address the vanishing gradient issue.",
+    "category": "technical",
+    "importance": 0.5793999999999999,
+    "source_turn": 29,
+    "created_at": 1774981335.5441074,
+    "access_count": 0
+  },
+  {
+    "fact_id": "54f7faea-696a-4583-9b70-8c10da965d45",
+    "session_id": "demo-session",
+    "text": "The user is developing a text summarization model using transformer architectures.",
+    "category": "goal",
+    "importance": 0.5408999999999999,
+    "source_turn": 29,
+    "created_at": 1774981335.5441074,
+    "access_count": 0
+  },
+  {
+    "fact_id": "eae05ed8-5a8e-4c23-8a1e-965c65ef65f9",
+    "session_id": "demo-session",
+    "text": "The user needs to run inference on a laptop CPU within a specific time limit.",
+    "category": "constraint",
+    "importance": 0.5166999999999999,
+    "source_turn": 29,
+    "created_at": 1774981335.5441074,
+    "access_count": 0
+  },
+  {
+    "fact_id": "6fea3699-f252-45b6-8c54-bb0fe5369ef3",
+    "session_id": "demo-session",
+    "text": "The vanishing gradient issue arises from the repeated application of the sigmoid or tanh activation functions during backpropagation through time (BPTT).",
+    "category": "technical",
+    "importance": 0.5357,
+    "source_turn": 29,
+    "created_at": 1774981335.5441074,
+    "access_count": 0
+  }
+]

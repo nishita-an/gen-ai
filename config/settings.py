@@ -47,13 +47,10 @@ class TokenSettings:
 
 @dataclass
 class LLMSettings:
-    provider: str = "grok"                          # swap to "openai" etc.
-    model: str = "llama-3.3-70b-versatile"
-    api_key: str = field(default_factory=lambda: os.getenv("GROK_API_KEY", ""))
-    base_url: str = "https://api.x.ai/v1"           # xAI Grok endpoint
-    temperature: float = 0.7
-    max_retries: int = 3
-
+    provider: str = "groq"
+    model: str = "llama-3.3-70b-versatile"      # or "llama3-8b-8192" for faster/cheaper
+    api_key: str = field(default_factory=lambda: os.getenv("GROQ_API_KEY", ""))
+    base_url: str = "https://api.groq.com/openai/v1"
 
 @dataclass
 class EmbeddingSettings:
