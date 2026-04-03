@@ -113,7 +113,7 @@ export GROK_API_KEY="xai-..."    # Windows: set GROK_API_KEY=xai-...
 
 ```bash
 cd memory_agent
-uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
+python -m uvicorn api.main:app --reload
 ```
 
 Interactive API docs: http://localhost:8000/docs
