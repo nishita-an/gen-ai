@@ -416,3 +416,258 @@
 2026-04-05 17:38:39,631 [INFO] ingest:   Chunks added    : 3314
 2026-04-05 17:38:39,632 [INFO] ingest:   Vector store    : chroma_db
 2026-04-05 17:38:39,635 [INFO] ingest:   Total chunks in store: 3314
+2026-04-07 16:24:05,414 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 16:24:05,423 [INFO] ingest: Starting ingestion from: pdfs
+2026-04-07 16:24:05,436 [INFO] ingest: Found 138 PDF file(s).
+2026-04-07 16:24:05,438 [INFO] ingest: Already-ingested file hashes in cache: 120
+2026-04-07 16:24:05,493 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-07 16:24:05,911 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:24:05,916 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:24:06,683 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+2026-04-07 16:24:06,688 [INFO] ingest: Chunks already in vector store: 3314
+2026-04-07 16:24:06,693 [INFO] ingest: SKIP (duplicate hash): french_1.pdf
+2026-04-07 16:24:06,697 [INFO] ingest: SKIP (duplicate hash): french_11.pdf
+2026-04-07 16:24:06,699 [INFO] ingest: SKIP (duplicate hash): french_13.pdf
+2026-04-07 16:24:06,700 [INFO] ingest: SKIP (duplicate hash): french_14.pdf
+2026-04-07 16:24:06,703 [INFO] ingest: SKIP (duplicate hash): french_15.pdf
+2026-04-07 16:24:06,705 [INFO] ingest: SKIP (duplicate hash): french_17.pdf
+2026-04-07 16:24:06,707 [INFO] ingest: SKIP (duplicate hash): french_2.pdf
+2026-04-07 16:24:06,718 [INFO] ingest: SKIP (duplicate hash): french_21.pdf
+2026-04-07 16:24:06,720 [INFO] ingest: SKIP (duplicate hash): french_24.pdf
+2026-04-07 16:24:06,722 [INFO] ingest: SKIP (duplicate hash): french_25.pdf
+2026-04-07 16:24:06,723 [INFO] ingest: SKIP (duplicate hash): french_26.pdf
+2026-04-07 16:24:06,725 [INFO] ingest: SKIP (duplicate hash): french_27.pdf
+2026-04-07 16:24:06,730 [INFO] ingest: SKIP (duplicate hash): french_28.pdf
+2026-04-07 16:24:06,746 [INFO] ingest: SKIP (duplicate hash): french_3.pdf
+2026-04-07 16:24:06,752 [INFO] ingest: SKIP (duplicate hash): french_30.pdf
+2026-04-07 16:24:06,755 [INFO] ingest: SKIP (duplicate hash): french_31.pdf
+2026-04-07 16:24:06,757 [INFO] ingest: SKIP (duplicate hash): french_32.pdf
+2026-04-07 16:24:06,759 [INFO] ingest: SKIP (duplicate hash): french_34.pdf
+2026-04-07 16:24:06,764 [INFO] ingest: SKIP (duplicate hash): french_35.pdf
+2026-04-07 16:24:06,767 [INFO] ingest: SKIP (duplicate hash): french_36.pdf
+2026-04-07 16:24:06,769 [INFO] ingest: SKIP (duplicate hash): french_37.pdf
+2026-04-07 16:24:06,771 [INFO] ingest: SKIP (duplicate hash): french_38.pdf
+2026-04-07 16:24:06,774 [INFO] ingest: SKIP (duplicate hash): french_39.pdf
+2026-04-07 16:24:06,778 [INFO] ingest: SKIP (duplicate hash): french_4.pdf
+2026-04-07 16:24:06,790 [INFO] ingest: SKIP (duplicate hash): french_41.pdf
+2026-04-07 16:24:06,794 [INFO] ingest: SKIP (duplicate hash): french_42.pdf
+2026-04-07 16:24:06,811 [INFO] ingest: SKIP (duplicate hash): french_43.pdf
+2026-04-07 16:24:06,813 [INFO] ingest: SKIP (duplicate hash): french_44.pdf
+2026-04-07 16:24:06,815 [INFO] ingest: SKIP (duplicate hash): french_45.pdf
+2026-04-07 16:24:06,819 [INFO] ingest: SKIP (duplicate hash): french_46.pdf
+2026-04-07 16:24:06,821 [INFO] ingest: SKIP (duplicate hash): french_47.pdf
+2026-04-07 16:24:06,823 [INFO] ingest: SKIP (duplicate hash): french_5.pdf
+2026-04-07 16:24:06,826 [INFO] ingest: SKIP (duplicate hash): french_6.pdf
+2026-04-07 16:24:06,830 [INFO] ingest: SKIP (duplicate hash): french_7.pdf
+2026-04-07 16:24:06,831 [INFO] ingest: SKIP (duplicate hash): french_8.pdf
+2026-04-07 16:24:06,833 [INFO] ingest: SKIP (duplicate hash): french_9.pdf
+2026-04-07 16:24:06,834 [INFO] ingest: SKIP (duplicate hash): hindi_0.pdf
+2026-04-07 16:24:06,838 [INFO] ingest: SKIP (duplicate hash): hindi_1.pdf
+2026-04-07 16:24:06,851 [INFO] ingest: SKIP (duplicate hash): hindi_10.pdf
+2026-04-07 16:24:06,853 [INFO] ingest: SKIP (duplicate hash): hindi_11.pdf
+2026-04-07 16:24:06,854 [INFO] ingest: SKIP (duplicate hash): hindi_12.pdf
+2026-04-07 16:24:06,858 [INFO] ingest: SKIP (duplicate hash): hindi_15.pdf
+2026-04-07 16:24:06,859 [INFO] ingest: SKIP (duplicate hash): hindi_18.pdf
+2026-04-07 16:24:06,860 [INFO] ingest: SKIP (duplicate hash): hindi_2.pdf
+2026-04-07 16:24:06,869 [INFO] ingest: SKIP (duplicate hash): hindi_22.pdf
+2026-04-07 16:24:06,874 [INFO] ingest: SKIP (duplicate hash): hindi_23.pdf
+2026-04-07 16:24:06,878 [INFO] ingest: SKIP (duplicate hash): hindi_26.pdf
+2026-04-07 16:24:06,880 [INFO] ingest: SKIP (duplicate hash): hindi_27.pdf
+2026-04-07 16:24:06,881 [INFO] ingest: SKIP (duplicate hash): hindi_29.pdf
+2026-04-07 16:24:06,885 [INFO] ingest: SKIP (duplicate hash): hindi_30.pdf
+2026-04-07 16:24:06,887 [INFO] ingest: SKIP (duplicate hash): hindi_31.pdf
+2026-04-07 16:24:06,889 [INFO] ingest: SKIP (duplicate hash): hindi_35.pdf
+2026-04-07 16:24:06,892 [INFO] ingest: SKIP (duplicate hash): hindi_36.pdf
+2026-04-07 16:24:06,898 [INFO] ingest: SKIP (duplicate hash): hindi_37.pdf
+2026-04-07 16:24:06,904 [INFO] ingest: SKIP (duplicate hash): hindi_38.pdf
+2026-04-07 16:24:06,906 [INFO] ingest: SKIP (duplicate hash): hindi_39.pdf
+2026-04-07 16:24:06,908 [INFO] ingest: SKIP (duplicate hash): hindi_42.pdf
+2026-04-07 16:24:06,920 [INFO] ingest: SKIP (duplicate hash): hindi_43.pdf
+2026-04-07 16:24:06,921 [INFO] ingest: SKIP (duplicate hash): hindi_44.pdf
+2026-04-07 16:24:06,922 [INFO] ingest: SKIP (duplicate hash): hindi_45.pdf
+2026-04-07 16:24:06,925 [INFO] ingest: SKIP (duplicate hash): hindi_47.pdf
+2026-04-07 16:24:06,931 [INFO] ingest: SKIP (duplicate hash): hindi_48.pdf
+2026-04-07 16:24:06,946 [INFO] ingest: SKIP (duplicate hash): hindi_49.pdf
+2026-04-07 16:24:06,951 [INFO] ingest: SKIP (duplicate hash): hindi_5.pdf
+2026-04-07 16:24:06,952 [INFO] ingest: SKIP (duplicate hash): hindi_7.pdf
+2026-04-07 16:24:06,958 [INFO] ingest: SKIP (duplicate hash): hindi_8.pdf
+2026-04-07 16:24:06,976 [INFO] ingest: SKIP (duplicate hash): hindi_9.pdf
+2026-04-07 16:24:06,979 [INFO] ingest: SKIP (duplicate hash): kannada_0.pdf
+2026-04-07 16:24:06,987 [INFO] ingest: SKIP (duplicate hash): kannada_1.pdf
+2026-04-07 16:24:06,989 [INFO] ingest: SKIP (duplicate hash): kannada_10.pdf
+2026-04-07 16:24:06,991 [INFO] ingest: SKIP (duplicate hash): kannada_11.pdf
+2026-04-07 16:24:06,992 [INFO] ingest: SKIP (duplicate hash): kannada_12.pdf
+2026-04-07 16:24:06,998 [INFO] ingest: SKIP (duplicate hash): kannada_13.pdf
+2026-04-07 16:24:07,001 [INFO] ingest: SKIP (duplicate hash): kannada_14.pdf
+2026-04-07 16:24:07,003 [INFO] ingest: SKIP (duplicate hash): kannada_15.pdf
+2026-04-07 16:24:07,005 [INFO] ingest: SKIP (duplicate hash): kannada_16.pdf
+2026-04-07 16:24:07,014 [INFO] ingest: SKIP (duplicate hash): kannada_18.pdf
+2026-04-07 16:24:07,017 [INFO] ingest: SKIP (duplicate hash): kannada_19.pdf
+2026-04-07 16:24:07,181 [INFO] ingest: SKIP (duplicate hash): kannada_2.pdf
+2026-04-07 16:24:07,182 [INFO] ingest: SKIP (duplicate hash): kannada_21.pdf
+2026-04-07 16:24:07,184 [INFO] ingest: SKIP (duplicate hash): kannada_22.pdf
+2026-04-07 16:24:07,186 [INFO] ingest: SKIP (duplicate hash): kannada_23.pdf
+2026-04-07 16:24:07,191 [INFO] ingest: SKIP (duplicate hash): kannada_27.pdf
+2026-04-07 16:24:07,195 [INFO] ingest: SKIP (duplicate hash): kannada_28.pdf
+2026-04-07 16:24:07,200 [INFO] ingest: SKIP (duplicate hash): kannada_29.pdf
+2026-04-07 16:24:07,300 [INFO] ingest: SKIP (duplicate hash): kannada_3.pdf
+2026-04-07 16:24:07,305 [INFO] ingest: SKIP (duplicate hash): kannada_30.pdf
+2026-04-07 16:24:07,315 [INFO] ingest: SKIP (duplicate hash): kannada_31.pdf
+2026-04-07 16:24:07,318 [INFO] ingest: SKIP (duplicate hash): kannada_33.pdf
+2026-04-07 16:24:07,327 [INFO] ingest: SKIP (duplicate hash): kannada_35.pdf
+2026-04-07 16:24:07,333 [INFO] ingest: SKIP (duplicate hash): kannada_47.pdf
+2026-04-07 16:24:07,334 [INFO] ingest: SKIP (duplicate hash): kannada_48.pdf
+2026-04-07 16:24:07,335 [INFO] ingest: SKIP (duplicate hash): kannada_49.pdf
+2026-04-07 16:24:07,337 [INFO] ingest: SKIP (duplicate hash): kannada_6.pdf
+2026-04-07 16:24:07,342 [INFO] ingest: SKIP (duplicate hash): kannada_7.pdf
+2026-04-07 16:24:07,348 [INFO] ingest: SKIP (duplicate hash): kannada_8.pdf
+2026-04-07 16:24:07,351 [INFO] ingest: SKIP (duplicate hash): kannada_9.pdf
+2026-04-07 16:24:07,368 [INFO] ingest: SKIP (duplicate hash): marathi_0.pdf
+2026-04-07 16:24:07,370 [INFO] ingest: SKIP (duplicate hash): marathi_1.pdf
+2026-04-07 16:24:07,371 [INFO] ingest: SKIP (duplicate hash): marathi_10.pdf
+2026-04-07 16:24:07,373 [INFO] ingest: SKIP (duplicate hash): marathi_11.pdf
+2026-04-07 16:24:07,378 [INFO] ingest: SKIP (duplicate hash): marathi_12.pdf
+2026-04-07 16:24:07,382 [INFO] ingest: SKIP (duplicate hash): marathi_13.pdf
+2026-04-07 16:24:07,384 [INFO] ingest: SKIP (duplicate hash): marathi_15.pdf
+2026-04-07 16:24:07,386 [INFO] ingest: SKIP (duplicate hash): marathi_16.pdf
+2026-04-07 16:24:07,387 [INFO] ingest: SKIP (duplicate hash): marathi_17.pdf
+2026-04-07 16:24:07,389 [INFO] ingest: SKIP (duplicate hash): marathi_19.pdf
+2026-04-07 16:24:07,391 [INFO] ingest: SKIP (duplicate hash): marathi_21.pdf
+2026-04-07 16:24:07,393 [INFO] ingest: SKIP (duplicate hash): marathi_22.pdf
+2026-04-07 16:24:07,397 [INFO] ingest: SKIP (duplicate hash): marathi_23.pdf
+2026-04-07 16:24:07,398 [INFO] ingest: SKIP (duplicate hash): marathi_24.pdf
+2026-04-07 16:24:07,399 [INFO] ingest: SKIP (duplicate hash): marathi_26.pdf
+2026-04-07 16:24:07,405 [INFO] ingest: SKIP (duplicate hash): marathi_27.pdf
+2026-04-07 16:24:07,406 [INFO] ingest: SKIP (duplicate hash): marathi_28.pdf
+2026-04-07 16:24:07,411 [INFO] ingest: SKIP (duplicate hash): marathi_3.pdf
+2026-04-07 16:24:07,415 [INFO] ingest: SKIP (duplicate hash): marathi_30.pdf
+2026-04-07 16:24:07,419 [INFO] ingest: SKIP (duplicate hash): marathi_31.pdf
+2026-04-07 16:24:07,421 [INFO] ingest: SKIP (duplicate hash): marathi_32.pdf
+2026-04-07 16:24:07,423 [INFO] ingest: SKIP (duplicate hash): marathi_33.pdf
+2026-04-07 16:24:07,424 [INFO] ingest: SKIP (duplicate hash): marathi_34.pdf
+2026-04-07 16:24:07,425 [INFO] ingest: SKIP (duplicate hash): marathi_35.pdf
+2026-04-07 16:24:07,429 [INFO] ingest: SKIP (duplicate hash): marathi_36.pdf
+2026-04-07 16:24:07,431 [INFO] ingest: SKIP (duplicate hash): marathi_37.pdf
+2026-04-07 16:24:07,432 [INFO] ingest: SKIP (duplicate hash): marathi_38.pdf
+2026-04-07 16:24:07,436 [INFO] ingest: SKIP (duplicate hash): marathi_39.pdf
+2026-04-07 16:24:07,437 [INFO] ingest: SKIP (duplicate hash): marathi_4.pdf
+2026-04-07 16:24:07,441 [INFO] ingest: SKIP (duplicate hash): marathi_40.pdf
+2026-04-07 16:24:07,443 [INFO] ingest: SKIP (duplicate hash): marathi_41.pdf
+2026-04-07 16:24:07,447 [INFO] ingest: SKIP (duplicate hash): marathi_42.pdf
+2026-04-07 16:24:07,454 [INFO] ingest: SKIP (duplicate hash): marathi_44.pdf
+2026-04-07 16:24:07,455 [INFO] ingest: SKIP (duplicate hash): marathi_45.pdf
+2026-04-07 16:24:07,456 [INFO] ingest: SKIP (duplicate hash): marathi_46.pdf
+2026-04-07 16:24:07,457 [INFO] ingest: SKIP (duplicate hash): marathi_48.pdf
+2026-04-07 16:24:07,459 [INFO] ingest: SKIP (duplicate hash): marathi_49.pdf
+2026-04-07 16:24:07,463 [INFO] ingest: SKIP (duplicate hash): marathi_5.pdf
+2026-04-07 16:24:07,467 [INFO] ingest: SKIP (duplicate hash): marathi_6.pdf
+2026-04-07 16:24:07,469 [INFO] ingest: SKIP (duplicate hash): marathi_9.pdf
+2026-04-07 16:24:07,474 [INFO] ingest: SKIP (duplicate hash): PDF_1.pdf
+2026-04-07 16:24:07,475 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 16:24:07,476 [INFO] ingest: Ingestion complete.
+2026-04-07 16:24:07,477 [INFO] ingest:   PDFs processed  : 0
+2026-04-07 16:24:07,477 [INFO] ingest:   PDFs skipped    : 138 (duplicates / scanned)
+2026-04-07 16:24:07,478 [INFO] ingest:   Chunks added    : 0
+2026-04-07 16:24:07,478 [INFO] ingest:   Vector store    : chroma_db
+2026-04-07 16:24:07,482 [INFO] ingest:   Total chunks in store: 3314
+2026-04-07 18:57:50,201 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 18:57:50,204 [INFO] ingest: Starting ingestion from: "D:\Project\RAG\pdfs\french_1.pdf"
+2026-04-07 18:57:50,205 [ERROR] ingest: PDF folder does not exist: "D:\Project\RAG\pdfs\french_1.pdf"
+2026-04-07 18:59:17,496 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 18:59:17,501 [INFO] ingest: Starting ingestion from: python ingest.py --pdf-folder D:\Project\RAG\pdfs
+2026-04-07 18:59:17,502 [ERROR] ingest: PDF folder does not exist: python ingest.py --pdf-folder D:\Project\RAG\pdfs
+2026-04-07 21:10:01,181 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 21:10:01,189 [INFO] ingest: Starting ingestion from: data\uploaded_pdfs
+2026-04-07 21:10:01,192 [INFO] ingest: Found 1 PDF file(s).
+2026-04-07 21:10:01,193 [INFO] ingest: Already-ingested file hashes in cache: 0
+2026-04-07 21:10:01,239 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-07 21:10:02,658 [INFO] ingest: Existing collection 'multilingual_rag' deleted (--reset flag).
+2026-04-07 21:10:02,706 [INFO] ingest: Chunks already in vector store: 0
+2026-04-07 21:10:02,711 [INFO] ingest: Processing: french_1.pdf
+2026-04-07 21:10:04,888 [INFO] ingest:   Parsed 2 page(s) from french_1.pdf
+2026-04-07 21:10:05,781 [INFO] ingest:   Produced 17 chunk(s)
+2026-04-07 21:10:05,782 [INFO] utils.embedder: Loading embedding model: paraphrase-multilingual-mpnet-base-v2
+2026-04-07 21:10:05,784 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-04-07 21:10:05,785 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: paraphrase-multilingual-mpnet-base-v2
+2026-04-07 21:10:22,493 [INFO] utils.embedder: Embedding model loaded.
+2026-04-07 21:10:29,390 [INFO] ingest:   Added 17 new chunk(s) to vector store.
+2026-04-07 21:10:29,396 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 21:10:29,402 [INFO] ingest: Ingestion complete.
+2026-04-07 21:10:29,403 [INFO] ingest:   PDFs processed  : 1
+2026-04-07 21:10:29,403 [INFO] ingest:   PDFs skipped    : 0 (duplicates / scanned)
+2026-04-07 21:10:29,403 [INFO] ingest:   Chunks added    : 17
+2026-04-07 21:10:29,403 [INFO] ingest:   Vector store    : chroma_db
+2026-04-07 21:10:29,406 [INFO] ingest:   Total chunks in store: 17
+2026-04-07 21:11:15,970 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 21:11:15,972 [INFO] ingest: Starting ingestion from: data\uploaded_pdfs
+2026-04-07 21:11:15,973 [INFO] ingest: Found 1 PDF file(s).
+2026-04-07 21:11:15,974 [INFO] ingest: Already-ingested file hashes in cache: 0
+2026-04-07 21:11:15,991 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-07 21:11:16,197 [INFO] ingest: Existing collection 'multilingual_rag' deleted (--reset flag).
+2026-04-07 21:11:16,223 [INFO] ingest: Chunks already in vector store: 0
+2026-04-07 21:11:23,721 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 21:11:23,726 [INFO] ingest: Starting ingestion from: data\uploaded_pdfs
+2026-04-07 21:11:23,728 [INFO] ingest: Found 1 PDF file(s).
+2026-04-07 21:11:23,729 [INFO] ingest: Already-ingested file hashes in cache: 0
+2026-04-07 21:11:23,753 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-07 21:11:24,123 [INFO] ingest: Existing collection 'multilingual_rag' deleted (--reset flag).
+2026-04-07 21:11:24,169 [INFO] ingest: Chunks already in vector store: 0
+2026-04-07 21:11:24,172 [INFO] ingest: Processing: french_1.pdf
+2026-04-07 21:11:26,276 [INFO] ingest:   Parsed 2 page(s) from french_1.pdf
+2026-04-07 21:11:27,078 [INFO] ingest:   Produced 17 chunk(s)
+2026-04-07 21:11:27,078 [INFO] utils.embedder: Loading embedding model: paraphrase-multilingual-mpnet-base-v2
+2026-04-07 21:11:27,080 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-04-07 21:11:27,080 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: paraphrase-multilingual-mpnet-base-v2
+2026-04-07 21:11:38,361 [INFO] utils.embedder: Embedding model loaded.
+2026-04-07 21:11:44,401 [INFO] ingest:   Added 17 new chunk(s) to vector store.
+2026-04-07 21:11:44,407 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 21:11:44,410 [INFO] ingest: Ingestion complete.
+2026-04-07 21:11:44,411 [INFO] ingest:   PDFs processed  : 1
+2026-04-07 21:11:44,411 [INFO] ingest:   PDFs skipped    : 0 (duplicates / scanned)
+2026-04-07 21:11:44,411 [INFO] ingest:   Chunks added    : 17
+2026-04-07 21:11:44,412 [INFO] ingest:   Vector store    : chroma_db
+2026-04-07 21:11:44,414 [INFO] ingest:   Total chunks in store: 17
+2026-04-07 21:27:28,352 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 21:27:28,355 [INFO] ingest: Starting ingestion from: data\uploaded_pdfs
+2026-04-07 21:27:28,357 [INFO] ingest: Found 1 PDF file(s).
+2026-04-07 21:27:28,357 [INFO] ingest: Already-ingested file hashes in cache: 0
+2026-04-07 21:27:28,372 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-07 21:27:28,622 [INFO] ingest: Existing collection 'multilingual_rag' deleted (--reset flag).
+2026-04-07 21:27:28,647 [INFO] ingest: Chunks already in vector store: 0
+2026-04-07 21:27:28,654 [INFO] ingest: Processing: french_1.pdf
+2026-04-07 21:27:29,932 [INFO] ingest:   Parsed 2 page(s) from french_1.pdf
+2026-04-07 21:27:30,831 [INFO] ingest:   Produced 17 chunk(s)
+2026-04-07 21:27:30,832 [INFO] utils.embedder: Loading embedding model: paraphrase-multilingual-mpnet-base-v2
+2026-04-07 21:27:30,834 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-04-07 21:27:30,834 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: paraphrase-multilingual-mpnet-base-v2
+2026-04-07 21:27:45,452 [INFO] utils.embedder: Embedding model loaded.
+2026-04-07 21:27:52,735 [INFO] ingest:   Added 17 new chunk(s) to vector store.
+2026-04-07 21:27:52,741 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 21:27:52,744 [INFO] ingest: Ingestion complete.
+2026-04-07 21:27:52,744 [INFO] ingest:   PDFs processed  : 1
+2026-04-07 21:27:52,745 [INFO] ingest:   PDFs skipped    : 0 (duplicates / scanned)
+2026-04-07 21:27:52,745 [INFO] ingest:   Chunks added    : 17
+2026-04-07 21:27:52,745 [INFO] ingest:   Vector store    : chroma_db
+2026-04-07 21:27:52,746 [INFO] ingest:   Total chunks in store: 17
+2026-04-07 21:33:57,740 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 21:33:57,746 [INFO] ingest: Starting ingestion from: data\uploaded_pdfs
+2026-04-07 21:33:57,748 [INFO] ingest: Found 1 PDF file(s).
+2026-04-07 21:33:57,748 [INFO] ingest: Already-ingested file hashes in cache: 0
+2026-04-07 21:33:57,772 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-07 21:33:58,123 [INFO] ingest: Existing collection 'multilingual_rag' deleted (--reset flag).
+2026-04-07 21:33:58,168 [INFO] ingest: Chunks already in vector store: 0
+2026-04-07 21:33:58,173 [INFO] ingest: Processing: french_1.pdf
+2026-04-07 21:34:00,434 [INFO] ingest:   Parsed 2 page(s) from french_1.pdf
+2026-04-07 21:34:01,280 [INFO] ingest:   Produced 17 chunk(s)
+2026-04-07 21:34:01,280 [INFO] utils.embedder: Loading embedding model: paraphrase-multilingual-mpnet-base-v2
+2026-04-07 21:34:01,282 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-04-07 21:34:01,282 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: paraphrase-multilingual-mpnet-base-v2
+2026-04-07 21:34:17,772 [INFO] utils.embedder: Embedding model loaded.
+2026-04-07 21:34:24,711 [INFO] ingest:   Added 17 new chunk(s) to vector store.
+2026-04-07 21:34:24,722 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-07 21:34:24,738 [INFO] ingest: Ingestion complete.
+2026-04-07 21:34:24,738 [INFO] ingest:   PDFs processed  : 1
+2026-04-07 21:34:24,738 [INFO] ingest:   PDFs skipped    : 0 (duplicates / scanned)
+2026-04-07 21:34:24,739 [INFO] ingest:   Chunks added    : 17
+2026-04-07 21:34:24,739 [INFO] ingest:   Vector store    : chroma_db
+2026-04-07 21:34:24,744 [INFO] ingest:   Total chunks in store: 17

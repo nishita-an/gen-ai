@@ -1,25 +1,315 @@
+# """
+# app.py — Multilingual PDF Q&A (Streamlit UI)
+# Updated: Direct PDF upload instead of folder path
+# """
+
+# from __future__ import annotations
+
+# import logging
+# import subprocess
+# import sys
+# import time
+# from pathlib import Path
+
+# import streamlit as st
+
+# # ── Page config ───────────────────────────────────────────────────────────────
+# st.set_page_config(
+#     page_title="Multilingual PDF Q&A",
+#     page_icon="🌍",
+#     layout="wide",
+#     initial_sidebar_state="expanded",
+# )
+
+# sys.path.insert(0, str(Path(__file__).parent))
+
+# from config import GROQ_MODEL, TOP_K, COLLECTION_NAME
+# from utils.chunker import detect_language
+
+# logger = logging.getLogger(__name__)
+
+# # ── Language labels ───────────────────────────────────────────────────────────
+# _LANG_LABELS = {
+#     "en": "🇬🇧 English",
+#     "fr": "🇫🇷 French",
+#     "hi": "🇮🇳 Hindi",
+#     "kn": "🇮🇳 Kannada",
+#     "ta": "🇮🇳 Tamil",
+#     "te": "🇮🇳 Telugu",
+#     "de": "🇩🇪 German",
+#     "es": "🇪🇸 Spanish",
+#     "pt": "🇧🇷 Portuguese",
+#     "it": "🇮🇹 Italian",
+#     "ar": "🇸🇦 Arabic",
+#     "zh": "🇨🇳 Chinese",
+#     "ja": "🇯🇵 Japanese",
+#     "ko": "🇰🇷 Korean",
+#     "ru": "🇷🇺 Russian",
+# }
+
+# def _lang_label(code: str):
+#     return _LANG_LABELS.get(code, f"🌐 {code}")
+
+# # ── Cached retriever ──────────────────────────────────────────────────────────
+# @st.cache_resource(show_spinner="Loading retrieval engine...")
+# def _load_retriever(top_k: int):
+#     from retriever import MultilingualRetriever
+#     return MultilingualRetriever(top_k=top_k)
+
+# # ── Session state init ────────────────────────────────────────────────────────
+# def _init_session():
+#     defaults = {
+#         "messages": [],
+#         "top_k": TOP_K,
+#         "uploaded_files": [],
+#     }
+
+#     for k, v in defaults.items():
+#         if k not in st.session_state:
+#             st.session_state[k] = v
+
+# # ── Run ingestion ─────────────────────────────────────────────────────────────
+# def _run_ingestion(folder: str, reset=True):
+
+#     cmd = [
+#         sys.executable,
+#         "ingest.py",
+#         "--pdf-folder",
+#         folder
+#     ]
+
+#     if reset:
+#         cmd.append("--reset")
+
+#     log_box = st.empty()
+#     logs = []
+
+#     try:
+#         proc = subprocess.Popen(
+#             cmd,
+#             stdout=subprocess.PIPE,
+#             stderr=subprocess.STDOUT,
+#             text=True,
+#             cwd=str(Path(__file__).parent)
+#         )
+
+#         for line in proc.stdout:
+#             logs.append(line)
+#             log_box.code("".join(logs[-15:]))
+
+#         proc.wait()
+
+#         if proc.returncode == 0:
+#             st.success("Ingestion complete")
+#             st.cache_resource.clear()
+#             time.sleep(1)
+#             st.rerun()
+
+#         else:
+#             st.error("Ingestion failed")
+
+#     except Exception as e:
+#         st.error(str(e))
+
+# # ── Sidebar ───────────────────────────────────────────────────────────────────
+# def _render_sidebar():
+
+#     with st.sidebar:
+
+#         st.title("Settings")
+
+#         # Upload PDFs
+#         st.subheader("Upload PDFs")
+
+#         uploaded_files = st.file_uploader(
+#             "Upload one or more PDFs",
+#             type="pdf",
+#             accept_multiple_files=True
+#         )
+
+#         if uploaded_files:
+
+#             save_dir = Path("data/uploaded_pdfs")
+#             save_dir.mkdir(parents=True, exist_ok=True)
+
+#             for f in uploaded_files:
+
+#                 file_path = save_dir / f.name
+
+#                 with open(file_path, "wb") as out:
+#                     out.write(f.getbuffer())
+
+#             st.success(f"{len(uploaded_files)} file(s) uploaded")
+
+#             if st.button("Process PDFs"):
+
+#                 _run_ingestion(
+#                     folder=str(save_dir),
+#                     reset=True
+#                 )
+
+#         st.divider()
+
+#         # Retrieval settings
+#         st.subheader("Retrieval")
+
+#         st.slider(
+#             "Top K chunks",
+#             1,
+#             15,
+#             key="top_k"
+#         )
+
+#         st.divider()
+
+#         # System info
+#         st.subheader("System")
+
+#         st.caption(f"LLM: {GROQ_MODEL}")
+#         st.caption("Embeddings: multilingual-mpnet")
+
+#         if st.button("Clear chat"):
+#             st.session_state.messages = []
+#             st.rerun()
+
+#         # DB stats
+#         try:
+
+#             r = _load_retriever(st.session_state.top_k)
+
+#             stats = r.collection_stats()
+
+#             if stats.get("total_chunks"):
+
+#                 st.metric(
+#                     "Indexed chunks",
+#                     stats["total_chunks"]
+#                 )
+
+#                 st.caption(
+#                     f"Collection: {stats.get('collection', COLLECTION_NAME)}"
+#                 )
+
+#         except:
+#             pass
+
+# # ── Chat UI ───────────────────────────────────────────────────────────────────
+# def _render_chat():
+
+#     st.title("Multilingual PDF Question Answering")
+
+#     st.caption(
+#         "Ask questions from PDFs in any language"
+#     )
+
+#     # show history
+#     for msg in st.session_state.messages:
+
+#         with st.chat_message(msg["role"]):
+
+#             st.markdown(msg["content"])
+
+#             if msg["role"] == "assistant":
+
+#                 _render_sources(msg.get("sources", []))
+
+#     # input box
+#     question = st.chat_input(
+#         "Ask a question"
+#     )
+
+#     if question:
+
+#         lang = detect_language(question)
+
+#         st.session_state.messages.append(
+#             {
+#                 "role": "user",
+#                 "content": question,
+#                 "lang": lang
+#             }
+#         )
+
+#         with st.chat_message("user"):
+#             st.markdown(question)
+#             st.caption(_lang_label(lang))
+
+#         with st.chat_message("assistant"):
+
+#             with st.spinner("Searching..."):
+
+#                 try:
+
+#                     retriever = _load_retriever(
+#                         st.session_state.top_k
+#                     )
+
+#                     result = retriever.query(question)
+
+#                     st.markdown(result.answer)
+
+#                     _render_sources(result.sources)
+
+#                     st.session_state.messages.append(
+#                         {
+#                             "role": "assistant",
+#                             "content": result.answer,
+#                             "sources": result.sources
+#                         }
+#                     )
+
+#                 except Exception as e:
+
+#                     st.error(str(e))
+
+# # ── show sources ──────────────────────────────────────────────────────────────
+# def _render_sources(sources):
+
+#     if not sources:
+#         return
+
+#     with st.expander(f"Sources ({len(sources)})"):
+
+#         for i, s in enumerate(sources):
+
+#             st.markdown(
+#                 f"Source {i+1}: {s.source} (page {s.page_num})"
+#             )
+
+#             st.text_area(
+#                 label=f"src_{i}",
+#                 value=s.text[:500],
+#                 height=120,
+#                 disabled=True,
+#                 label_visibility="collapsed"
+#             )
+
+# # ── main ──────────────────────────────────────────────────────────────────────
+# def main():
+
+#     _init_session()
+
+#     _render_sidebar()
+
+#     _render_chat()
+
+# if __name__ == "__main__":
+
+#     main()
+
+
+
+
+
+
 """
-app.py
-──────
-Streamlit frontend for the Multilingual RAG Pipeline.
-
-Features
-────────
-• Chat-style Q&A interface with conversation history
-• Language auto-detection badge on each query
-• Source citations with page numbers, language tags, and similarity scores
-• Sidebar: index stats, top-k slider, model selector, ingest trigger
-• Handles errors gracefully with user-friendly messages
-• Session state preserves conversation across reruns
-
-Run with:
-    streamlit run app.py
+app.py — Multilingual PDF Q&A (Streamlit UI)
+Updated: Direct PDF upload instead of folder path
 """
 
 from __future__ import annotations
 
 import logging
-import os
 import subprocess
 import sys
 import time
@@ -27,7 +317,7 @@ from pathlib import Path
 
 import streamlit as st
 
-# ── Page config (must be first Streamlit call) ────────────────────────────────
+# ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Multilingual PDF Q&A",
     page_icon="🌍",
@@ -35,17 +325,15 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ── Local imports (after page config) ─────────────────────────────────────────
 sys.path.insert(0, str(Path(__file__).parent))
 
-from config import GROQ_MODEL, TOP_K, PDF_FOLDER, CHROMA_DB_PATH, COLLECTION_NAME
+from config import GROQ_MODEL, TOP_K, COLLECTION_NAME
 from utils.chunker import detect_language
 
 logger = logging.getLogger(__name__)
 
-# ── Language display helpers ───────────────────────────────────────────────────
-
-_LANG_LABELS: dict[str, str] = {
+# ── Language labels ───────────────────────────────────────────────────────────
+_LANG_LABELS = {
     "en": "🇬🇧 English",
     "fr": "🇫🇷 French",
     "hi": "🇮🇳 Hindi",
@@ -63,287 +351,219 @@ _LANG_LABELS: dict[str, str] = {
     "ru": "🇷🇺 Russian",
 }
 
-def _lang_label(code: str) -> str:
-    return _LANG_LABELS.get(code, f"🌐 {code.upper()}")
-
-
-def _distance_to_pct(dist: float) -> str:
-    """Convert cosine distance (0–2) to a relevance percentage string."""
-    pct = max(0.0, min(100.0, (1.0 - dist / 2.0) * 100))
-    return f"{pct:.0f}%"
-
+def _lang_label(code: str):
+    return _LANG_LABELS.get(code, f"🌐 {code}")
 
 # ── Cached retriever ──────────────────────────────────────────────────────────
-
-@st.cache_resource(show_spinner="Loading retrieval engine…")
+@st.cache_resource(show_spinner="Loading retrieval engine...")
 def _load_retriever(top_k: int):
-    """Load retriever once; cache across sessions."""
     from retriever import MultilingualRetriever
     return MultilingualRetriever(top_k=top_k)
 
+# ── Session state init ────────────────────────────────────────────────────────
+def _init_session():
+    defaults = {
+        "messages": [],
+        "top_k": TOP_K,
+        "uploaded_files": [],
+        "input_key": 0,           # <-- used to reset the text input
+    }
+    for k, v in defaults.items():
+        if k not in st.session_state:
+            st.session_state[k] = v
 
-# ── Session state initialisation ──────────────────────────────────────────────
-
-def _init_session() -> None:
-    if "messages" not in st.session_state:
-        st.session_state.messages = []   # list of {role, content, sources?, lang?}
-    if "top_k" not in st.session_state:
-        st.session_state.top_k = TOP_K
-    if "retriever_error" not in st.session_state:
-        st.session_state.retriever_error = None
-
-
-# ── Sidebar ───────────────────────────────────────────────────────────────────
-
-def _render_sidebar() -> None:
-    with st.sidebar:
-        st.title("⚙️ Settings")
-
-        # ── Index stats ───────────────────────────────────────────────────────
-        st.subheader("📚 Knowledge Base")
-        if st.button("🔄 Refresh Stats"):
-            st.cache_resource.clear()
-
-        try:
-            retriever = _load_retriever(st.session_state.top_k)
-            stats = retriever.collection_stats()
-            if "error" in stats:
-                st.error(f"Vector store not ready: {stats['error']}")
-                st.info("Run `python ingest.py` to index your PDFs first.")
-            else:
-                st.metric("Indexed chunks", stats.get("total_chunks", 0))
-                st.caption(f"Collection: `{stats.get('collection', COLLECTION_NAME)}`")
-                st.caption(f"DB path: `{stats.get('db_path', CHROMA_DB_PATH)}`")
-        except Exception as exc:
-            st.warning(f"Could not connect to vector store: {exc}")
-
-        st.divider()
-
-        # ── Retrieval settings ────────────────────────────────────────────────
-        st.subheader("🔍 Retrieval")
-        new_top_k = st.slider(
-            "Number of chunks to retrieve (Top-K)",
-            min_value=1, max_value=15,
-            value=st.session_state.top_k,
-            help="Higher values provide more context but may include less relevant chunks.",
-        )
-        if new_top_k != st.session_state.top_k:
-            st.session_state.top_k = new_top_k
-            st.cache_resource.clear()
-            st.rerun()
-
-        st.divider()
-
-        # ── Ingest trigger ────────────────────────────────────────────────────
-        st.subheader("📥 Ingest PDFs")
-        pdf_folder_input = st.text_input(
-            "PDF Folder",
-            value=str(PDF_FOLDER),
-            help="Absolute or relative path to the folder containing PDF files.",
-        )
-        reset_flag = st.checkbox(
-            "Reset index (re-ingest everything)",
-            value=False,
-            help="⚠️ This will delete the existing vector store and start fresh.",
-        )
-        if st.button("▶️ Run Ingestion", type="primary"):
-            _run_ingestion(pdf_folder_input, reset_flag)
-
-        st.divider()
-
-        # ── Conversation management ───────────────────────────────────────────
-        st.subheader("💬 Conversation")
-        if st.button("🗑️ Clear chat history"):
-            st.session_state.messages = []
-            st.rerun()
-
-        st.divider()
-
-        # ── Info ──────────────────────────────────────────────────────────────
-        st.subheader("ℹ️ System Info")
-        st.caption(f"**LLM model:** `{GROQ_MODEL}`")
-        st.caption("**Embedding model:**")
-        st.caption("`paraphrase-multilingual-mpnet-base-v2`")
-        st.caption("**Supported languages:** EN, FR, HI, KN + 46 others")
-
-
-def _run_ingestion(folder: str, reset: bool) -> None:
-    """Trigger ingest.py as a subprocess and stream stdout to the UI."""
-    cmd = [sys.executable, "ingest.py", "--pdf-folder", folder]
+# ── Run ingestion ─────────────────────────────────────────────────────────────
+def _run_ingestion(folder: str, reset=True):
+    cmd = [
+        sys.executable,
+        "ingest.py",
+        "--pdf-folder",
+        folder,
+    ]
     if reset:
         cmd.append("--reset")
 
-    with st.spinner("Ingesting PDFs… (this may take several minutes)"):
-        output_placeholder = st.empty()
-        log_lines: list[str] = []
+    log_box = st.empty()
+    logs = []
 
-        try:
-            proc = subprocess.Popen(
-                cmd,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                text=True,
-                bufsize=1,
-                cwd=str(Path(__file__).parent),
-            )
-            for line in proc.stdout:  # type: ignore[union-attr]
-                log_lines.append(line.rstrip())
-                output_placeholder.code("\n".join(log_lines[-30:]), language="")
-            proc.wait()
+    try:
+        proc = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            cwd=str(Path(__file__).parent),
+        )
 
-            if proc.returncode == 0:
-                st.success("✅ Ingestion complete! Refresh stats to see updated chunk count.")
-                st.cache_resource.clear()
-            else:
-                st.error(f"❌ Ingestion failed with exit code {proc.returncode}.")
-        except FileNotFoundError:
-            st.error("Could not find `ingest.py`. Make sure you are running from the project root.")
-        except Exception as exc:
-            st.error(f"Ingestion error: {exc}")
+        for line in proc.stdout:
+            logs.append(line)
+            log_box.code("".join(logs[-15:]))
 
+        proc.wait()
 
-# ── Chat interface ────────────────────────────────────────────────────────────
-
-def _render_chat() -> None:
-    st.title("🌍 Multilingual PDF Question Answering")
-    st.caption(
-        "Ask questions about your PDF library in **any language** — "
-        "Kannada, Hindi, English, French, and 46+ more."
-    )
-
-    # ── Render conversation history ───────────────────────────────────────────
-    for msg in st.session_state.messages:
-        with st.chat_message(msg["role"]):
-            if msg["role"] == "user":
-                lang_code = msg.get("lang", "en")
-                st.markdown(msg["content"])
-                st.caption(f"Detected language: {_lang_label(lang_code)}")
-            else:
-                st.markdown(msg["content"])
-                _render_sources(msg.get("sources", []))
-
-    # ── Chat input ────────────────────────────────────────────────────────────
-    user_input = st.chat_input(
-        "Ask a question in any language…",
-        key="chat_input",
-    )
-
-    if not user_input:
-        return
-
-    # Detect query language
-    query_lang = detect_language(user_input)
-
-    # Add user message to history
-    st.session_state.messages.append({
-        "role"    : "user",
-        "content" : user_input,
-        "lang"    : query_lang,
-    })
-
-    # Display user turn immediately
-    with st.chat_message("user"):
-        st.markdown(user_input)
-        st.caption(f"Detected language: {_lang_label(query_lang)}")
-
-    # ── Generate answer ───────────────────────────────────────────────────────
-    with st.chat_message("assistant"):
-        with st.spinner("Retrieving and generating…"):
-            try:
-                retriever = _load_retriever(st.session_state.top_k)
-                result    = retriever.query(user_input)
-            except Exception as exc:
-                st.error(f"⚠️ Error: {exc}")
-                st.info(
-                    "Make sure you have:\n"
-                    "1. Set `GROQ_API_KEY` in your `.env` file.\n"
-                    "2. Run `python ingest.py` to build the index."
-                )
-                return
-
-        # Display answer
-        if result.error and not result.answer:
-            st.error(result.answer)
+        if proc.returncode == 0:
+            st.success("✅ Ingestion complete")
+            st.cache_resource.clear()
+            time.sleep(1)
+            st.rerun()
         else:
-            st.markdown(result.answer)
+            st.error("❌ Ingestion failed")
 
-        _render_sources(result.sources)
+    except Exception as e:
+        st.error(str(e))
 
-    # Save assistant turn to history
-    st.session_state.messages.append({
-        "role"    : "assistant",
-        "content" : result.answer,
-        "sources" : result.sources,
-    })
+# ── Sidebar ───────────────────────────────────────────────────────────────────
+def _render_sidebar():
+    with st.sidebar:
+        st.title("⚙️ Settings")
 
+        # Upload PDFs
+        st.subheader("📄 Upload PDFs")
 
-def _render_sources(sources) -> None:
-    """Render collapsible source citations below an answer."""
+        uploaded_files = st.file_uploader(
+            "Upload one or more PDFs",
+            type="pdf",
+            accept_multiple_files=True,
+        )
+
+        if uploaded_files:
+            save_dir = Path("data/uploaded_pdfs")
+            save_dir.mkdir(parents=True, exist_ok=True)
+
+            for f in uploaded_files:
+                file_path = save_dir / f.name
+                with open(file_path, "wb") as out:
+                    out.write(f.getbuffer())
+
+            st.success(f"✅ {len(uploaded_files)} file(s) uploaded")
+
+            if st.button("⚙️ Process PDFs", use_container_width=True):
+                _run_ingestion(folder=str(save_dir), reset=True)
+
+        st.divider()
+
+        # Retrieval settings
+        st.subheader("🔍 Retrieval")
+        st.slider("Top K chunks", 1, 15, key="top_k")
+
+        st.divider()
+
+        # System info
+        st.subheader("🖥️ System")
+        st.caption(f"LLM: {GROQ_MODEL}")
+        st.caption("Embeddings: multilingual-mpnet")
+
+        if st.button("🗑️ Clear chat", use_container_width=True):
+            st.session_state.messages = []
+            st.rerun()
+
+        # DB stats
+        try:
+            r = _load_retriever(st.session_state.top_k)
+            stats = r.collection_stats()
+            if stats.get("total_chunks"):
+                st.metric("Indexed chunks", stats["total_chunks"])
+                st.caption(f"Collection: {stats.get('collection', COLLECTION_NAME)}")
+        except Exception:
+            pass
+
+# ── show sources ──────────────────────────────────────────────────────────────
+def _render_sources(sources):
     if not sources:
         return
-
-    with st.expander(f"📄 Sources ({len(sources)} chunk(s))", expanded=False):
-        for idx, chunk in enumerate(sources, start=1):
-            relevance = _distance_to_pct(chunk.distance)
-            lang      = _lang_label(chunk.language)
-            tags = []
-            if chunk.has_tables:
-                tags.append("📊 table")
-            if chunk.has_images:
-                tags.append("🖼️ image")
-            tag_str = "  " + "  ".join(tags) if tags else ""
-
-            st.markdown(
-                f"**[Source {idx}]** `{chunk.source}` — "
-                f"page **{chunk.page_num}** | {lang} | "
-                f"relevance **{relevance}**{tag_str}"
+    with st.expander(f"📚 Sources ({len(sources)})"):
+        for i, s in enumerate(sources):
+            st.markdown(f"**Source {i+1}:** `{s.source}` — page {s.page_num}")
+            st.text_area(
+                label=f"src_{i}",
+                value=s.text[:500],
+                height=120,
+                disabled=True,
+                label_visibility="collapsed",
             )
-            with st.container():
-                st.text_area(
-                    label     = f"Excerpt from {chunk.source} p.{chunk.page_num}",
-                    value     = chunk.text[:800] + ("…" if len(chunk.text) > 800 else ""),
-                    height    = 120,
-                    disabled  = True,
-                    key       = f"src_{idx}_{id(chunk)}_{int(time.time()*1000) % 100000}",
-                    label_visibility="collapsed",
-                )
-            st.divider()
 
+# ── Handle question submission ────────────────────────────────────────────────
+def _handle_question(question: str):
+    """Process a question and append result to session messages."""
+    question = question.strip()
+    if not question:
+        return
 
-# ── Welcome / onboarding screen ───────────────────────────────────────────────
-
-def _render_welcome() -> None:
-    """Show onboarding instructions when the knowledge base is empty."""
-    st.info(
-        "👋 **Welcome!** Your knowledge base appears to be empty.\n\n"
-        "**To get started:**\n"
-        "1. Place your PDF files in the `pdfs/` folder (or configure a custom path in the sidebar).\n"
-        "2. Click **▶️ Run Ingestion** in the sidebar to index your documents.\n"
-        "3. Once ingestion is complete, ask your first question below!\n\n"
-        "Supported languages include English, French, Hindi, Kannada, and 46+ others."
+    lang = detect_language(question)
+    st.session_state.messages.append(
+        {"role": "user", "content": question, "lang": lang}
     )
 
-
-# ── Main ──────────────────────────────────────────────────────────────────────
-
-def main() -> None:
-    _init_session()
-    _render_sidebar()
-
-    # Check if knowledge base is ready
-    kb_ready = False
     try:
         retriever = _load_retriever(st.session_state.top_k)
-        stats = retriever.collection_stats()
-        kb_ready = stats.get("total_chunks", 0) > 0
+        result = retriever.query(question)
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": result.answer,
+                "sources": result.sources,
+            }
+        )
+    except Exception as e:
+        st.session_state.messages.append(
+            {"role": "assistant", "content": f"❌ Error: {e}", "sources": []}
+        )
+
+    # Bump key to reset the text input widget
+    st.session_state.input_key += 1
+
+# ── Chat UI ───────────────────────────────────────────────────────────────────
+def _render_chat():
+    st.title("🌍 Multilingual PDF Question Answering")
+    st.caption("Ask questions from your uploaded PDFs in any language.")
+
+    # ── Message history ───────────────────────────────────────────────────────
+    chat_container = st.container()
+    with chat_container:
+        for msg in st.session_state.messages:
+            with st.chat_message(msg["role"]):
+                st.markdown(msg["content"])
+                if msg["role"] == "user":
+                    st.caption(_lang_label(msg.get("lang", "en")))
+                if msg["role"] == "assistant":
+                    _render_sources(msg.get("sources", []))
+
+    # ── Input row (always visible at bottom) ─────────────────────────────────
+    st.divider()
+
+    col1, col2 = st.columns([9, 1])
+
+    with col1:
+        question = st.text_input(
+            label="Your question",
+            placeholder="💬 Ask a question about your PDFs…",
+            label_visibility="collapsed",
+            key=f"user_input_{st.session_state.input_key}",
+        )
+
+    with col2:
+        send_clicked = st.button("Send ➤", use_container_width=True)
+
+    # Trigger on button click OR Enter key (non-empty input)
+    if (send_clicked or question) and question.strip():
+        with st.spinner("🔍 Searching…"):
+            _handle_question(question)
+        st.rerun()
+
+    # Show a hint if no PDFs are indexed yet
+    try:
+        r = _load_retriever(st.session_state.top_k)
+        stats = r.collection_stats()
+        if not stats.get("total_chunks"):
+            st.info("⬅️ Upload and process PDFs from the sidebar to get started.")
     except Exception:
-        kb_ready = False
+        st.info("⬅️ Upload and process PDFs from the sidebar to get started.")
 
-    if not kb_ready and not st.session_state.messages:
-        _render_welcome()
-
+# ── main ──────────────────────────────────────────────────────────────────────
+def main():
+    _init_session()
+    _render_sidebar()
     _render_chat()
-
 
 if __name__ == "__main__":
     main()

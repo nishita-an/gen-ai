@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>पिंपरी चिंचवड महानगरपालिका | कटिबद्ध जनहिताय उद्देशाने  प्रेरित महानगरपालिका</title>
+
+    <meta name="description" content="पिंपरी चिंचवाड महापालिकेचा स्थापना दिवस ११ ऑक्टोबर १९८२. पिंपरी - चिंचवड हे उद्योगांचे नगर म्हणून नावारुपास आले.  स्थानिक भाषा मराठी, मुंबई पासून १५० कि.मी. खंड -आशिया देश - भारत राज्य - महाराष्ट्र" />
+
+    <meta name="keywords" content="पिंपरी चिंचवाड महानगरपालिका, पीसीएमसी मनपा नागरिक सेवा, पिंपरी चिंचवाड महानगरपालिका बातम्या आणि माहिती , ई-सेवा आणि  ऑनलाईन सेवा, पीसीएमसी मनपा आयुक्त , पीसीएमसी स्मार्ट सारथी (एक शहर एक ॲप), पीसीएमसी कार्यक्रम आणि प्रमुख उपक्रम , स्मार्ट सिटी आणि स्वच्छ भारत, आवास योजना-शहरी गृहनिर्माण, नागरिक सुविधा केंद्रे, नागरिकांची सनद" />
+	
+    <!-- fav icon link -->
+    <link rel="shortcut icon" href="https://www.pcmcindia.gov.in/images/favicon.ico" type="image/x-icon">
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://www.pcmcindia.gov.in/css/all.min.css">
+    <link rel="stylesheet" href="https://www.pcmcindia.gov.in/css/fontawesome.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Link slick slider CSS -->
+    <link rel="stylesheet" href="https://www.pcmcindia.gov.in/css/slick.css">
+    <link rel="stylesheet" href="https://www.pcmcindia.gov.in/css/slick-theme.css">
+    <!-- letter animation -->
+    <link rel="stylesheet" href="https://www.pcmcindia.gov.in/css/cssanimation.min.css">
+    <!-- lordicon icons animation -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- css link -->
+    <link rel="stylesheet" href="https://www.pcmcindia.gov.in/css/style.css">
+    <meta name="robots" content="index, follow" />
+	<script>
+		var serverpath = 'https://www.pcmcindia.gov.in/';
+	</script>
+	
+	<style>
+		.toggle-btn {
+            position: relative;
+			width: 35px;
+    		height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 34px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            overflow: hidden;
+        }
+
+        .toggle-btn:hover {
+            background: #fff;
+        }
+
+        .toggle-slider {
+            position: absolute;
+           	top: 2px;
+			left: 0px;
+			width: 15px;
+			height: 15px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .toggle-btn.active .toggle-slider {
+            transform: translateX(12px);
+        }
+		/* body.light-mode {
+			background: #11141b;
+		} */
+		body.dark-mode{
+			color: #fff;
+			background: #11141b;
+		}
+		body.dark-mode .home-one .navbar-details {
+			background: #11141b;
+		}
+		body.dark-mode header .home-one .top-header .top-header-content {
+			background-color: #3e4454;
+		}
+		body.dark-mode .home-one .navbar-details .brand-logo a img {
+			background: #fff;
+		}
+		body.dark-mode .home-one .navbar-details .navigation-link .navbar-nav .nav-item .nav-link {
+			color: #fff;
+		}
+		body.dark-mode .indiagov {
+			background: #fff;
+		}
+		body.dark-mode .home-one .banner-card .card {
+			background: #2b2c2f;
+			box-shadow: 0 0 11px 0 rgb(255 255 255 / 13%);
+		}
+		body.dark-mode .home-one .banner-card .card:hover img {
+			background-color: #7c7a7a;
+		}
+		body.dark-mode .home-one .banner-card .card .card-body h4 {
+			color: #c7c7c7;
+		}
+		body.dark-mode .home-one .banner-card .card .card-body p {
+			color: #fff;
+		}
+		body.dark-mode .home-one .banner-card .card::after {
+			border-bottom: 5px solid #a6bae9;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- =====header section===== -->
+	<header class="sticky-top">
+		<div class="home-one">
+			<div class="top-header">
+				<div class="top-header-content">
+					<div class="container">
+						<div class="contact-top-information d-flex">
+							<div class="mobile-number-email d-flex">
+								<a href="tel:8888006666" title='सारथी हेल्पलाईन'>
+                                    <i class="bi bi-telephone phone"></i>
+                                    8888006666 - सारथी हेल्पलाईन
+                                </a>
+								<!--<a href="mailto:egov@pcmcindia.gov.in">
+									<i class="bi bi-envelope email"></i>
+									egov@pcmcindia.gov.in
+								</a>-->
+								<!-- <a href="javascript:void(0);" onClick="scrollDown()" title='मुख्य मजकूराकडे जा'>&nbsp;| मुख्य मजकूराकडे जा | &nbsp; </a> -->
+								&nbsp;<li class="zoom-in-out-btn"><a href="javascript:void(0)" id="btn-increase" title='A+'>A+</a><span> | </span><a href="javascript:void(0)" id="btn-orig" title='A'>A</a><span> | </span><a href="javascript:void(0)" id="btn-decrease" title='A-'>A-</a></li>
+							</div>
+							<div class="language-socialLink d-flex ms-auto">
+								<ul class="links-box d-flex">
+									<li><img src="https://www.pcmcindia.gov.in/marathi/images/new-blink.gif" alt="New Blink"><a href="https://www.pcmcindia.gov.in/abhayYogna"  title='मालमत्ता कर अभय योजना'> मालमत्ता कर अभय योजना</a> <span> | </span></li>
+																		<li><a href="https://www.pcmcindia.gov.in/circulars" title='परिपत्रके'>परिपत्रके </a> <span> | </span></li>
+									<li><a href="https://www.gmail.com" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://www.gmail.com', '_blank'); } return false;" title='ई-मेल'>ई-मेल</a> <span aria-hidden="true"> | </span></li>
+									<li><a href="https://smartgisda.pcmcindia.gov.in/CitizenPortal/" target="_blank" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://smartgisda.pcmcindia.gov.in/CitizenPortal/', '_blank'); } return false;" title='शहर GIS प्रणाली'> शहर GIS प्रणाली </a> <span> | </span> </li>
+								</ul>
+								<div class="language">
+									<!-- <label for="language" class="text-white">Language:</label> -->
+									<select id="language" onChange="change_lang(this.value);">
+										<option value="engish">English</option>
+										<option value="marathi"  selected >मराठी</option>
+									</select>
+								</div>
+								<div class="socialLink d-flex">
+									<!-- <p class="d-inline-block text-white">Follow on:</p> -->
+									<ul class="d-flex">
+										<li> <span class="d-none d-md-inline-block"> | </span> 
+											<a href="#" target="_blank" title='Facebook' onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://www.facebook.com/pcmcindia.gov.in/', '_blank'); } return false;"><i class="bi bi-facebook"></i></a>
+										</li>
+										<li><a href="#" target="_blank" title='Twitter' onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://x.com/PCMCSarathi', '_blank'); } return false;"><i class="bi bi-twitter-x"></i></a></li>
+										<li>
+											<button class="toggle-btn" id="themeToggle" aria-label="Toggle theme">
+												<span class="toggle-slider">☀️</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="navbar-details navbar navbar-expand-lg">
+				<div class="container">
+					<div class="brand-logo">
+						<a class="navbar-brand" href="https://www.pcmcindia.gov.in/" title='PCMC Logo'>
+							
+							<img src="https://www.pcmcindia.gov.in/images/multiple-use/header/marathi_logo.png" class="img-fluid" alt="logo"></a>
+							
+					</div>
+					<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="navigation-link collapse navbar-collapse gap-4" id="navbarSupportedContent">
+						<ul class="navbar-nav ms-auto">
+							
+							<li class="nav-item">
+								<a class="nav-link fw-normal" href="https://www.pcmcindia.gov.in/" title='मुख्य पृष्ठ'><span>मुख्य पृष्ठ</span></a>							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link fw-normal hover-style" href="#" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false" title="महापालिका">
+									<span>महापालिका</span><i class="bi bi-chevron-down"></i>								</a>
+								<ul class="dropdown-menu mega-menu">
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/ward_info" title="क्षेत्रीय कार्यालये">क्षेत्रीय कार्यालये</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/corporator" title="नगरसेवक">नगरसेवक</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/commissioner?N=MQ==" title="आयुक्त">आयुक्त</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/committee_info" title="कार्यपत्रिका व सभावृत्तांत">कार्यपत्रिका व सभावृत्तांत</a> </li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/budget_L2_E" title="अर्थसंकल्प">अर्थसंकल्प</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/marathi/pdf/bond_2023.pdf" target="_blank" title="कर्ज थकबाकी बाबत">कर्ज थकबाकी बाबत</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/acc_options" target="_blank" title="लेखा परिक्षण अहवाल">लेखा परिक्षण अहवाल</a></li>
+									
+									
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/departments" title="विभाग">विभाग</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/committee" title="समिती">समिती</a></li>
+																		<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/policies" title="धोरणे">धोरणे</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/financial_L2_E" title="वार्षिक आर्थिक विवरण">वार्षिक आर्थिक विवरण</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/citizen-charter_new" title="नागरिकांची सनद">नागरिकांची सनद</a></li>
+																		<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/electionNew" title="निवडणूक">निवडणूक</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/pdf/nrw_2016.pdf" target="_blank" title="एनआरडब्ल्यू धोरण">एनआरडब्ल्यू धोरण</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link fw-normal hover-style" href="#" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false" title="नागरिक">
+									<span>नागरिक </span><i class="bi bi-chevron-down"></i>								</a>
+								<ul class="dropdown-menu mega-menu">
+									<li class="nav-links"><a class="dropdown-item" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://pcmcsmartsarathi.org/Login/login', '_blank'); } return false;" href="#" target="_blank" title="सारथी">सारथी</a></li>
+									<li class="nav-links"><a class="dropdown-item" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('http://live.publicptaxpcmc.in:8080/PropertyTaxService/?wicket:bookmarkablePage=:com.pcmc.propertytax.online.reconsilation.AssesmentHomepage', '_blank'); } return false;" href="#" title="माझी मिळकत माझी आकारणी">माझी मिळकत माझी आकारणी</a> </li>
+									<li class="nav-links"><a class="dropdown-item" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://water.pcmcindia.gov.in/online_payment/waterbillpayment.html', '_blank'); } return false;" href="#" title="पाणी कर">पाणी कर</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/rti_dept_eng" title="माहितीचा अधिकार">माहितीचा अधिकार</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/cfc_info" title="नागरी सुविधा केंद्र">नागरी सुविधा केंद्र</a></li>
+									<li class="nav-links"><a class="dropdown-item" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://grievance.pcmcindia.gov.in:8443/Grievance/citizen/', '_blank'); } return false;" href="#" title="तक्रार नोंदणी">तक्रार नोंदणी</a></li>
+									<!--<li class="nav-links"><a class="dropdown-item" href="./maintenance/maintenance.php" target="_blank">तक्रार नोंदणी</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="./maintenance/maintenance.php" target="_blank">मालमत्ता कर</a></li>-->
+									<li class="nav-links"><a class="dropdown-item"  onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://publicptaxpcmc.in/', '_blank'); } return false;" href="#" target="_blank" title="मालमत्ता कर">मालमत्ता कर</a></li>
+																		<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/citizen-charter_new" target="_blank" title="नागरिकांची सनद">नागरिकांची सनद</a></li>
+									<li class="nav-links"><a class="dropdown-item"  onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('http://live.publicptaxpcmc.in:8080/PropertyTaxService/?wicket:bookmarkablePage=:com.pcmc.propertytax.ptaxservices.FrmCitizenAssesmentHomePage', '_blank'); } return false;" href="#" target="_blank" title="मालमत्ता नोंदणी">मालमत्ता नोंदणी</a></li>
+									<li class="nav-links"><a class="dropdown-item"  onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('http://103.224.247.141:8085', '_blank'); } return false;" href="#" title="सेवांचा अधिकार">सेवांचा अधिकार</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/rts_e" target="_blank" title="लोकसेवा हक्क अधिनियम">लोकसेवा हक्क अधिनियम</a></li>
+									
+									
+									<li class="nav-links"><a class="dropdown-item"  onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('http://103.224.247.141:8085', '_blank'); } return false;" href="#" title="सेवा हमी अंतर्गत सेवा">सेवा हमी अंतर्गत सेवा</a></li>
+									<li class="nav-links"><a class="dropdown-item" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://noncoreerp.pcmcindia.gov.in/login', '_blank'); } return false;" href="#" title="क्रीडा आरक्षण">क्रीडा आरक्षण</a></li>
+									<li class="nav-links"><a class="dropdown-item"  onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://opencloud.pcmcsmartsarathi.org/public-catalog', '_blank'); } return false;" href="#" target="_blank" title="ओपन डेटा पोर्टल">ओपन डेटा पोर्टल</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link fw-normal hover-style" href="#" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false" title="व्यवसाय">
+									<span>व्यवसाय </span><i class="bi bi-chevron-down"></i>								</a>
+								<ul class="dropdown-menu">
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/tender_options" title="निविदा">निविदा</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/bldp_info" title="बांधकाम परवानगी">बांधकाम परवानगी</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/hording" target="_blank" title="जाहिरात फलक">जाहिरात फलक</a></li>
+									<li class="nav-links"><a class="dropdown-item" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('http://lbt.pcmcindia.gov.in:8080/PCMCLBT/App/#Again-No-back-button', '_blank'); } return false;" href="#" title="स्थानिक संस्था कर">स्थानिक संस्था कर</a></li>
+									<li class="nav-links"><a class="dropdown-item" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://skysign.pcmcindia.gov.in', '_blank'); } return false;" href="#" title="ई - लिलाव - आकाशचिन्ह">ई - लिलाव - आकाशचिन्ह</a></li>
+									<li class="nav-links"><a class="dropdown-item" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://publicptaxpcmc.in/HospitalRegistration/registration.php', '_blank'); } return false;" href="#" title="रुग्णालये नोंदणी">रुग्णालये नोंदणी</a></li>
+									<li class="nav-links"><a class="dropdown-item" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://publicptaxpcmc.in/ifc/index.php', '_blank'); } return false;" href="#" title="उद्योग सारथी">उद्योग सारथी</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link fw-normal hover-style" href="#" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false" title="आमच्या बद्दल">
+									<span>आमच्या बद्दल </span><i class="bi bi-chevron-down"></i>								</a>
+								<ul class="dropdown-menu">
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/location_info" title="भौगोलिक स्थान">भौगोलिक स्थान</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/history" title="शहराचा इतिहास">शहराचा इतिहास</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/tourisum" title="पर्यटन">पर्यटन</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/commissioner?N=MQ==" title="आयुक्त">आयुक्त</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/jobspcmc" title="नोकरी विषयी">नोकरी विषयी</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/prashasak_info" target="_blank" title="प्रशासकीय निर्णय">प्रशासकीय निर्णय</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/OrgStru.pdf" target="_blank" title="संस्था रचना आलेख">संस्था रचना आलेख</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/circular_info" title="परिपत्रके">परिपत्रके</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link fw-normal hover-style" href="#" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false" title="घडामोडी">
+									<span>घडामोडी </span><i class="bi bi-chevron-down"></i>								</a>
+								<ul class="dropdown-menu">
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/public-disclosure-law" title="सार्वजनिक प्रकटीकरण कायदा">सार्वजनिक प्रकटीकरण कायदा</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/administration" title="सामान्य प्रशासन">सामान्य प्रशासन</a></li>
+									<li class="nav-links"><a class="dropdown-item" href="https://www.pcmcindia.gov.in/dept_circular" title="परिपत्रक">परिपत्रक</a></li>
+									<!--<li class="nav-links"><a class="dropdown-item" href="#">शहर परिवर्तन कार्यालय</a> </li>-->
+								</ul>
+							</li>
+						</ul>
+						
+							<div
+								class="getStart-sideMenu d-flex align-items-center align-content-center justify-content-center justify-content-md-between gap-2 ">
+								<div class="d-flex align-items-center ms-sm-0 ms-lg-auto ms-xl-auto ms-xxl-auto cityWall-btn"
+									role="search">
+									<a href="https://www.pcmcindia.gov.in/imp-link" class="get-quote" title="महत्वाचे">महत्वाचे <i class="bi bi-arrow-right"></i></a>
+								</div>
+								<div class="said-navbar ms-2">
+									<a href="#" class="navSidebar-button" onClick="openNav()">
+										<i class="bi bi-grid-3x3-gap-fill"></i>
+									</a>
+									<div id="mySidenav" class="sidenav">
+										<div class="side-logo-button">
+											<a href="#" title="PCMC">
+												<img src="https://www.pcmcindia.gov.in/images/multiple-use/side-navmenu/side-marathi-logo.png" class="img-fluid" alt="logo">
+											</a>
+											<a href="#" class="closebtn" onClick="closeNav()">&times;</a>
+										</div>
+										<div class="our-mission">
+											<h4 class="text-white">संकेतस्थळ माहिती अधिकारी</h4>
+											<p>											  उज्वला गोडसे <br>
+											  माहिती व तंत्रज्ञान अधिकारी <br>
+											  संपर्क क्र. 020-67333333<br>
+										    ई-मेल u.godse@pcmcindia.gov.in </p>
+									  </div>
+										<div class="contact">
+											<div class="con-info">
+												<h4 class="text-white ">संपर्क माहिती</h4>
+												<ul>
+													<li><a href="#"><i class="bi bi-geo-alt"></i>पिंपरी चिंचवड महानगरपालिका
+															मुंबई-पुणे रोड, पिंपरी - 411018,
+															महाराष्ट्र, भारत
+														</a></li>
+													<li class="d-flex"> <a href="tel:+91-020-67333333">
+															<i class="bi bi-telephone phone"></i>
+															+91-020-67333333
+														</a> <span> / </span> <a href="tel:+91020-28333333">+91-020-28333333</a></li>
+													<li><a href="mailto:egov@pcmcindia.gov.in">
+															<i class="bi bi-envelope email"></i>
+															egov@pcmcindia.gov.in
+														</a></li>
+												</ul>
+											</div>
+											<div class="social-link">
+												<ul>
+													<li><a onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://www.facebook.com/pcmcindia.gov.in/', '_blank'); } return false;" href="#" title="Facebook"><i class="bi bi-facebook"></i></a></li>
+													<li><a onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://x.com/PCMCSarathi', '_blank'); } return false;" href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a></li>
+												</ul>
+											</div>
+											
+											<div class="con-info">
+												<ul>
+													<li><a class="text-white" href="https://www.pcmcindia.gov.in/feedback" title="प्रतिक्रिया नोंदवा"> प्रतिक्रिया नोंदवा</a> </li>
+												</ul>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+
+								<div class="said-navbar ms-2">
+									<a onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://www.maharashtra.gov.in/', '_blank'); } return false;" href="#" class="navSidebar-button" title="Maharashtra State Portal">
+										<img src="https://www.pcmcindia.gov.in/views/images/maharashtra-logo.webp" class="img-fluid" alt="maharashtra.gov.in" width="50px">
+									</a>
+								</div>
+
+								<div class="said-navbar ms-2">
+									<a onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://www.india.gov.in/', '_blank'); } return false;" href="#" class="navSidebar-button" title="National Portal of India">
+										<img src="https://www.pcmcindia.gov.in/views/images/satyamev-jayate.webp" class="img-fluid indiagov" alt="india.gov.in"  width="50px">
+									</a>
+								</div>
+							</div>
+						
+				  </div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+        <div class="banner">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="images-optimization position-relative ">
+                            <img src="https://www.pcmcindia.gov.in/images/multiple-use/default-banner/general-info.webp" class="d-block img-fluid " alt="...">
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container errorPage">
+                <div class="row g-5">
+                    
+					<p>
+														आपण शोधत असलेली माहिती सध्या वेबसाईटवर उपलब्ध नाही.<br>
+								होणाऱ्या गैरसोयीबद्दल आम्ही मनःपूर्वक दिलगीर आहोत.<br>
+								कृपया नंतर पुन्हा भेट द्या किंवा अधिक माहितीसाठी आमच्याशी संपर्क साधा.
+												</p>
+					<div class="cityWall-btn">
+                        <a href="/">Pimpri Chinchwad Municipal Corporation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+	<!-- =====Footer section===== -->
+
+	<div class="container">
+		<div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 subscribe-field g-4 ">
+			<div class="col ">
+				<div class="subscribe-content position-relative ">
+					<div class="divide-column position-absolute "></div>
+					<h3 class="tow ms-3 mb-1 text-white">मनपाचे मोबाईल अ‍ॅप डाउनलोड करा.</h3>
+					<p class=" ms-3 text-white-50">स्मार्ट सारथी (एक शहर एक अँप )</p>
+				</div>
+			</div>
+			<div class="col">
+				<form action="#" class="d-flex">
+					<!-- <input type="email" name="email" id="footerEmail" placeholder="Enter Your Email Address"
+								required> -->
+					<a class="" href="#"><img src="https://www.pcmcindia.gov.in/images/google-play.png" alt="google-play"></a>
+				</form>
+			</div>
+		</div>
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 g-4 our-details">
+			<div class="col">
+				<div class="card bg-transparent border-0  ">
+					<a href="#" title="पिंपरी चिंचवड महानगरपालिका"><img src="https://www.pcmcindia.gov.in/images/multiple-use/header/marathi_logo.png"
+							class="card-img-top img-fluid " alt="Logo"></a>
+					<div class="card-body px-0 py-1 ">
+						<p class="card-text text-white ">पिंपरी चिंचवड महानगरपालिका
+मुंबई-पुणे मार्ग,
+पिंपरी - 411018,
+महाराष्ट्र, भारत</p>
+					</div>
+					<ul class="d-flex flex-column  my-2 row-gap-2 ">
+						<li class="mb-2">
+							<a class="text-white" href="tel:+91 020-67333333">
+								<i class="bi bi-telephone phone"></i>
+								+91 020-67333333
+							</a>
+						</li class="mb-2">
+						<li> <a class="text-white" href="mailto:egov@pcmcindia.gov.in">
+								<i class="bi bi-envelope email"></i>
+								egov@pcmcindia.gov.in
+							</a>
+						</li>
+					</ul>
+					<div class="social-info">
+						<div class="position-relative">
+							<div class="divide-column position-absolute "></div>
+							<h4 class="ms-3 text-white ">सोशल मीडिया</h4>
+						</div>
+						<ul class="d-flex mt-2 gap-3 ms-3  ">
+							<li><a class="text-white " href="#" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://www.facebook.com/pcmcindia.gov.in/', '_blank'); } return false;" title="Facebook"><i class="link-icons fa-brands fa-facebook-f"></i></a></li>
+							<li><a class="text-white " href="#" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://x.com/PCMCSarathi', '_blank'); } return false;" title='Twitter'><i class="link-icons fa-brands bi bi-twitter-x"></i></a></li>
+
+							<!-- <li><a class="text-white " href="#"><i class="link-icons fa-brands fa-vine"></i></a>
+									</li>
+									<li><a class="text-white " href="#"><i
+												class="link-icons fa-brands fa-instagram"></i></a></li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100 bg-transparent border-0">
+					<div class="industry-info">
+						<div class="position-relative">
+							<div class="divide-column position-absolute "></div>
+							<h4 class="ms-3 text-white ">महापालिका</h4>
+						</div>
+						<ul class="d-flex flex-column  mt-3 row-gap-2  ms-3  ">
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/ward_info" title='क्षेत्रीय कार्यालये'>क्षेत्रीय कार्यालये</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/departments" title='विभाग'>विभाग</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/budget_L2_E" title='अंदाजपत्रक'>अंदाजपत्रक</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/marathi/pdf/bond_2023.pdf" target="_blank" title='कर्जदारांना थकबाकी'>कर्जदारांना थकबाकी</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/committee_info" title='कार्यपत्रिका व सभावृत्तांत'>कार्यपत्रिका व सभावृत्तांत</a> </li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/addcoms" title='अतिरिक्त आयुक्त'>अतिरिक्त आयुक्त</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/policies" title='धोरणे'>धोरणे</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/financial_L2_E" title='वार्षिक आर्थिक विवरण'>वार्षिक आर्थिक विवरण</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/citizen-charter_new" title='नागरिकांची सनद'>नागरिकांची सनद</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/electionNew" title='निवडणूक'>निवडणूक</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100 bg-transparent border-0">
+					<div class="touch-info">
+						<div class="position-relative">
+							<div class="divide-column position-absolute "></div>
+							<h4 class="ms-3 text-white ">नागरिक</h4>
+						</div>
+						<ul class="d-flex flex-column  mt-3 row-gap-2  ms-3  ">
+						
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('http://www.pcmchelpline.in/', '_blank'); } return false;" href="#" title='सारथी'>सारथी</a></li>
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('http://live.publicptaxpcmc.in:8080/PropertyTaxService/?wicket:bookmarkablePage=:com.pcmc.propertytax.online.reconsilation.AssesmentHomepage', '_blank'); } return false;" href="#" title='माझी मिळकत माझी आकारणी'>माझी मिळकत माझी आकारणी</a> </li>
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://water.pcmcindia.gov.in/online_payment/waterbillpayment.html', '_blank'); } return false;" href="#" title='पाणी कर'>पाणी कर</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/rti_dept_eng" title='माहितीचा अधिकार'>माहितीचा अधिकार</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/cfc_info" title='नागरी सुविधा केंद्र'>नागरी सुविधा केंद्र</a></li>
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://grievance.pcmcindia.gov.in:8443/Grievance/citizen/', '_blank'); } return false;" href="#" title='तक्रार नोंदणी'>तक्रार नोंदणी</a></li>
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://publicptaxpcmc.in', '_blank'); } return false;" href="#" title='मालमत्ता कर'>मालमत्ता कर</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/citizen-charter_new" target="_blank" target='नागरिकांची सनद'>नागरिकांची सनद</a></li>
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('http://103.224.247.141:8085/', '_blank'); } return false;" href="#" title='सेवा हमी अंतर्गत सेवा'>सेवा हमी अंतर्गत सेवा</a></li>
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://noncoreerp.pcmcindia.gov.in/login', '_blank'); } return false;" href="#" target='क्रीडा ई-आरक्षण'>क्रीडा ई-आरक्षण</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100 bg-transparent border-0">
+					<div class="touch-info">
+						<div class="position-relative">
+							<div class="divide-column position-absolute "></div>
+							<h4 class="ms-3 text-white ">व्यवसाय</h4>
+						</div>
+						<ul class="d-flex flex-column  mt-3 row-gap-2  ms-3  ">
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/tender_options" title='निविदा'>निविदा</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/bldp_info" title='बांधकाम परवानगी'>बांधकाम परवानगी</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/hording" target="_blank" title='जाहिरात फलक'>जाहिरात फलक</a></li>
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('http://lbt.pcmcindia.gov.in:8080/PCMCLBT/App/#Again-No-back-button', '_blank'); } return false;" href="#" title='स्थानिक संस्था कर'>स्थानिक संस्था कर</a></li>
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://pcmc.skysigngov.tech/#/home', '_blank'); } return false;" href="#" title='होर्डिंग परवाना'>होर्डिंग परवाना</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100 bg-transparent border-0">
+					<div class="touch-info">
+						<div class="position-relative">
+							<div class="divide-column position-absolute "></div>
+							<h4 class="ms-3 text-white ">आमच्या बद्दल</h4>
+						</div>
+						<ul class="d-flex flex-column  mt-3 row-gap-2  ms-3  ">
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/location_info" title='भौगोलिक स्थान'>भौगोलिक स्थान</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/history" title='शहराचा इतिहास'>शहराचा इतिहास</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/tourisum" title='पर्यटन'>पर्यटन</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/commissioner?N=MQ==" title='आयुक्त'>आयुक्त</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/jobspcmc" title='नोकरी विषयी'>नोकरी विषयी</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/prashasak_info" target="_blank" title='प्रशासकीय निर्णय'>प्रशासकीय निर्णय</a></li>
+							<li><a class="text-white" onClick="if (confirm('आपण पिंपरी चिंचवड महानगरपालिकेच्या संकेतस्थळावरून बाह्य संकेतस्थळावर जात आहात. पुढे जायचे आहे का?')) {window.open('https://publicptaxpcmc.in/HospitalRegistration/registration.php', '_blank'); } return false;" href="#" title='रुग्णालये नोंदणी'>रुग्णालये नोंदणी</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/circular_info" title='परिपत्रके'> परिपत्रके</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/contact" title='संपर्क'> संपर्क</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/siteMap" target="_blank" title='साइटमॅप'> साइटमॅप</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/pdf/Maharashtra-IT-ITES-Policy.pdf" target="_blank" target='महाराष्ट्र शासनाच्या IT / ITeS धोरण'> महाराष्ट्र शासनाच्या IT / ITeS धोरण</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/pdf/IT_Policy_2023.pdf" target="_blank" title='आयटी पॉलिसी २०२३'> आयटी पॉलिसी २०२३</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/pdf/IT Policy_2009.pdf" target="_blank" title='आयटी धोरण २००९'> आयटी धोरण २००९</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/feedback" title='प्रतिक्रिया नोंदवा'> प्रतिक्रिया नोंदवा</a></li>
+							<li><a class="text-white" href="https://www.pcmcindia.gov.in/help" title='मदत'>मदत</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<ul class="d-flex gap-3 w3-icons">
+				<li><img src="https://www.pcmcindia.gov.in//images/norton.jpg" style="width:50px;" alt="norton" /></li>
+				<li><img src="https://www.pcmcindia.gov.in//images/w3c-xhtml.png" alt="w3c-xhtml" /></li>
+				<li><img src="https://www.pcmcindia.gov.in//images/w3c-css.png" alt="w3c-css" /></li>
+								<li><img src="https://www.pcmcindia.gov.in//images/wcag.jpg" alt="WCAG" /></li>
+				<li><span style="color:white;">शेवटचा बदल :  05-04-2026</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="term-and-condition">
+		<div class="container">
+			<div class="d-flex justify-content-between align-items-center copy-right-content ">
+				<div class="text-white copy-right">© 2026 पिंपरी चिंचवड महानगरपालिका</span></div>
+				<div class="button-div">
+					<a href="#" class="up-to-down-btn to-top"><i class="bi bi-chevron-double-up"></i></a>
+				</div>
+				<div>
+					<!-- ul counter -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery js -->
+	<script src="https://www.pcmcindia.gov.in//js/jquery-3.7.1.min.js"></script>
+	<!-- letter animation -->
+	<script src="https://www.pcmcindia.gov.in//js/plugins/letteranimation.min.js"></script>
+	<!-- AOS animation -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<!-- font awesome -->
+	<!-- <script src="./js/all.min.js"></script> -->
+	<!-- slick slider JS -->
+	<script src="https://www.pcmcindia.gov.in//js/plugins/slick.js"></script>
+	<script src="https://www.pcmcindia.gov.in//js/plugins/slick.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="https://www.pcmcindia.gov.in//js/bootstrap.bundle.min.js"></script>
+	<!-- custom js -->
+	<script src="https://www.pcmcindia.gov.in//js/app.js"></script>
+	<!-- DataTable -->
+	<script src="https://cdn.datatables.net/2.1.3/js/dataTables.min.js"></script>
+	<script>
+	    let table = new DataTable('#myTable');
+	</script>
+		<script>
+  window.addEventListener('load', function () {
+    const s = document.createElement('script');
+    s.src = 'https://wow-strategies.com/pcmc-widget.js';
+    s.async = true;
+    document.body.appendChild(s);
+  });
+</script>
+	
+	</footer>
+    </main>
+
+    <!-- Code start for auto suggest -->
+
+    <script>
+		function change_lang(lang){
+			if(lang != ""){
+				$.ajax({
+					type:'POST',
+					url: serverpath+'ajax/add_session_lang',
+					data: ({lang: lang}),
+					cache: false,
+					dataType: 'json',
+					async: false,
+					success: function(json)						
+					{
+						if(json.result)
+						{
+							window.location.reload();
+						}
+					}
+				});
+			}
+		}
+		
+        document.addEventListener("DOMContentLoaded", function() {
+            const solutions = [
+                "Property KYC",
+                "Property bill pay / view",
+                "New property assessment",
+                "Property transfer",
+                "No dues certificate",
+                "Property abstract"
+            ];
+
+            const suggestionBox = document.getElementById("suggestion-box");
+            const showSuggestions = document.getElementById("showSuggestions");
+
+            showSuggestions.addEventListener("click", function() {
+                suggestionBox.innerHTML = "";
+                solutions.forEach(solution => {
+                    const div = document.createElement("div");
+                    div.textContent = solution;
+                    div.onclick = () => {
+                        alert("You selected: " + solution); // Modify this action as needed
+                        suggestionBox.style.display = "none";
+                    };
+                    suggestionBox.appendChild(div);
+                });
+
+                suggestionBox.style.display = "block";
+            });
+
+            document.addEventListener("click", (e) => {
+                if (e.target !== showSuggestions && e.target !== suggestionBox) {
+                    suggestionBox.style.display = "none";
+                }
+            });
+        });
+    </script>
+    <!-- Code end for auto suggest -->
+
+	<script>
+        // Get elements
+        const toggleBtn = document.getElementById('themeToggle');
+        const body = document.body;
+        const slider = document.querySelector('.toggle-slider');
+
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = getTheme();
+        
+        // Apply saved theme on page load
+        body.className = currentTheme;
+        updateToggleButton(currentTheme);
+
+        // Toggle button click event
+        toggleBtn.addEventListener('click', () => {
+            const currentMode = body.classList.contains('light-mode') ? 'light-mode' : 'dark-mode';
+            const newMode = currentMode === 'light-mode' ? 'dark-mode' : 'light-mode';
+            
+            body.className = newMode;
+            saveTheme(newMode);
+            updateToggleButton(newMode);
+        });
+
+        // Function to get theme from memory
+        function getTheme() {
+            return window.themePreference || 'light-mode';
+        }
+
+        // Function to save theme to memory
+        function saveTheme(theme) {
+            window.themePreference = theme;
+        }
+
+        // Function to update toggle button appearance
+        function updateToggleButton(theme) {
+            if (theme === 'dark-mode') {
+                toggleBtn.classList.add('active');
+                slider.textContent = '🌙';
+            } else {
+                toggleBtn.classList.remove('active');
+                slider.textContent = '☀️';
+            }
+        }
+
+        // Optional: Listen for system theme changes
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (!window.themePreference) {
+                    const newTheme = e.matches ? 'dark-mode' : 'light-mode';
+                    body.className = newTheme;
+                    updateToggleButton(newTheme);
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
