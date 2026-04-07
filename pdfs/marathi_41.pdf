@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+            <!-- <meta http-equiv="Cache-control" content="no-cache" /> -->
+<meta charset="utf-8" />
+<meta name="MobileOptimized" content="320" />
+<meta name="theme-color" content="#317EFB"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Maharashtra Police</title>
+<meta name="description" content="">
+
+<link rel="apple-touch-icon" href="https://www.mahapolice.gov.in/images/favicon.png">
+<link rel="icon" href="https://www.mahapolice.gov.in/images/favicon.png">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Playfair+Display|Dancing+Script&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=&display=swap" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="https://www.mahapolice.gov.in/css/main.css?ver=113">
+
+<link rel="stylesheet" href="https://www.mahapolice.gov.in/css/slick.css">
+<!-- <link rel="stylesheet" href="https://www.mahapolice.gov.in/css/bulma.css"> -->
+
+
+<!-- <link rel="stylesheet" href="https://www.mahapolice.gov.in/css/aos.css"> -->
+
+        
+
+    </head>
+
+    <body>
+        <input type="hidden" id="baseurl" value="https://www.mahapolice.gov.in/">
+
+
+
+<div class="overlay mobileMenuOverlay"></div>
+<div class="overlay innerMenuOverlay"></div>
+
+<div class="feedbackBtn">
+			<p>अभिप्राय / तक्रार फॉर्म</p>
+	
+</div>
+<div class="overlay feedBackFormOverlay"></div>
+<div class="feedBackForm transition">
+	<div class="closeFeedbackForm"></div>
+	<div class="tabOut">
+		<div class="tabMain2">
+			<!-- <ul>
+				<li id="feedback" class="activeTab transition">
+
+					Citizen Feedback
+				</li><li id="complaint" class="transition">
+
+					Citizen Complaint
+				</li>
+			</ul> -->
+
+						<ul>
+				<li id="" class="activeTab transition">
+					नागरिकांचे अभिप्राय
+				</li><li id="" class=" transition">
+					<a href="http://www.mhpolice.maharashtra.gov.in/Citizen/CitizenTips/CitizenTips.aspx?From=LFhlihlx/W49VSlBvdGc4w==" target="_blank">नागरिकांच्या तक्रारी</a> 
+				</li>
+			</ul>
+					</div>
+		<div class="tabWrapOut ">
+			<div class="tabWrap feedbackWrap activeWrap">
+				<form id="feedback_form" method="POST" action="javascript:;">
+					<div class="formElememnt asideSection col6">
+						<input type="text" name="first_name" placeholder="First Name">
+						<div id="first_name_err" class="error"></div>
+					</div><div class="formElememnt asideSection col6">
+						<input type="text" name="last_name" placeholder="Last Name">
+						<div id="last_name_err" class="error"></div>
+					</div><div class="formElememnt asideSection col6">
+						<input type="text" name="email_id" placeholder="Email ID">
+						<div id="email_err" class="error"></div>
+					</div><div class="formElememnt asideSection col6">
+						<input type="text" name="mobile_no" placeholder="Mobile Number">
+						<div id="mobile_no_err" class="error"></div>
+					</div><div class="formElememnt asideSection col12">
+						<textarea placeholder="Feedback" name="message"></textarea>
+						<div id="feedback_err" class="error"></div>
+					</div><div class="formElememnt asideSection col12">
+						<input type="submit" name="Submit" id="feed_submit_btn" value="Submit">
+					</div><div class="formElememnt success_msg"></div><div class="failure_msg error"></div>
+				</form>
+			</div>
+		
+					</div>
+	</div>
+	
+</div>
+
+
+<div class="topTicker" data-aos="fade-down">
+	<p>ठळक बातम्या</p>
+				<marquee scrollamount="10">
+				<a href="https://www.mahapolice.gov.in/police-recru.php/" title="POLICE RECRUITMENT 2024-25, INFORMATION" target="_blank"><span>
+					पोलीस शिपाई भरती २०२४-२५, माहिती				</span></a><a href="https://bprd.nic.in/page/sajag_bharat" title="VIGILANT INDIA" target="_blank"><span>
+					सजग भारत				</span></a>			</marquee>
+	</div>
+<!-- <div class="maintainence">This Site is under upgradation & maintenance</div> -->
+
+
+<header class="gutterSpace" data-aos="fade-down">
+	<div class="menuClick">
+		<span class="transition"></span>
+		<span class="transition"></span>
+		<span class="transition"></span>
+	</div>
+	<div class="headLeft asideSection col4" data-aos="fade-right">
+		<div class="logoLeft asideSection">
+			<a href="https://www.mahapolice.gov.in/"><img class="logo" src="https://www.mahapolice.gov.in/images/mahaPolicelLogo2.jpg" alt="Maharashtra Police" title="Maharashtra State Police" data-aos="fade-right"></a>
+		</div><div class="logoRight asideSection" title="Maharashtra State Police">
+							<h3>महाराष्ट्र राज्य पोलीस</h3>
+				<p>अधिकृत संकेतस्थळ</p>
+					</div>
+	</div><div class="headRight asideSection col8">
+		<div class="topNav">
+			<ul>
+				<!-- <li data-aos="fade-left">
+					<img src="https://www.mahapolice.gov.in/images/icons/search.svg">
+				</li>--> <li data-aos="fade-left">
+					<a href="https://dial112.mahapolice.gov.in/" target="_blank">
+												
+						डाइल ११२ सिटीझन पोर्टल
+											</a>
+					&nbsp; 
+					<a href="https://eoffice.mahapolice.gov.in/" target="_blank">
+												
+						ई-ऑफिस
+											</a>&nbsp; 
+					<a href="https://email.gov.in/" target="_blank">
+												
+						NIC ई-मेल
+											</a>
+					
+				</li><li data-aos="fade-left">
+											<a href="https://www.mahapolice.gov.in/contact-us/">आमच्याशी संपर्क साधा</a>
+									</li><li data-aos="fade-left " class="langSwitch">
+					<p><a href="https://www.mahapolice.gov.in/switchLanguage.php" title="Switch Language">
+												English
+											</a></p>
+				</li>
+				<!-- <li data-aos="fade-left " class="langSwitch">
+					<p><span title="Switch Language">
+						English
+					</span></p>
+				</li> -->
+
+			</ul>
+		</div>
+
+		<div class="bottomNav">
+			
+			<ul>
+				<li  class="subemenuClick" data-aos="fade-left">
+					<p>आमच्या विषयी</p>
+					<div class="submenu transition">
+						<div class="submenuLeft asideSection col4">
+							<ul>
+								<li><a href="https://www.mahapolice.gov.in/maharashtra-police/">महाराष्ट्र राज्य पोलीस</a></li>
+								<li><a href="https://www.mahapolice.gov.in/maharashtra-police-head-quarter/">महाराष्ट्र पोलीस मुख्यालय</a></li>
+								<li><a href="https://www.mahapolice.gov.in/dgps-of-maharashtra/">महाराष्ट्र पोलिसांचे महासंचालक</a></li>
+								<li><a href="https://www.mahapolice.gov.in/hierarchy-of-maharashtra-police/">महाराष्ट्र पोलिसांचे पदक्रम</a></li>
+								<li><a href="http://mahacid.com/activities.html" target="_blank">राजपत्रातील गुन्हे</a></li>
+								<li><a href="https://www.mahapolice.gov.in/uploads/external_links/policeRank.pdf" target="_blank">पोलीस क्रम</a></li>
+								<li><a href="https://www.mahapolice.gov.in/uploads/external_links/policeFlags.pdf" target="_blank">पोलीस ध्वज आणि स्टार-बक्कल</a></li>
+								<li><a href="https://www.mahapolice.gov.in/uploads/external_links/policeMedal.pdf" target="_blank">पदके आणि सजावटी</a></li>
+							</ul>
+						</div><div class="submenuRight asideSection col8">
+							<div class="digImg asideSection">
+								<img src="https://www.mahapolice.gov.in/images/dgp_date_sir.jpg" alt="" title="">
+							</div><div class="digQuote asideSection">
+								<h3> आम्ही सर्वांचे, विशेषत: वंचित, दुर्बल, महिला, लहान मुले, अल्पसंख्यांक, जेष्ठ नागरिक,
+झोपडपट्टीवासी, गरीब आणि समाजातील इतर उपेक्षित घटकांची सेवा आणि संरक्षण करू. आम्ही संकटात असलेल्या नागरिकांच्या प्रत्येक हाकेला त्वरीत व आत्मीयतेने प्रतिसाद देऊ.</h3>
+								<h5>श्री सदानंद दाते</h5>
+								<p>पोलिस महासंचालक, महाराष्ट्र राज्य</p>
+							</div>
+						</div>
+					</div>
+				</li><li class="subemenuClick" data-aos="fade-left">
+					<p>नागरिकांसाठी विभाग</p>
+					<div class="submenu transition">
+						<div class="submenuLeft asideSection col4">
+							<ul>
+								<li><a href="">प्रसिद्धी पत्रक</a></li>
+								<li><a href="https://www.mahapolice.gov.in/safety-tips/">सुरक्षितता संबंधी टिपा</a></li>
+								<li><a href="https://www.mahapolice.gov.in/faq/">वारंवार विचारले जाणारे प्रश्न</a></li>
+								<li><a href="https://highwaypolice.maharashtra.gov.in/en/rules-and-regulations/" target="_blank">वाहतूक शिक्षण</a></li>
+								<li><a href="https://www.mahapolice.gov.in/rti-information/">माहिती अधिकार अधिनियम 2005 नुसार</a></li>
+								<li><a href="http://www.mhpolice.maharashtra.gov.in/Citizen/CitizenTips/CitizenTips.aspx?From=LFhlihlx/W49VSlBvdGc4w==" target="_blank">गोपनीय माहिती सांगण्या करीता</a></li>
+								<li><a href="http://www.mhpolice.maharashtra.gov.in/Citizen/MH/Index.aspx" target="_blank">नागरिकांसाठी सेवा</a></li>
+							</ul>
+						</div><div class="submenuRight asideSection col8">
+							<div class="digImg asideSection">
+								<img src="https://www.mahapolice.gov.in/images/dgp_date_sir.jpg" alt="" title="">
+							</div><div class="digQuote asideSection">
+								<h3>आम्ही सर्वांचे, विशेषत: वंचित, दुर्बल, महिला, लहान मुले, अल्पसंख्यांक, जेष्ठ नागरिक,
+झोपडपट्टीवासी, गरीब आणि समाजातील इतर उपेक्षित घटकांची सेवा आणि संरक्षण करू.
+आम्ही संकटात असलेल्या नागरिकांच्या प्रत्येक हाकेला त्वरीत व आत्मीयतेने प्रतिसाद देऊ.</h3>
+								<h5>श्री सदानंद दाते</h5>
+								<p>पोलिस महासंचालक, महाराष्ट्र राज्य</p>
+							</div>
+						</div>
+					</div>
+				</li><li class="subemenuClick" data-aos="fade-left">
+					<p>पोलीस कॉर्नर</p>
+					<div class="submenu transition">
+						<div class="submenuLeft asideSection col4">
+							<ul>
+								<li><a href="https://www.mahapolice.gov.in/posting-details/">पोस्टिंग तपशील</a></li>
+								<li><a href="https://www.mahapolice.gov.in/flash/">फ्लॅश</a></li>
+								<li><a href="https://www.mahapolice.gov.in/gradation-list/">सेवाजेष्ठता यादी</a></li>
+								<li><a href="https://www.mahapolice.gov.in/officers-mess/" >अधिकारी मेस</a></li>
+								<li><a href="https://www.mahapolice.gov.in/smart-police-stations/">स्मार्ट पोलिस ठाणी</a></li>
+								<li><a href="https://www.mahapolice.gov.in/welfare-activities/">पोलीस कल्याण</a></li>
+								<li><a href="https://www.mahapolice.gov.in/community-policing/">समुदाय धोरण</a></li>
+								<!--<li><a href="https://www.mahapolice.gov.in/police-corner/">पोलीस कॉर्नर</a></li>-->
+							</ul>
+						</div><div class="submenuRight asideSection col8">
+							<div class="digImg asideSection">
+								<img src="https://www.mahapolice.gov.in/images/dgp_date_sir.jpg" alt="" title="">
+							</div><div class="digQuote asideSection">
+								<h3>आम्ही सर्वांचे, विशेषत: वंचित, दुर्बल, महिला, लहान मुले, अल्पसंख्यांक, जेष्ठ नागरिक,
+झोपडपट्टीवासी, गरीब आणि समाजातील इतर उपेक्षित घटकांची सेवा आणि संरक्षण करू.
+आम्ही संकटात असलेल्या नागरिकांच्या प्रत्येक हाकेला त्वरीत व आत्मीयतेने प्रतिसाद देऊ.</h3>
+								<h5>श्री सदानंद दाते</h5>
+								<p>पोलिस महासंचालक, महाराष्ट्र राज्य</p>
+							</div>
+						</div>
+					</div>
+				</li><li class="subemenuClick" data-aos="fade-left">
+					<p>विशेष पथके</p>
+					<div class="submenu transition">
+						<div class="submenuLeft asideSection col4">
+							<ul>
+								<li><a href="https://www.mahapolice.gov.in/state-intelligence-department/">राज्य गुप्तचर विभाग </a></li>
+								<li><a href="https://mahacid.gov.in/" target="_blank">गुन्हे अन्वेषण विभाग (CID), पुणे</a></li>
+								<li><a href="https://www.mahapolice.gov.in/anti-terrorism-squad/">दहशतवाद विरोधी पथक (एटीएस)</a></li>
+								<li><a href="https://highwaypolice.maharashtra.gov.in" target="_blank">महामार्ग वाहतूक पोलीस</a></li>
+								<li><a href="https://maharashtrasrpf.gov.in/" target="_blank">राज्य राखीव पोलीस दल (SRPF)</a></li>
+								<li><a href="https://www.mahapolice.gov.in/training-directorate/">प्रशिक्षण संचालनालय</a></li>
+								<li><a href="https://www.mahapolice.gov.in/motor-transport-unit/">मोटार परिवहन विभाग</a></li>
+								<li><a href="https://mahpolwireless.gov.in/" target="_blank">राज्य वायरलेस पोलीस</a></li>
+								<li><a href="http://acbmaharashtra.gov.in/" target="_blank">लाचलुचपत  प्रतिबंधक विभाग (एसीबी)</a></li>
+								<li><a href="https://www.mahapolice.gov.in/protection-of-civil-rights/">नागरी हक्क संरक्षण</a></li>
+							</ul>
+						</div><div class="submenuRight asideSection col8">
+							<div class="digImg asideSection">
+								<img src="https://www.mahapolice.gov.in/images/dgp_date_sir.jpg" alt="" title="">
+							</div><div class="digQuote asideSection">
+								<h3>आम्ही सर्वांचे, विशेषत: वंचित, दुर्बल, महिला, लहान मुले, अल्पसंख्यांक, जेष्ठ नागरिक,
+झोपडपट्टीवासी, गरीब आणि समाजातील इतर उपेक्षित घटकांची सेवा आणि संरक्षण करू. आम्ही संकटात असलेल्या नागरिकांच्या प्रत्येक हाकेला त्वरीत व आत्मीयतेने प्रतिसाद देऊ.</h3>
+								<h5>श्री सदानंद दाते</h5>
+								<p>पोलिस महासंचालक, महाराष्ट्र राज्य</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+					</div>
+	</div>
+
+
+
+</header>
+<div class="topTicker" data-aos="fade-down">
+	<p>ठळक बातम्या</p>
+				<marquee scrollamount="4">
+				<a href="https://www.mahapolice.gov.in/police-recru.php/" title="POLICE RECRUITMENT 2024-25, INFORMATION" target="_blank"><span>
+					पोलीस शिपाई भरती २०२४-२५, माहिती				</span></a><a href="https://bprd.nic.in/page/sajag_bharat" title="VIGILANT INDIA" target="_blank"><span>
+					सजग भारत				</span></a>			</marquee>
+	</div>
+      
+
+        <main class="gutterSpace notFoundMainWrap">
+            <div class="notFoundMain">
+                <h1>Page Not Found</h1>
+                <a href="https://www.mahapolice.gov.in/">GO back to Homepage</a>
+            </div>
+        </main>
+        <footer>
+	<div class="govLogos gutterSpace" data-aos="fade-up" data-aos-offset="-1300">
+		<marquee>
+			<ul>
+				<li>
+					<img src="https://www.mahapolice.gov.in/images/MyGov_Maharashtra.png?ver=1" alt="" title="">
+				</li>
+			
+			
+				<li>
+					<img src="https://www.mahapolice.gov.in/images/digital-india-logo.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/mha-logo.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/india-gov-logo.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/cbi.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/bprd.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/mygov-footer-logo.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/makeinindia.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/nic.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/maharashtra.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/pm-india-logo.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/Meity_logo.png?ver=1" alt="" title="">
+				</li><li>
+					<img src="https://www.mahapolice.gov.in/images/swachh-bharat.png?ver=1" alt="" title="">
+				</li>
+			</ul>
+		</marquee>
+	</div>
+
+			<div class="footerBottom" data-aos="fade-up" data-aos-offset="-1300">
+			<div class="footerImg asideSection col12">
+				<div class="footerLogoSection">
+					<div class="asideSection">
+						<img class="bottomLogo" src="https://www.mahapolice.gov.in/images/logoW.png" alt="Maharashtra State Police" title="Maharashtra State Police">
+					</div><div class="asideSection" title="Maharashtra State Police">
+						<h2>महाराष्ट्र राज्य पोलीस</h2>
+						<h5>अधिकृत संकेतस्थळ</h5>
+					</div>
+				</div>
+									<div class="footerLinks">
+						<div class="footerLinksIn">
+							<h3>जनसंपर्क</h3>
+							<ul>
+			                    <li>
+			                        <a href="https://www.mahapolice.gov.in/women-safety/"><p>महिला सुरक्षितता</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/news-and-events/"><p>बातम्या आणि घटना</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/positive-stories/"><p>सकारात्मक कथा</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/gallery/"><p>छायाचित्र गॅलरी</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/contact-and-emails/"><p>संपर्क आणि ईमेल आयडी</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/senior-citizens-corner/"><p>ज्येष्ठ नागरिकांचा कॉर्नर</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/rti-information/"><p>माहितीचा अधिकार</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/accidents-compensation/"><p>अपघात भरपाई</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/martyrs/"><p>शहीद</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/dakshata-magazine/"><p>दक्षता मासिक</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/our-new-initiatives/"><p>आमचे नवीन पुढाकार</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/act-and-rules/"><p>कायदे व नियम</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/download-forms"><p>फॉर्म डाउनलोड करा</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/the-book-corner/"><p>बुक कॉर्नर</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/join-mpd/"><p>महाराष्ट्र पोलिस विभागात सामील व्हा</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/foreigners-registration/"><p>परदेशी नोंदणी</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/contact-us/"><p>आमच्याशी संपर्क साधा</p></a>
+			                    </li><li>
+			                        <a href="http://www.mhpolice.maharashtra.gov.in/Citizen/Feedback/CitizenServicesCitizenFeedback.aspx?From=LFhlihlx/W49VSlBvdGc4w==" target="_blank"><p>अभिप्राय</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/protection-of-civil-rights/"><p>नागरी हक्कांचे संरक्षण</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/right-to-services/"><p>सेवांचा अधिकार</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/instruction-regarding-tenants/"><p>भाडेकरूंबद्दल सूचना</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/voluntary-code-of-practice/"><p>ऐच्छिक संहिता</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/police-patil/"><p>पोलिस पाटील संपर्क</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/village-defence-party/"><p>गाव संरक्षण पार्टी</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/dispute-free-village/"><p>तंटामुक्त गाव</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/mohalla-committees/"><p>मोहल्ला समित्या</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/uploads/external_links/sov-1.pdf" target="_blank"><p>स्मृतीचिन्ह</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/police-recru.php/"><p>पोलिस भरती</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/awareness-videos/"><p>जागरूकता व्हिडिओ</p></a>
+			                    </li><li>
+			                        <a href="https://www.mahapolice.gov.in/important-website-links/"><p>महत्वाचे वेबसाइट लिंक्स</p></a>
+			                    </li><li>
+			                        <a href=""><p>प्रेस प्रकाशन</p></a>
+			                    </li><li>
+			                        <a href="http://www.mhpolice.maharashtra.gov.in/Citizen/MH/Index.aspx" target="_blank"><p>नागरिकांसाठी सेवा</p></a>
+			                    </li>
+			                </ul>
+			            </div><div class="footerLinksIn">
+			            	<h3>गुन्हे / गुन्हेगार माहिती</h3>
+			            	<ul>
+		                        <li>
+		                            <a href="http://www.mhpolice.maharashtra.gov.in/Citizen/CitizenTips/CitizenTips.aspx?From=LFhlihlx/W49VSlBvdGc4w==" target="_blank"><p>गोपनीय माहिती द्या</p></a>
+		                        </li><li>
+		                            <a href="http://www.mhpolice.maharashtra.gov.in/Citizen/MH/SearchView.aspx" target="_blank"><p>हरवलेले व्यक्ती</p></a>
+		                        </li><li>
+		                            <a href="http://mhpolice.maharashtra.gov.in/Citizen/MH/SearchDeadBodyList.aspx" target="_blank"><p>अनोळखी मृतदेह</p></a>
+		                        </li>
+								
+								<li>
+		                            <a href="http://www.mhpolice.maharashtra.gov.in/Citizen/MH/PublishedFIRs.aspx" target="_blank"><p>नोंदणीकृत एफआयआर</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/accidents-compensation/"><p>अपघात भरपाई</p></a>
+		                        </li><li>
+		                            <a href="https://citizen.mahapolice.gov.in/Citizen/MH/index.aspx" target="_blank"><p>सर्वाधिक पाहिजे असलेले गुन्हेगार</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/senior-citizens-corner/"><p>ज्येष्ठ नागरिकांचा कॉर्नर</p></a>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div class="footerLinksIn">
+		                    <h3 class="marginTop">पोलीस कॉर्नर</h3>
+			            	<ul>
+		                        <li>
+		                            <a href="https://www.mahapolice.gov.in/contact-and-emails/"><p>संपर्क आणि ईमेल आयडी</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/rewards-and-honors/"><p>पुरस्कार आणि सन्मान</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/martyrs/"><p>शहीद</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/training-seminar/"><p>प्रशिक्षण व सेमिनार</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/act-and-rules/"><p>कायदे व नियम</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/the-book-corner/"><p>बुक कॉर्नर</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/protection-of-civil-rights/"><p>नागरी हक्कांचे संरक्षण</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/police-patil/"><p>पोलिस पाटील संपर्क</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/village-defence-party/"><p>गाव संरक्षण पार्टी</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/dispute-free-village/"><p>तंटामुक्त गाव</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/mohalla-committees/"><p>मोहल्ला समित्या</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/modern-police-firing-range/"><p>पोलिसांना गोळीबारासाठी असलेले आधुनिक मैदान </p></a>
+		                        </li><li>
+		                            <a href="http://117.222.38.165/SSS/" target="_blank"><p>स्ट्रेटेजी सपोर्ट सिस्टीम</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/legal-matters/"><p>कायदेशीर बाबी</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/uploads/external_links/sov-1.pdf" target="_blank"><p>स्मृतीचिन्ह</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/senior-citizens-corner/"><p>ज्येष्ठ नागरिकांचा कॉर्नर</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/police-recru.php/"><p>पोलिस भरती</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/news-and-events/"><p>पोलिसांचे स्मरण</p></a>
+		                        </li><li>
+		                            <a href="https://www.mahapolice.gov.in/police-vrunda-parishad/"><p>पोलिस वृंद परिषद</p></a>
+		                        </li>
+		                    </ul>
+			            </div>
+			            <div class="footerLinksIn">
+			            	<h3>आमच्या विषयी</h3>
+		                    <ul>
+								<li>
+									<a href="https://www.mahapolice.gov.in/maharashtra-police/">महाराष्ट्र राज्य पोलीस</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/maharashtra-police-head-quarter/">महाराष्ट्र पोलीस मुख्यालय</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/dgps-of-maharashtra/">महाराष्ट्र पोलिसांचे महासंचालक</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/hierarchy-of-maharashtra-police/">महाराष्ट्र पोलिसांचे पदक्रम</a>
+								</li><li>
+									<a href="https://mahacid.gov.in/publications/crime-in-maharashtra" target="_blank">राजपत्रातील गुन्हे</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/uploads/external_links/policeRank.pdf" target="_blank">पोलीस क्रम</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/uploads/external_links/policeFlags.pdf" target="_blank">पोलीस ध्वज आणि स्टार-बक्कल</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/uploads/external_links/policeMedal.pdf" target="_blank">पदके आणि सजावटी</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footerLinksIn">
+		                    <h3 class="marginTop">निविदा आणि व्यवसाय</h3>
+		                    <ul>
+		                        <li>
+		                            <a href="https://mahatenders.gov.in/" target="_blank"><p>निविदा</p></a>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div class="footerLinksIn">
+		                    <h3 class="marginTop">विशेष पथके</h3>
+		                    <ul>
+								<li>
+									<a href="https://www.mahapolice.gov.in/state-intelligence-department/">राज्य गुप्तचर विभाग</a>
+								</li><li>
+									<a href="https://mahacid.gov.in/" target="_blank">गुन्हे अन्वेषण विभाग (CID), पुणे</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/anti-terrorism-squad/">दहशतवाद विरोधी पथक (एटीएस)</a>
+								</li><li>
+									<a href="https://highwaypolice.maharashtra.gov.in" target="_blank">महामार्ग वाहतूक पोलीस</a>
+								</li><li><a href="https://maharashtrasrpf.gov.in/" target="_blank">राज्य राखीव पोलीस दल (SRPF)</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/training-directorate/">प्रशिक्षण संचालनालय</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/motor-transport-unit/">मोटार परिवहन विभाग</a>
+								</li>
+                                                                <!--  <li>
+							<a href="https://mahpolwireless.gov.in/" target="_blank">राज्य वायरलेस पोलीस</a>
+                                                  							</li>  --!>
+                                                        <li>
+									<a href="http://acbmaharashtra.gov.in/" target="_blank">लाचलुचपत  प्रतिबंधक विभाग (एसीबी)</a>
+								</li><li>
+									<a href="https://www.mahapolice.gov.in/protection-of-civil-rights/">नागरी हक्क संरक्षण</a>
+								</li>
+							</ul>
+			            </div>
+					</div>
+								
+			</div>
+			<div class="footetRight asideSection col12">
+				<div class="madeWith"><p><a href="https://www.hepta-agency.com/">Made With <span>♥</span> by HEPTA</a></p></div>
+									<p class="copyright">© २०२१ महाराष्ट्र राज्य पोलीस</p><ul>
+						<li class="asideSection">
+							<a href="javascript:void(0)" title="">संकेतस्थळ अभ्यागत: ८९४१</a>
+						</li><li class="asideSection">
+							<a href="https://www.mahapolice.gov.in/disclaimer/">अस्वीकरण</a>
+						</li><li class="asideSection">
+							<a href="https://www.mahapolice.gov.in/sitemap">साइट मॅप</a>
+						</li><li class="asideSection">
+							<a href="javascript:void(0)" target="_blank">ध्वज चे कोड</a>
+						</li>
+					</ul>
+							</div>
+		</div>
+	</footer>
+
+<script src="https://www.mahapolice.gov.in/js/jquery-3.7.1.min.js"></script>
+<script src="https://www.mahapolice.gov.in/js/slick.js" defer></script>
+<script src="https://www.mahapolice.gov.in/js/main.js?ver=20260405122525" defer></script>
+
+<script>
+	$(window).on('load',function () {
+
+        function Preloader() {
+            $('.preloader').addClass('show');
+            $('.homeMainWrapOut').css('opacity','1');
+            setTimeout(function(){ $('.first').addClass('activeLine'); },1000);
+            setTimeout(function(){ $('.second').addClass('activeLine'); },1200);
+            setTimeout(function(){ $('.third').addClass('activeLine'); },1400);
+            setTimeout(function(){ $('.fourth').addClass('activeLine'); },1600);
+            setTimeout(function(){ $('.fifth').addClass('activeLine'); },1800);
+
+            setTimeout(function(){
+                $('.preloader').fadeOut();
+            },5000);
+        }
+
+        if ( ! sessionStorage.getItem( 'doNotShow' ) ) {
+            sessionStorage.setItem( 'doNotShow', true );
+            Preloader();
+        }else{
+            $('.homeMainWrapOut').css('opacity','1');
+        }
+
+        $(window).bind("beforeunload", function () {
+            sessionStorage.setItem( 'doNotShow', false );
+        })
+    }); 
+    // $(window).on('load',function () {
+
+    //     setTimeout(function(){ $('.first').addClass('activeLine'); },1000);
+    //     setTimeout(function(){ $('.second').addClass('activeLine'); },1200);
+    //     setTimeout(function(){ $('.third').addClass('activeLine'); },1400);
+    //     setTimeout(function(){ $('.fourth').addClass('activeLine'); },1600);
+    //     setTimeout(function(){ $('.fifth').addClass('activeLine'); },1800);
+
+    //     setTimeout(function(){
+    //         $('.preloader').fadeOut();
+    //     },5000);
+    // });
+
+    // $(document).ready(function() {
+	    // $(window).load(function() {
+	    //     function Preloader() {
+	    //         setTimeout(function(){ $('.first').addClass('activeLine'); },1000);
+		   //      setTimeout(function(){ $('.second').addClass('activeLine'); },1200);
+		   //      setTimeout(function(){ $('.third').addClass('activeLine'); },1400);
+		   //      setTimeout(function(){ $('.fourth').addClass('activeLine'); },1600);
+		   //      setTimeout(function(){ $('.fifth').addClass('activeLine'); },1800);
+
+		   //      setTimeout(function(){
+		   //          $('.preloader').fadeOut();
+		   //      },5000);
+	    //     }
+	    //     if ( ! sessionStorage.getItem( 'doNotShow' ) ) {
+	    //         sessionStorage.setItem( 'doNotShow', true );
+	    //         Preloader();
+	    //     } else {
+	    //        $('.preloader').fadeOut();
+	    //     }
+	    // });
+	// }); 
+</script>
+
+<!-- <script src="https://www.mahapolice.gov.in/js/aos.js"></script> -->
+
+    </body>
+</html>

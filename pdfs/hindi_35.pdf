@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <meta name="google-site-verification" content="9BbZLMR4cBYMQNdlhyIctY4s69KzF0advBjnT9wwg9Q" />
+  <link rel="canonical" href="https://jutecomm.gov.in/home">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Office of Jute Commissioner</title>
+  <meta name="description"
+    content="JUTE SMART is an end-to-end web platform for procurement of jute sacking by State Governments under the Office of the Jute Commissioner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-28L0ZHW7YZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-28L0ZHW7YZ');
+  </script>
+  <script type="module" crossorigin src="/assets/index-gj_O3-Sr.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B5vP3oBD.css">
+</head>
+
+<body style="min-height: 100vh !important" id="main-content">
+  <!-- <div id="app"></div> -->
+  <div id="navigation-bar"></div>
+  <div id="app" style="min-height: 80vh;"></div>
+
+  <div id="view-container" style="min-height: 80vh;">
+    <!-- dynamic view will load here -->
+  </div>
+  <div id="footer"></div>
+  <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highcharts@11/highcharts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highcharts@11/modules/accessibility.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+</body>
+
+</html>

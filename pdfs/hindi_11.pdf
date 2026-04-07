@@ -1,0 +1,1533 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VPQBSLDPB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0VPQBSLDPB');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Personal & Corporate Banking | MSME & Agri banking - IDBI Bank </title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about-us.css">
+    <link rel="stylesheet" href="css/home-loan.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <style>
+        @media only screen and (max-width: 767px) {
+            .left-menu-bottom {
+                display: block!important;
+                margin-top: 2px;
+            }
+
+            .left-menu {
+                position: static;
+                display: block;
+            }
+
+                .left-menu.sticky {
+                    position: static;
+                }
+        }
+	.blink {
+            animation: blink 1s linear infinite;
+            color: #ff0000;
+            font-size: 12px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .blink_1 {
+            color: #fff !important;
+        }
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+	.mega-dropdown-menu {
+            height: 480px;
+            overflow-y: scroll;
+        }
+    </style>
+    <script type="text/javascript" src="js/google_analytics.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js">
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="newdata/appice.js"></script>
+    <script>
+        function gotosearch(val) {
+            window.location.href = "search.aspx?val=" + val;
+        }
+    </script>
+	
+    <script type="text/javascript">
+        function CheckKeyPress(evt, val) {
+            try {
+                if (val != "") {
+                    if (window.event && window.event.keyCode == 13) {
+                        window.location.href = "search.aspx?val=" + val;
+                        event.returnValue = false;
+                        event.cancelBubble = true;
+                    }
+                    else if (evt == 13) {
+                        window.location.href = "search.aspx?val=" + val;
+                        evt.cancelBubble = true;
+                        evt.stopPropagation();
+                        return false;
+                    }
+                }
+            }
+            catch (ex) {
+                alert(ex.message);
+            }
+        }
+
+        function checkCheckbox(checkbox) {
+
+
+            if (checkbox.checked) {
+                window.location.href = "hindi/" + window.location.href.split("/")[3];
+            }
+
+
+        }
+    </script>
+
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IDBI</title>
+    
+    
+    
+    
+</head>
+
+<body>
+
+    
+    <!-- ==================================================
+    	Header Code Start
+ ==================================================== -->
+    <header>
+        <!-- DeskTop Menu Start -->
+        <div class="desktop-menu ">
+            <div class="top-header">
+                <div class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.aspx">
+                        <img class="logo" src="assets/images/IDBI_Logo.jpg" alt="IDBI logo" />
+                    </a>
+			
+                    <div class=" navbar-collapse justify-content-center ">
+                        
+                        <ul class="navbar-nav ">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.aspx">Personal</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="corporate-banking.aspx">Corporate</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="msme-banking.aspx">MSME</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="agri-banking.aspx">AGRI</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="nri-banking.aspx">NRI</a>
+                            </li>
+                            
+				<li class="nav-item ">
+                                <a class="nav-link" href="preferred-banking.aspx">Preferred Banking</a>
+                            </li>
+                           <li class="nav-item ">
+                                    <a class="nav-link" href="https://www.idbibank.in/ibu/index.aspx" target="_blank" rel="noreferrer noopener">GIFT CITY</a>
+                            </li>
+                            <!-- <li class="nav-item dropdown-nav">
+                     <a class="nav-link" href="#">Preferred Banking
+                        <span class="arrow-down"></span>
+                     </a>
+
+                     <ul class="dropdown-menu">
+                      
+                        <li><a href="#">Royale Account</a></li>
+                        <li><a href="#">Preferred Account</a></li>
+                        <li><a href="#">PowerPlus Account</a></li>
+                          <li><a href="#">Platinum Salary Account</a></li>
+
+                     </ul>
+
+                  </li> -->
+                        </ul>
+                    </div>
+                    <div class="social-icons">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                
+                                <a  aria-label="Search" href="https://apps.idbi.bank.in/search1.asp" id="search1" target="_blank" rel="noreferrer noopener">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17.103" height="17.103"
+                                        viewBox="0 0 17.103 17.103">
+                                        <defs>
+                                            <style>
+                                                .a3 {
+                                                    fill: #00836c;
+                                                    stroke: #00836c;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g transform="translate(-108.719 -213.347)">
+                                            <g transform="translate(109.219 213.847)">
+                                                <path class="a3"
+                                                    d="M109.219,220.166a6.32,6.32,0,0,1,6.321-6.319h0a6.32,6.32,0,0,1,6.321,6.319h0a6.321,6.321,0,0,1-6.321,6.321h0a6.321,6.321,0,0,1-6.321-6.321Zm.846,0a5.484,5.484,0,0,0,5.475,5.475h0a5.481,5.481,0,0,0,5.473-5.475h0a5.479,5.479,0,0,0-5.473-5.475h0a5.482,5.482,0,0,0-5.475,5.475Z"
+                                                    transform="translate(-109.219 -213.847)" />
+                                            </g>
+                                            <g transform="translate(119.464 224.088)">
+                                                <path class="a3" d="M115.443,220.667l.6-.6,5.054,5.057-.6.6-5.054-5.057Z"
+                                                    transform="translate(-115.443 -220.069)" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a  aria-label="Phone banking numbers" href="idbi-bank-phone-banking-no.aspx">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.77" height="16.803"
+                                        viewBox="0 0 16.77 16.803">
+                                        <defs>
+                                            <style>
+                                                .a4 {
+                                                    fill: none;
+                                                    stroke: #00836c;
+                                                    stroke-width: 1.2px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path class="a4"
+                                            d="M15.574,11.355,13.415,9.2a1.436,1.436,0,0,0-2.391.54,1.469,1.469,0,0,1-1.7.925,6.658,6.658,0,0,1-4.01-4.01,1.4,1.4,0,0,1,.925-1.7,1.436,1.436,0,0,0,.54-2.391L4.624.4A1.54,1.54,0,0,0,2.542.4L1.077,1.87C-.389,3.412,1.231,7.5,4.855,11.124s7.711,5.321,9.254,3.779l1.465-1.465A1.54,1.54,0,0,0,15.574,11.355Z"
+                                            transform="translate(0.081 0.711)" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select-lang">
+                        <div class="custom-dropdown dropdown">
+                            <button class="btn btn-secondary dropdown-toggle " type="button">
+                                <span class="selected-text">English</span>
+                                <span class="arrow-down"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item d-none" href="#">English</a>
+                                <a class="dropdown-item" href="hindi/err404.aspx">Hindi</a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="login-btns">
+                        <div>
+                            <a class="btn btn-orange" href="vkyc.aspx">Open An Account</a>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn  dropdown-toggle" type="button" id="AccdropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19.283" height="18.5" viewBox="0 0 19.283 18.5">
+                                    <defs>
+                                        <style>
+                                            .login {
+                                                fill: #fff;
+                                                stroke: #fff;
+                                                stroke-width: 0.5px;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(0.25 0.25)">
+                                        <path class="login"
+                                            d="M89.245,7.826a3.913,3.913,0,1,1,3.913-3.913A3.917,3.917,0,0,1,89.245,7.826Zm0-6.652a2.739,2.739,0,1,0,2.739,2.739A2.742,2.742,0,0,0,89.245,1.174Zm0,0"
+                                            transform="translate(-82.202 0)">
+                                        </path>
+                                        <path class="login"
+                                            d="M325.674,346.81h-4.3a1.371,1.371,0,0,1-1.37-1.37V342.7a1.371,1.371,0,0,1,1.37-1.37h4.3a1.371,1.371,0,0,1,1.37,1.37v2.739A1.371,1.371,0,0,1,325.674,346.81Zm-4.3-4.3a.2.2,0,0,0-.2.2v2.739a.2.2,0,0,0,.2.2h4.3a.2.2,0,0,0,.2-.2V342.7a.2.2,0,0,0-.2-.2Zm0,0"
+                                            transform="translate(-308.261 -328.81)">
+                                        </path>
+                                        <path class="login"
+                                            d="M365.994,260.3h-2.739a.587.587,0,0,1-.587-.587v-1.761a1.956,1.956,0,1,1,3.913,0v1.761A.587.587,0,0,1,365.994,260.3Zm-2.152-1.174h1.565v-1.174a.783.783,0,1,0-1.565,0Zm0,0"
+                                            transform="translate(-349.364 -246.609)">
+                                        </path>
+                                        <path class="login"
+                                            d="M9.783,263.043H.587A.587.587,0,0,1,0,262.457v-2.739A3.722,3.722,0,0,1,3.717,256h6.848a3.706,3.706,0,0,1,1.862.5.587.587,0,1,1-.591,1.014,2.536,2.536,0,0,0-1.271-.341H3.717a2.546,2.546,0,0,0-2.543,2.543v2.152H9.783a.587.587,0,1,1,0,1.174Zm0,0"
+                                            transform="translate(0 -246.609)">
+                                        </path>
+                                    </g>
+                                </svg>
+                                Internet Banking
+                        <span class="arrow-down"></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="AccdropdownMenuButton">
+                                <div class="dropdown-divider"></div>
+                                  	<a class="dropdown-item" href="https://ebanking.idbi.bank.in/idbiweb/login" target="_blank" rel="noreferrer noopener">Personal</a>
+                                <a class="dropdown-item" href="https://corp.idbi.bank.in/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&__FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=IBKL" target="_blank" rel="noreferrer noopener">Corporate</a>
+								
+                                <a class="dropdown-item" href="https://samriddhigsec.idbi.bank.in/GSEC" target="_blank" rel="noreferrer noopener">Samriddhi Portal</a>
+								
+                                <a class="dropdown-item" href="https://idbicreditcards.co.in/" target="_blank" rel="noreferrer noopener">Credit Card</a>
+								
+                                <a class="dropdown-item" href="https://clms.idbibank.co.in/GLMS/" target="_blank" rel="noreferrer noopener">G-LMS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="primary-header">
+                <div>
+                    <ul class="menu list-inline">
+                        <li class="mega-dropdown list-inline-item">
+                            <a href="#"><span class="icon">
+                                <img src="assets/images/accounts-1.svg" alt="Accounts" /></span>Accounts
+                                    <span class="arrow-down"></span></a>
+                            <div class="mega-dropdown-menu ">
+                                <div class="row  ">
+                                    <div class="col-md-3">
+                                        <ul class="list-group ">
+
+                                            <li class="list-group-item active"><a href="#savingsAccount">Savings Account </a></li>
+                                            <li class="list-group-item"><a href="#FixedDeposit">Fixed Deposit Account</a></li>
+                                            <li class="list-group-item"><a href="#CorporatePayroll">Salary Accounts</a></li>
+                                            <li class="list-group-item"><a href="#CurrentAccount">Current Account</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <ul class="sub-dropdown list-unstyled" id="savingsAccount" style="display: block">
+                                            <li><a href="advantage-savings-account.aspx">Advantage Account</a></li>
+                                            <li><a href="advantage-plus-savings-account.aspx">Advantage Plus Account</a></li>
+                                            <li><a href="advantage-diva-savings-account.aspx">Advantage DIVA Account</a></li>
+                                            <li><a href="advantage-superior-savings-account.aspx">Advantage Superior Senior Citizen Account</a></li>
+                                            <li><a href="advantage-prime-savings-account.aspx">Advantage Prime Account</a></li>
+                                            <li><a href="advantage-kidz-savings-account.aspx">Advantage Kids Account</a></li>
+                                            <li><a href="advantage-bonanza-account.aspx">Advantage Bonanza Account</a></li>
+                                            <li><a href="vkyc.aspx">Savings Account Using Video KYC</a></li>
+                                            <li><a href="small-relaxed-kyc-saving-account.aspx">Small Account - Relaxed KYC</a></li>
+                                            <li><a href="sabka-basic-saving-account.aspx">Basic Savings Account -
+                                                <br>
+                                                Complete KYC</a></li>
+                                            <li><a href="pension-saving-account.aspx">Pension Savings Account<br>
+                                                (Central Govt. Emp)</a></li>
+                                            <li><a href="capital-gain-account.aspx">Capital Gain Account Scheme</a></li>
+                                        </ul>
+
+
+                                        <ul class="sub-dropdown list-unstyled " id="FixedDeposit">
+                                            <li><a href="idbi-bank-freedom-deposit.aspx">Suvidha Fixed Deposit</a></li>
+                                            <li><a href="suvidha-tax-saving-fixed-deposit.aspx">Suvidha Tax Saving Fixed Deposit</a></li>
+                                            <li><a href="recurring-deposit.aspx">Systematic Savings Plan (SSP/SSP Plus)</a></li>
+                                            <li><a href="floating-rate-fixed-deposit.aspx">Floating Rate Term Deposit</a></li>
+					    <li><a href="vasundhara-green-deposit.aspx">Vasundhara Green Deposit </a></li>
+					    <li><a href="tender-fixed-deposit.aspx">Tender Fixed Deposit </a></li>
+					    <li><a href="aarogya-fixed-deposit.aspx">Aarogya Fixed Deposit</a></li>
+                                        </ul>
+
+                                        <ul class="sub-dropdown list-unstyled " id="CorporatePayroll">
+                                            <li><a href="salary-accounts.aspx">Salary Account Overview</a></li>
+					    <li><a href="platinum-salary-account.aspx">Platinum Salary Account</a></li>
+					    <li><a href="gold-salary-account.aspx">Gold Salary Account</a></li>
+					    <li><a href="silver-salary-account.aspx">Silver Salary Account</a></li>
+					    <li><a href="bronze-salary-account.aspx">Bronze Salary Account</a></li>
+					    <li><a href="pride-salary-account.aspx">Pride Salary Account</a></li>
+                                            <li><a href="indian-army-salary-account.aspx">Indian Army Salary Account</a></li>
+                                            <li><a href="indian-navy-salary-account.aspx">Indian Navy Salary Account</a></li>
+											
+                                           <!-- <li><a href="platinum-salary-account.aspx">Platinum Salary Account</a></li>
+                                            <li><a href="imperial-salary-account.aspx">Imperial Salary Account</a></li>
+                                            <li><a href="crown-salary-account.aspx">Crown Salary Account</a></li>
+                                            <li><a href="star-salary-account.aspx">Star Salary Account</a></li>
+                                            <li><a href="prime-salary-account.aspx">Prime Salary Account</a></li>
+											
+											
+                                            <li><a href="pride-salary-account.aspx">Pride Salary Account</a></li>
+                                            <li><a href="state-and-central-government-salary-account.aspx">State and Central Govt. Salary Account</a></li>
+                                            <li><a href="indian-army-salary-account.aspx">Indian Army Salary Account</a></li>
+                                            <li><a href="indian-navy-salary-account.aspx">Indian Navy Salary Account</a></li>-->
+
+                                        </ul>
+					<ul class="sub-dropdown list-unstyled" id="CurrentAccount">
+                                           <li><a href="idbi-bank-elite-plus-business-account.aspx">Elite Plus Business Account</a></li>
+                                            <li><a href="umang-business-account-for-metro-urban-locations.aspx">Umang Business Account </a></li>
+                                            <li><a href="unnati-business-account-for-semi-urban-locations.aspx">Unnati Business Account </a></li>
+                                            <li><a href="gram-unnati-business-account.aspx">Gram Unnati Business Account </a></li>
+					    <li><a href="eMerchant-current-account.aspx">eMerchant Current Account</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="menu-img">
+                                            <img src="assets/images/accounts.png" class="img-fluid" alt="megamenu img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mega-dropdown list-inline-item">
+                            <a href="#"><span class="icon">
+                                <img src="assets/images/card.svg" alt="Cards" /></span> Cards <span
+                                    class="arrow-down"></span></a>
+                            <div class="mega-dropdown-menu">
+                                <div class="row ">
+                                    <div class="col-md-3">
+                                        <ul class="list-group ">
+                                            <li class="list-group-item active"><a href="#credit-card">Credit Cards</a></li>
+                                            <li class="list-group-item"><a href="#debit-card">Debit Cards  </a></li>
+                                            <li class="list-group-item"><a href="#prepaid-card">Prepaid Cards</a></li>
+                                            
+                                            <li class="list-group-item"><a href="cash-at-pos-on-debit-cards.aspx">Cash at POS Facility</a></li>
+                                            <li class="list-group-item"><a href="debit-card-green-pin-generation.aspx">Debit Card Green PIN Generation</a></li>
+                                            <li class="list-group-item"><a href="abhay.aspx">Abhay - Card Control App</a></li>
+                                            <li class="list-group-item"><a href="https://secureonline.idbibank.com/ACSWeb/EnrollWeb/IDBIBank/main/index.jsp" target="_blank" rel="noreferrer noopener">Registration of Card for Online Payment Service</a></li>
+					    <li class="list-group-item"><a href="https://www.sihub.in/managesi/idbi#/home/landing" target="_blank" rel="noreferrer noopener">Manage Standing Instruction</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <ul class="sub-dropdown list-unstyled" id="credit-card" style="display: block">
+                                            <li><a href="credit-card.aspx">Credit Cards Overview</a></li>
+                                            <li><a href="royal-credit-card.aspx">Royale Signature Credit Card</a></li>
+                                            <li><a href="Euphoria-credit-card.aspx">Euphoria World Credit Card</a></li>
+                                            <li><a href="aspire-credit-card.aspx">Aspire Platinum Credit Card</a></li>
+                                            <li><a href="Imperium-credit-card.aspx">Imperium Platinum Credit Card</a></li>
+                                            <li><a href="Winnings-credit-card.aspx">Winnings Credit Card</a></li>
+                                        </ul>
+                                        <ul class="sub-dropdown list-unstyled" id="debit-card">
+                                            <li><a href="debit-card.aspx">Debit Cards Overview</a></li>
+                                            <li><a href="signature_debit_card.aspx">VISA Signature PayWave Debit Card</a></li>
+                                            <li><a href="platinum-debit-card.aspx">VISA Platinum PayWave Debit Card</a></li>
+                                            <li><a href="visa-business-debit-card.aspx">VISA Business Debit Card</a></li>
+                                            <li><a href="gold-debit-card.aspx">VISA Gold Debit Card</a></li>
+                                            <li><a href="rupay-select-opulentia-ncmc-debit-card.aspx">RuPay Select/Opulentia NCMC Debit Card</a></li>
+                                            <li><a href="rupay_classic_NCMC_debit-card.aspx">RuPay Classic NCMC Card</a></li>
+						<li><a href="rupay_platinum_NCMC_debit-card.aspx">RuPay Platinum NCMC Card</a></li>
+                                            <li><a href="classic-debit-card.aspx">VISA Classic PayWave Debit Card</a></li>
+                                            <li><a href="mastercard_classic-debit-card.aspx">Mastercard Classic Debit Card</a></li>
+                                            <li><a href="mastercard-platinum-debit-card.aspx">Mastercard Platinum Debit Card</a></li>
+                                            <li><a href="visa-women-paywave-debit-card.aspx">VISA Women's PayWave Debit Card</a></li>
+                                            <li><a href="rupay-women-debit-card.aspx">RuPay Women's Debit Card</a></li>
+                                            <li><a href="being-me-debit-card.aspx">VISA Being Me PayWave Debit Card</a></li>
+                                            <li><a href="visa-kids-paywave-debit-card.aspx">VISA Kids PayWave Debit Card</a></li>
+                                            <li><a href="rupay-mudra-debit-card.aspx">RuPay Mudra Debit Card</a></li>
+                                            <li><a href="rupay-kisan-debit-card.aspx">RuPay Kisan Card</a></li>
+                                        </ul>
+                                        <ul class="sub-dropdown list-unstyled" id="prepaid-card">
+                                            <li><a href="prepaid-card.aspx">Prepaid Cards Overview</a></li>
+                                            <li><a href="gift-card.aspx">Gift Card</a></li>
+                                            <li><a href="cash-card.aspx">Cash Card</a></li>
+                                            <li><a href="world-global-currency-card.aspx">World / Global Currency Card</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="menu-img">
+                                            <img src="assets/images/cards.png" class="img-fluid" alt="IDBI Bank" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mega-dropdown list-inline-item">
+                            <a href="#"><span class="icon">
+                                <img src="assets/images/loans.svg" alt="Loans" /></span> Loans <span
+                                    class="arrow-down"></span></a>
+                            <div class="mega-dropdown-menu">
+                                <div class="row ">
+                                    <div class="col-md-3">
+                                        <ul class="list-group ">
+                                            <li class="list-group-item active"><a href="#home-loan">Home Loan</a></li>
+                                            <li class="list-group-item"><a href="auto-loan.aspx"> <em>i_zoomdrive</em> Auto Loan </a></li>
+                                            <li class="list-group-item"><a href="education-loan.aspx"><em>I_learn</em> Education Loan</a></li>
+                                            <li class="list-group-item"><a href="personal-loan.aspx">Personal Loan</a></li>
+                                            <li class="list-group-item"><a href="#loan-against-property">Mortgage Loan and its variants</a></li>
+                                            <li class="list-group-item"><a href="loan-against-securities.aspx">Loan Against Securities</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <ul class="sub-dropdown list-unstyled " id="loan-against-property">
+                                            <li><a href="loan-against-property.aspx">Mortgage Loan </a></li>
+                                            <li><a href="loan-against-rent-receivable.aspx">Loan Against Rent Receivables</a></li>
+                                            <li><a href="reverse-mortgage-loan.aspx">Reverse Mortgage Loan</a></li>
+                                            <li><a href="commercial-property-purchase.aspx">Loan for Purchase of Commercial Property</a></li>
+                                        </ul>
+                                        <ul class="sub-dropdown list-unstyled " id="home-loan">
+                                            <li><a href="home-loan.aspx">Home Loan </a></li>
+                                            <!--<li><a href="home-loan-pmay-clss.aspx">Pradhan Mantri Awas Yojna</a></li>-->
+											<li><a href="pradhan-mantri-awas-yojana.aspx">Pradhan Mantri Awas Yojana -Urban 2.0 (PMAY-U 2.0)</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="menu-img">
+                                            <img src="assets/images/loans.jpg" class="img-fluid" alt="IDBI Bank" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mega-dropdown list-inline-item">
+                            <a href="#"><span class="icon">
+                                <img src="assets/images/investment.svg" alt="Investment" /></span>
+                                Investment <span class="arrow-down"></span></a>
+                            <div class="mega-dropdown-menu">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <ul class="list-group ">
+                                            <li class="list-group-item active"><a href="#Advisory">Third Party Distribution</a></li>
+                                            <li class="list-group-item"><a href="#CapitalMarket">Capital Market </a></li>
+                                            <li class="list-group-item"><a href="#Bonds">Bonds (GOI & 54EC)</a></li>
+                                            <li class="list-group-item"><a href="new-pension.aspx">National Pension System</a></li>
+                                            <li class="list-group-item"><a href="capital-gain-account.aspx">Capital Gain Account Scheme</a></li>
+                                            <li class="list-group-item"><a href="socialsecurityschemes.aspx">Pradhanmantri Social Security Scheme</a></li>
+                                            <li class="list-group-item"><a href="small-savings-schemes.aspx">Small Savings Schemes</a></li>
+                                            <li class="list-group-item"><a href="https://samriddhigsec.idbi.bank.in/GSEC">IDBI Samridhi Portal</a></li>
+                                            <li class="list-group-item"><a href="pdf/Financial_Guide_Mitra_Sadaiv.pdf" target="_blank" rel="noreferrer noopener">Financial Guide – मित्र,सदैव</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <ul class="sub-dropdown list-unstyled " id="Advisory" style="display: block">
+                                            <li><a href="investment-advisory.aspx">Health, Wealth, Happiness Products</a></li>
+                                            <li><a href="electronic-insurance-account.aspx">Electronic Insurance Account</a></li>
+                                        </ul>
+                                        <ul class="sub-dropdown list-unstyled " id="CapitalMarket">
+                                            <li><a href="idbi-bank-demat-account.aspx">DEMAT Services</a></li>
+                                            <li><a href="idbi-asba-ipo-payment-option.aspx">ASBA IPO </a></li>
+					     
+                                            
+                                        </ul>
+                                        <ul class="sub-dropdown list-unstyled " id="Bonds">
+                                            <li><a href="sovereign-gold-bond.aspx">Sovereign Gold Bonds</a></li>
+                                            <li><a href="floating-rate-savings-bonds.aspx">Floating Rate Savings Bond</a></li>
+
+                                            <li><a href="capital-gains-bonds.aspx">Capital Gains Bond / 54 EC Bonds</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="menu-img">
+                                            <img src="assets/images/insurance.png" class="img-fluid" alt="IDBI Bank" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+			<li class="mega-dropdown list-inline-item">
+                            <a href="tax-payments.aspx">
+                                <span class="icon">
+                                    <img src="assets/images/GovtBusiness.svg" alt="Tax Payments" />
+                                </span>Tax Payments
+                            </a>
+                            
+                        </li>
+                        <li class="mega-dropdown list-inline-item">
+
+                            <a href="#"><span class="icon">
+                                <img src="assets/images/Services.svg" alt="Services" /></span>
+                                Services <span class="arrow-down"></span></a>
+
+
+                            <div class="mega-dropdown-menu">
+                                <div class="row ">
+                                    <div class="col-md-3 pr-0">
+                                        <ul class="list-group ">
+                                            <li class="list-group-item active"><a href="24-7-care.aspx">Phone Banking</a></li>
+                                            <li class="list-group-item"><a href="go_mobile_app_android_version.aspx">Mobile Banking </a></li>
+                                            <li class="list-group-item"><a href="idbi-bank-internet-banking.aspx">Internet Banking</a></li>
+					    <li class="list-group-item"><a href="pdf/General-Terms-and-conditions-ME-Business.pdf" target="_blank" rel="noreferrer noopener">Merchant Acquiring - General Terms & Conditions of ME Business</a></li>
+                                            <li class="list-group-item"><a href="idbi-bank-account-alerts.aspx">Account Alerts</a></li>                                            
+                                            <li class="list-group-item"><a href="pdf/Positive-Pay-System-PPS.pdf" target="_blank" rel="noreferrer noopener">Positive Pay System (PPS)</a></li>
+                                            <li class="list-group-item"><a href="idbi-bank-online-nach-mandate-cancellation.aspx">Online NACH Mandate Cancellation</a></li>
+					    <li class="list-group-item"><a href="idbi-bank-soft-token.aspx">IDBI Bank Soft Token</a></li>
+					    <li class="list-group-item"><a href="pdf/Model-Locker-Agreement.pdf" target="_blank">Model Locker Agreement </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3 pl-0">
+                                        <ul class="list-group ">
+					    <li class="list-group-item"><a href="mPassbook.aspx">mPassbook</a></li>
+
+                                            <li class="list-group-item"><a href="bhim-digital-pos.aspx">BHIM Digital POS-UPI & Aadhar Pay App Mechants</a></li>
+                                            <li class="list-group-item"><a href="fastag.aspx">FASTag</a></li>
+                                            <li class="list-group-item"><a href="jus_tab.aspx">JusTab</a></li>
+                                            <li class="list-group-item"><a href="https://linkaadhaar.idbibank.com/AadhaarSeeding/" target="_blank" rel="noreferrer noopener">Aadhar Verification</a></li>
+					    <li class="list-group-item"><a href="fx-remit.aspx">Fx-Remit</a></li>
+					    <li class="list-group-item"><a href="pension.aspx">Pensions</a></li>
+						<li class="list-group-item"><a href="central-bank-digital-currency.aspx">Central Bank Digital Currency</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="menu-img">
+                                            <img src="assets/images/services.png" class="img-fluid" alt="IDBI Bank" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mega-dropdown list-inline-item">
+                            <a href="#">
+                                <span class="icon">
+                                    <img src="assets/images/offers.svg" alt="Offers" />
+                                </span>Offers
+                        <span class="arrow-down"></span>
+                            </a>
+                            <div class="mega-dropdown-menu">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <ul class="list-group ">
+                                            <li class="list-group-item active"><a href="credit-card-offers.aspx">Credit Card Offers</a></li>
+                                            <li class="list-group-item"><a href="Debit-card-offers.aspx">Debit Card Offers </a></li>
+                                            <li class="list-group-item"><a href="prepaid-card-offers.aspx">Prepaid Card Offers</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="menu-img">
+                                            <img src="assets/images/offers.png" class="img-fluid" alt="IDBI Bank" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+                    
+                    
+<div class="fontsize">
+    <a id="btndec" href="javascript:void(0);" title="Decrease text size" style="outline: none;">A-</a> &nbsp; 
+                    <a id="btnnrml" href="javascript:void(0);" title="Normal text size" style="outline: none;">A</a> &nbsp;
+                     <a id="btninc" href="javascript:void(0);" title="Increase text size" style="outline: none;">A+</a>
+</div>
+
+<style>
+    .primary-header {
+        position: relative;
+    }
+
+        .primary-header .fontsize {
+            position: absolute;
+            right: 32px;
+            top: 12px;
+        }
+
+            .primary-header .fontsize a {
+                color: #fff;
+            }
+
+    @media only screen and (max-width: 768px) {
+
+        .primary-header .fontsize {
+            display: none;
+        }
+    }
+</style>
+
+
+<script>
+    $(document).ready(function () {
+
+        $("#btninc").click(function () {
+            var fontSize = "16px";
+            $("a").css({ 'font-size': fontSize });
+            $("p").css({ 'font-size': fontSize });
+            $("li").css({ 'font-size': fontSize });
+            $("span").css({ 'font-size': fontSize });
+            $("div").css({ 'font-size': fontSize });
+            $("body").css({ 'font-size': fontSize });
+            $("td").css({ 'font-size': fontSize });
+            $("select").css({ 'font-size': fontSize });
+        });
+
+        $("#btnnrml").click(function () {
+            var fontSize = "";
+            $("a").css({ 'font-size': fontSize });
+            $("p").css({ 'font-size': fontSize });
+            $("li").css({ 'font-size': fontSize });
+            $("span").css({ 'font-size': fontSize });
+            $("div").css({ 'font-size': fontSize });
+            $("body").css({ 'font-size': fontSize });
+            $("td").css({ 'font-size': fontSize });
+            $("select").css({ 'font-size': fontSize });
+        });
+
+        $("#btndec").click(function () {
+            var fontSize = "12px";
+            $("a").css({ 'font-size': fontSize });
+            $("p").css({ 'font-size': fontSize });
+            $("li").css({ 'font-size': fontSize });
+            $("span").css({ 'font-size': fontSize });
+            $("div").css({ 'font-size': fontSize });
+            $("body").css({ 'font-size': fontSize });
+            $("td").css({ 'font-size': fontSize });
+            $("select").css({ 'font-size': fontSize });
+        });
+
+    });
+</script>
+
+                    
+                </div>
+
+            </nav>
+        </div>
+
+
+        <!-- DeskTop Menu End -->
+
+
+        <!-- Mobile Menu Start -->
+        <div class="mobile-menu">
+            <div class="head-bar d-flex">
+                <div class="left">
+                    <span class="navbar-toggle position-relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
+                            <g id="Group_258" data-name="Group 258" transform="translate(-20 -21)">
+                                <rect id="Rectangle_73" data-name="Rectangle 73" width="20" height="2" rx="1"
+                                    transform="translate(20 21)" fill="#00836c" />
+                                <rect id="Rectangle_74" data-name="Rectangle 74" width="20" height="2" rx="1"
+                                    transform="translate(20 28)" fill="#00836c" />
+                                <rect id="Rectangle_75" data-name="Rectangle 75" width="20" height="2" rx="1"
+                                    transform="translate(20 35)" fill="#00836c" />
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="mobile-log">
+                        <a href="index.aspx">
+                            <img src="assets/images/IDBI_Logo.svg" alt="IDBI logo" /></a>
+                    </span>
+                </div>
+		
+                <div class="right ml-auto">
+                    
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a aria-label="Search"  href="https://apps.idbi.bank.in/search1.asp" id="search-btn-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17.103" height="17.103"
+                                    viewBox="0 0 17.103 17.103">
+                                    <defs>
+                                        <style>
+                                            .a3 {
+                                                fill: #00836c;
+                                                stroke: #00836c;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(-108.719 -213.347)">
+                                        <g transform="translate(109.219 213.847)">
+                                            <path class="a3"
+                                                d="M109.219,220.166a6.32,6.32,0,0,1,6.321-6.319h0a6.32,6.32,0,0,1,6.321,6.319h0a6.321,6.321,0,0,1-6.321,6.321h0a6.321,6.321,0,0,1-6.321-6.321Zm.846,0a5.484,5.484,0,0,0,5.475,5.475h0a5.481,5.481,0,0,0,5.473-5.475h0a5.479,5.479,0,0,0-5.473-5.475h0a5.482,5.482,0,0,0-5.475,5.475Z"
+                                                transform="translate(-109.219 -213.847)">
+                                            </path>
+                                        </g>
+                                        <g transform="translate(119.464 224.088)">
+                                            <path class="a3" d="M115.443,220.667l.6-.6,5.054,5.057-.6.6-5.054-5.057Z"
+                                                transform="translate(-115.443 -220.069)">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a  aria-label="Phone banking numbers" href="idbi-bank-phone-banking-no.aspx">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.77" height="16.803"
+                                    viewBox="0 0 16.77 16.803">
+                                    <defs>
+                                        <style>
+                                            .a4 {
+                                                fill: none;
+                                                stroke: #00836c;
+                                                stroke-width: 1.2px;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <path class="a4"
+                                        d="M15.574,11.355,13.415,9.2a1.436,1.436,0,0,0-2.391.54,1.469,1.469,0,0,1-1.7.925,6.658,6.658,0,0,1-4.01-4.01,1.4,1.4,0,0,1,.925-1.7,1.436,1.436,0,0,0,.54-2.391L4.624.4A1.54,1.54,0,0,0,2.542.4L1.077,1.87C-.389,3.412,1.231,7.5,4.855,11.124s7.711,5.321,9.254,3.779l1.465-1.465A1.54,1.54,0,0,0,15.574,11.355Z"
+                                        transform="translate(0.081 0.711)">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list-inline-item login-btns">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false" style="background: transparent;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19.283" height="18.5"
+                                        viewBox="0 0 19.283 18.5">
+                                        <defs>
+                                            <style>
+                                                .a7 {
+                                                    fill: #00836c;
+                                                    stroke: #00836c;
+                                                    stroke-width: 0.5px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g transform="translate(0.25 0.25)">
+                                            <path class="a7"
+                                                d="M89.245,7.826a3.913,3.913,0,1,1,3.913-3.913A3.917,3.917,0,0,1,89.245,7.826Zm0-6.652a2.739,2.739,0,1,0,2.739,2.739A2.742,2.742,0,0,0,89.245,1.174Zm0,0"
+                                                transform="translate(-82.202 0)">
+                                            </path>
+                                            <path class="a7"
+                                                d="M325.674,346.81h-4.3a1.371,1.371,0,0,1-1.37-1.37V342.7a1.371,1.371,0,0,1,1.37-1.37h4.3a1.371,1.371,0,0,1,1.37,1.37v2.739A1.371,1.371,0,0,1,325.674,346.81Zm-4.3-4.3a.2.2,0,0,0-.2.2v2.739a.2.2,0,0,0,.2.2h4.3a.2.2,0,0,0,.2-.2V342.7a.2.2,0,0,0-.2-.2Zm0,0"
+                                                transform="translate(-308.261 -328.81)">
+                                            </path>
+                                            <path class="a7"
+                                                d="M365.994,260.3h-2.739a.587.587,0,0,1-.587-.587v-1.761a1.956,1.956,0,1,1,3.913,0v1.761A.587.587,0,0,1,365.994,260.3Zm-2.152-1.174h1.565v-1.174a.783.783,0,1,0-1.565,0Zm0,0"
+                                                transform="translate(-349.364 -246.609)">
+                                            </path>
+                                            <path class="a7"
+                                                d="M9.783,263.043H.587A.587.587,0,0,1,0,262.457v-2.739A3.722,3.722,0,0,1,3.717,256h6.848a3.706,3.706,0,0,1,1.862.5.587.587,0,1,1-.591,1.014,2.536,2.536,0,0,0-1.271-.341H3.717a2.546,2.546,0,0,0-2.543,2.543v2.152H9.783a.587.587,0,1,1,0,1.174Zm0,0"
+                                                transform="translate(0 -246.609)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+                                    <div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="https://ebanking.idbi.bank.in/idbiweb/login" target="_blank" rel="noreferrer noopener">Personal</a>
+                                <a class="dropdown-item" href="https://corp.idbi.bank.in/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&__FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=IBKL" target="_blank" rel="noreferrer noopener">Corporate</a>
+								
+                                <a class="dropdown-item" href="https://samriddhigsec.idbi.bank.in/GSEC" target="_blank" rel="noreferrer noopener">Samriddhi Portal</a>
+								
+                                <a class="dropdown-item" href="https://idbicreditcards.co.in/" target="_blank" rel="noreferrer noopener">Credit Card</a>
+								
+                                <a class="dropdown-item" href="https://clms.idbibank.co.in/GLMS/" target="_blank" rel="noreferrer noopener">G-LMS</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+       <div class="mob-side-menu">
+            <ul class="primary-links list-unstyled">
+                <li>
+                    <div class="lang-swich-bar d-flex">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="checkCheckbox(this)">
+                            <label class="custom-control-label" for="customSwitch1">
+                                Switch to
+                                    <span class="language">Hindi </span>
+                            </label>
+                        </div>
+                        <div>
+                            <span class="navbar-toggle position-relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
+                                    <g id="G1" data-name="Group 258" transform="translate(-20 -21)">
+                                        <rect id="Rect1" data-name="Rectangle 73" width="20" height="2" rx="1"
+                                            transform="translate(20 21)" fill="#fff" />
+                                        <rect id="Rect2" data-name="Rectangle 74" width="20" height="2" rx="1"
+                                            transform="translate(20 28)" fill="#fff" />
+                                        <rect id="Rect3" data-name="Rectangle 75" width="20" height="2" rx="1"
+                                            transform="translate(20 35)" fill="#fff" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-nav sub-accordian">
+                    <a href="javascript:void(0)">Accounts
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-accordian" id="savingsAccount"><a href="#savingsAccount">Savings Account </a></li>
+                        <li class="sub-accordian" id="FixedDeposit"><a href="#FixedDeposit">Fixed Deposit Account</a>  </li>
+                        <li class="sub-accordian" id="CorporatePayroll"><a href="#CorporatePayroll">Salary Accounts</a></li>
+                        <li class="sub-accordian" id="CurrentAccount"><a href="#CurrentAccount">Current Account</a></li>
+                        
+
+                    </ul>
+                </li>
+                <li class="main-nav sub-accordian">
+                    <a href="javascript:void(0)">Cards
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-accordian" id="credit-card"><a href="#credit-card">Credit Cards</a></li>
+                        <li class="sub-accordian" id="debit-card"><a href="#debit-card">Debit Cards </a></li>
+                        <li class="sub-accordian" id="prepaid-card"><a href="#prepaid-card">Prepaid Cards</a></li>
+                        <li><a href="cash-at-pos-on-debit-cards.aspx">Cash at POS Facility</a></li>
+                        <li><a href="debit-card-green-pin-generation.aspx">Debit Card Green PIN Generation</a></li>
+			<li><a href="abhay.aspx">Abhay - Card Control App</a></li>
+                        <li><a href="https://secureonline.idbibank.com/ACSWeb/EnrollWeb/IDBIBank/main/index.jsp" target="_blank" rel="noreferrer noopener">Registration of Card for Online Payment Service</a></li>
+                        <li><a href="https://www.sihub.in/managesi/idbi#/home/landing" target="_blank" rel="noreferrer noopener">Manage Standing Instruction</a></li>
+                    </ul>
+                </li>
+                <li class="main-nav sub-accordian">
+                    <a href="javascript:void(0)">Loans
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-accordian" id="home-loan"><a href="#home-loan">Home Loan</a></li>
+                        <li><a href="auto-loan.aspx"><em>i_zoomdrive</em> Auto Loan </a></li>
+                        <li><a href="education-loan.aspx"><em>I_learn</em> Education Loan</a></li>
+                        <li><a href="personal-loan.aspx">Personal Loan</a></li>
+                        <li class="sub-accordian" id="loan-against-property"><a href="#loan-against-property">Mortgage Loan and its variants</a></li>
+                        <li><a href="loan-against-securities.aspx">Loan Against Securities</a></li>
+                    </ul>
+                </li>
+                <li class="main-nav sub-accordian">
+                    <a href="javascript:void(0)">Investment
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-accordian" id="Advisory"><a href="#Advisory">Third Party Distribution</a></li>
+                        <li class="sub-accordian" id="CapitalMarket"><a href="#CapitalMarket">Capital Market </a></li>
+                        <li class="sub-accordian" id="Bonds"><a href="#Bonds">Bonds (GOI & 54EC)</a></li>
+                        <li><a href="new-pension.aspx">National Pension System</a></li>
+                        <li><a href="capital-gain-account.aspx">Capital Gain Account Scheme</a></li>
+                        <li><a href="socialsecurityschemes.aspx">Pradhanmantri Social Security Scheme</a></li>
+                        <li><a href="small-savings-schemes.aspx">Small Savings Schemes</a></li>
+                        <li><a href="https://samriddhigsec.idbi.bank.in/GSEC">IDBI Samridhi Portal</a></li>
+                        <li><a href="pdf/Financial_Guide_Mitra_Sadaiv.pdf" target="_blank" rel="noreferrer noopener">Financial Guide – मित्र,सदैव</a></li>
+                    </ul>
+                </li>
+		<li style="    border-bottom: 1px solid rgb(255 255 255 / 23%)">
+                    <a href="tax-payments.aspx">Tax Payments
+                    </a>
+                    </li>
+                <li class="main-nav sub-accordian">
+                    <a href="javascript:void(0)">Services
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="24-7-care.aspx">Phone Banking</a></li>
+                        <li><a href="go_mobile_app_android_version.aspx">Mobile Banking </a></li>
+                        <li><a href="idbi-bank-internet-banking.aspx">Internet Banking</a></li>
+			<li><a href="pdf/General-Terms-and-conditions-ME-Business.pdf" target="_blank" rel="noreferrer noopener">Merchant Acquiring-General Terms & Conditions of ME Business</a></li>
+                        <li><a href="idbi-bank-account-alerts.aspx">Account Alerts</a></li>
+                        <li><a href="pdf/Positive-Pay-System-PPS.pdf" target="_blank" rel="noreferrer noopener">Positive Pay System (PPS)</a></li>
+                        <li><a href="idbi-bank-online-nach-mandate-cancellation.aspx">Online NACH Mandate Cancellation </a></li>
+                       
+ <li><a href="mPassbook.aspx">mPassbook</a></li>
+<li><a href="idbi-bank-soft-token.aspx">IDBI Bank Soft Token</a></li>
+ <li><a href="pdf/Model-Locker-Agreement.pdf" target="_blank">Model Locker Agreement </a></li>                       
+                        <li><a href="bhim-digital-pos.aspx">BHIM Digital POS-UPI & Aadhar Pay App Mechants</a></li>
+                        <li><a href="fastag.aspx">FASTag</a></li>
+                        <li><a href="jus_tab.aspx">JusTab</a></li>
+                        <li><a href="https://linkaadhaar.idbibank.com/AadhaarSeeding/" target="_blank" rel="noreferrer noopener">Aadhar Verification</a></li>
+			<li><a href="fx-remit.aspx">Fx-Remit</a></li>
+			<li><a href="pension.aspx">Pensions</a></li>
+			<li><a href="central-bank-digital-currency.aspx">Central Bank Digital Currency</a></li>
+                    </ul>
+                </li>
+                <li class="main-nav sub-accordian">
+                    <a href="javascript:void(0)">Offers
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="credit-card-offers.aspx">Credit Card Offers</a></li>
+                        <li><a href="Debit-card-offers.aspx">Debit Card Offers </a></li>
+                        <li><a href="prepaid-card-offers.aspx">Prepaid Card Offers</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="secondary-links">
+                <li><a href="index.aspx">Personal </a></li>
+                <li><a href="corporate-banking.aspx">Corporate    </a></li>
+                <li><a href="msme-banking.aspx">MSME  </a></li>
+                <li><a href="agri-banking.aspx">AGRI </a></li>
+                <li><a href="nri-banking.aspx">NRI </a></li>
+                <li><a href="preferred-banking.aspx">Preferred Banking </a></li>
+		<li>
+                    <a href="https://www.idbibank.in/ibu/index.aspx" target="_blank" rel="noreferrer noopener">GIFT CITY</a>
+                            </li>
+                <li>  </li>
+		<li>  </li>
+            </ul>
+        </div>
+
+        
+        <!-- Mobile Menu End -->
+
+    </header>
+
+    <!-- ==================================================
+    	Header Code End
+ ==================================================== -->
+
+    <main>
+    
+         <div class="img_logo">
+
+
+
+        <div class="about-us-banner ssa-banner mb-50">
+            <img src="Banner/Images/404 Page/404l-(Responsive).jpg" class="idbi-desktop img-fluid"
+                alt="About us banner">
+            <img src="Banner/Images/404 Page/404-Page.jpg" class="idbi-mobile img-fluid"
+                alt="About us banner">
+            <div class="aboutus-banner-cont ssa-banner-cont">
+                <h2></h2>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="text">
+        <p>Something went wrong</p>
+    </div>
+    <div class="btn_fir">
+
+        
+        <a href="index.aspx" class="btn btn-orange-outline">Return Home</a>
+   
+    </div>
+
+    
+    </main>
+
+
+
+
+    <!-- ==================================================
+    	Footer Section Start
+ ==================================================== -->
+    
+
+<footer>
+   <div class="footer-top">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <ul class="footer-top-nav list-inline text-center">
+                        <li class="list-inline-item"><a href="vigilance-mechanism.aspx">Vigilance</a></li>
+                        <li class="list-inline-item"><a href="rti.aspx">RTI</a></li>
+                        <li class="list-inline-item"><a href="regulatory-disclosures-section.aspx">Regulatory Disclosures</a></li>
+                        <li class="list-inline-item"><a href="List-of-Aadhaar-Enrolment-Center.aspx">Aadhaar Services</a></li>
+                        <li class="list-inline-item"><a href="financial-inclusion.aspx">Financial Inclusion</a></li>
+                        <li class="list-inline-item"><a href="corporate-social-responsibility.aspx">CSR</a></li>
+                        <li class="list-inline-item"><a href="esg-environmental-social-governance.aspx">ESG</a></li>
+                        <li class="list-inline-item"><a href="idbi-bank-policies.aspx">Policies</a></li>
+                        <li class="list-inline-item"><a href="pdf/Investor-Charter-and-Grievance.pdf" rel="noreferrer noopener" target="_blank">Investor Charter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-section">
+        <div class="custom-container">
+            <div class="row flex-direction-reverse-xs">
+                <div class="col-md-12 col-lg-9">
+                    <ul class="footer-links list-inline">
+                        <li class="list-inline-item"><a href="https://www.idbitc.in/" target="_blank" rel="noreferrer noopener">IDBI Training College</a></li>
+                        <li class="list-inline-item"><a href="notices-tender-awards.aspx">Tenders Awarded</a></li>
+                        <li class="list-inline-item"><a href="https://apps.idbi.bank.in/idbiapp/e-auction.aspx" target="_blank" rel="noreferrer noopener">E-Auctions</a></li>
+                        <li class="list-inline-item"><a href="contact-us.aspx">Contact Us</a></li>
+                        <li class="list-inline-item"><a href="sitemap.aspx">SiteMap</a></li>
+                        <li class="list-inline-item"><a href="faq.aspx">FAQs</a></li>
+                        <li class="list-inline-item"><a href="idbi-bank-awards-and-accolades.aspx">Awards and Accolades</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="footer-social-links d-flex">
+                        <li><a href="https://www.facebook.com/IDBIBank" target="_blank" rel="noreferrer noopener">
+                            <img src="assets/images/icons/facebook.svg" alt="Facebook">
+                        </a></li>
+                        <li><a href="https://www.youtube.com/idbibank" target="_blank" rel="noreferrer noopener">
+                            <img src="assets/images/icons/youtube.svg" alt="Youtube">
+                        </a></li>
+                        <li><a href="https://www.instagram.com/idbibankofficial/" target="_blank" rel="noreferrer noopener">
+                            <img src="assets/images/icons/instagram.svg" alt="Instagram">
+                        </a></li>
+                        <li><a href="https://twitter.com/idbi_bank" target="_blank" rel="noreferrer noopener">
+                            <img src="assets/images/icons/twitter.svg" alt="Twitter" style="width: 20px; height:20px">
+                        </a></li>
+                        <li><a href="https://in.linkedin.com/company/idbi-bank" target="_blank" rel="noreferrer noopener">
+                            <img src="assets/images/icons/linkedin.svg" alt="Linkedin">
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xl-12 p-xs-0">
+                    <ul class="row list-unstyled" id="footer-accordion">
+                        <li class="col-md-4">
+                            <div class="footer-accordion">
+                                <div class="card-header collapsed">
+                                    <a class="card-title">National & State Relief Funds </a>
+                                </div>
+                                <div class="card-body collapse">
+                                    <ul>
+                                        <!--<li><a href="https://inetapps.idbibank.co.in/pmcaresfund" target="_blank" rel="noreferrer noopener">PM CARES fund</a> </li>-->
+                                        <li><a href="https://inetapps.idbibank.co.in/pmnrf" target="_blank" rel="noreferrer noopener">Prime Minister’s National Relief Fund – Online Donation</a></li>
+                                        <li><a href="pdf/pm-National-Relief-Fund.pdf" target="_blank" rel="noreferrer noopener">Prime Minister’s National Relief Fund – Notification</a> </li>
+                                        <li><a href="pdf/Chief-Minister-Relief-Fund-Bihar.pdf" target="_blank" rel="noreferrer noopener">Chief Minister’s Relief Fund, Bihar</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <div class="footer-accordion">
+                                <div class="card-header collapsed">
+                                    <a class="card-title">Announcements & Notices </a>
+                                </div>
+                                <div class="card-body collapse">
+                                    <ul>
+ <li><a href="pdf/Payroll-Locker-holders.pdf" target="_blank" rel="noreferrer noopener">Notice to Payroll (Salary) Account Customers - Revision in Locker concession for the Select Schemes/Variants</a></li> 
+					
+<li><a href="pdf/Appointment-of-Bluevine-Technologies-Private-Limited.pdf" target="_blank" rel="noreferrer noopener">Appointment of Bluevine Technologies Private Limited (Accumn) - Assignment Awarded on Nomination Basis</a></li> 
+
+<li><a href="pdf/LRFP-for-Develoment-of-Model-Risk-Managemenent-Framework.pdf" target="_blank" rel="noreferrer noopener">LRFP for Develoment of Model Risk Managemenent Framework</a></li> 										
+					
+<li><a href="pdf/Assignment-Awarded-on-Nomination-Basis.pdf" target="_blank" rel="noreferrer noopener">Appointment of M/s Protiviti Member India Private Limited - Assignment Awarded on Nomination Basis</a></li> 
+
+<li><a href="notices-adv/pdf/Broker-Empanelment-Notice-Treasury.pdf" target="_blank" rel="noreferrer noopener">Notice for Brokers’ Empanelment</a></li> 
+
+					<li><a href="pdf/Empanelment_of-Retired-officers.pdf" target="_blank" rel="noreferrer noopener">Empanelment of Retired Officers as Concurrent Auditors for IDBI Bank</a></li> 
+					 <li><a href="pdf/Empanelment-Chartered-Accountant-Firms-Concurrent-Auditors.pdf" target="_blank" rel="noreferrer noopener">Empanelment of Chartered Accountant Firms as Concurrent Auditor</a></li>   
+					
+					<li><a href="pdf/Notice-Appointment-of-CA-Firms-as-Concurrent-Auditors.pdf" target="_blank" rel="noreferrer noopener"> Disclaimer Notice- Appointment of Concurrent Auditors for IDBI Bank Ltd. </a></li>
+                                        <li><a href="pdf/Notice-to-Mutual-Fund-Investors.pdf" target="_blank" rel="noreferrer noopener">Notice to Mutual Fund Holders – Nomination & KYC Updation/ PAN – Aadhar linkage & others </a></li>   
+                                        <li><a href="pdf/Important-Notice-to-DEMAT-Account-holders.pdf" target="_blank" rel="noreferrer noopener">Notice to Demat Account Holder - Providing Nomination in Demat Account </a></li>   
+                                         
+                                        
+                                        <li><a href="pdf/NOTICE-FOR-EMPANELMENT-OF-COLLECTION-AGENCIES.pdf" target="_blank" rel="noreferrer noopener"> Public Notice for empanlement of Collection Agency(CA)</a></li>
+                                        <li><a href="pdf/Notice-to-Safe-Deposit-Locker-holders.pdf" target="_blank" rel="noreferrer noopener">Notice to Safe Deposit Locker holders</a></li>
+									    <li><a href="pdf/Advertisement-for-Empanelment-of-Retired-Bankers.pdf" target="_blank" rel="noreferrer noopener"> Advertisement for Empanelment of Retired Bankers/ Directors as Member of External Settlement Advisory Committee (ESAC).</a></li>
+					                    <li><a href="https://apps.idbi.bank.in/15gh/" target="_blank" rel="noreferrer noopener"> Submit Form 15G/H online</a></li>
+                                        <li><a href="pdf/Revised-Dearness-Relief-for-Central-Gov_Pensioners.pdf" target="_blank" rel="noreferrer noopener">Revised Dearness Relief for Central Government Pensioners</a></li>
+                                        <li><a href="pdf/New-IEMs-in-IDBI-Bank.pdf" target="_blank" rel="noreferrer noopener">Revision of Threshold Limits and Appointment of New IEMs in IDBI Bank</a></li>
+                                        <li><a href="https://www.rbi.org.in/Scripts/BS_CircularIndexDisplay.aspx?Id=11998" target="_blank" rel="noreferrer noopener">24x7 Availability of RTGS System</a></li>
+                                        <li><a href="pdf/Notice-to-Locker-Hirer.pdf" target="_blank" rel="noreferrer noopener">Notice to Locker Hirers</a></li>
+                                        <li><a href="Linking-of-PAN-with-Aadhar.aspx" target="_blank" rel="noreferrer noopener">Attention Demat Account Holders</a></li>
+                                        <li><a href="notice_to_customers.aspx" target="_blank" rel="noreferrer noopener">Notice to Customer</a></li>
+                                        <li><a href="fdcustomer-notice.aspx">Notice to Fixed Deposit Customer</a></li>
+                                        <li><a href="pdf/KYC-Notice_26122014.pdf" target="_blank" rel="noreferrer noopener">Notice for KYC Updation</a></li>
+                                        <li><a href="pdf/Re-KYC-Notice.pdf" target="_blank" rel="noreferrer noopener">Notices to Re-KYC Pending Customers</a></li>
+                                        <li><a href="pdf/CTS-Notice.pdf" target="_blank" rel="noreferrer noopener">CTS Notice</a></li>
+                                        <li><a href="pdf/WillfulDefaulters.xlsx">List of Willful Defaulters</a></li>
+                                        <li><a href="pdf/NodalOfficersDRT.pdf" target="_blank" rel="noreferrer noopener">Nodal Officers for DRTs</a></li>
+                                        <li><a href="https://apps.idbi.bank.in/idbiapp/statewise-holiday.aspx">Bank Holiday List</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <div class="footer-accordion">
+                                <div class="card-header collapsed">
+                                    <a class="card-title">Government Schemes & Pledges</a>
+                                </div>
+                                <div class="card-body collapse">
+                                    <ul>
+					<li><a href="pdf/RBI-Trade-Relief-Measures-Directions.pdf" target="_blank" rel="noreferrer noopener">RBI Trade Relief Measures Directions, 2025</a></li>
+                                        <!--<li><a href="disclaimer.aspx?lk=Jan-Dhan-darshak" target="_blank" rel="noreferrer noopener">Jan Dhan Darshak </a></li>-->
+                                        <li><a href="disclaimer.aspx?lk=psbloansin59minutes" target="_blank" rel="noreferrer noopener">PSB Loans in 59 minutes</a> </li>
+                                        <li><a href="disclaimer.aspx?lk=JPYDLC">Jeevan Pramaan Yojana</a> </li>
+                                        <li><a href="disclaimer.aspx?lk=epledge">Integrity Pledge</a> </li>
+                                        <!--<li><a href="disclaimer.aspx?lk=subsidy">Pledge to give up subsidy</a> </li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <div class="footer-accordion">
+                                <div class="card-header collapsed">
+                                    <a class="card-title">Important Links </a>
+                                </div>
+                                <div class="card-body collapse">
+                                    <ul>
+                                        <li><a href="disclaimer.aspx?lk=RBI-Kehta-Hai" target="_blank" rel="noreferrer noopener">RBI Kehta Hai</a></li>
+					<li><a href="dfs.aspx">DFS</a></li>
+                                        <li><a href="pdf/Financial_Guide_Mitra_Sadaiv.pdf" target="_blank" rel="noreferrer noopener">Financial Guide – मित्र, सदैव</a></li>
+                                        <li><a href="dicgc.aspx">Deposit Insurance and Credit Guarantee Corporation</a></li>
+                                        
+                                        <li><a href="pdf/pension-nodal-officer-list.pdf" target="_blank" rel="noreferrer noopener">Nodal Officers for Pension</a></li>
+                                        <li><a href="https://apps.idbi.bank.in/goi-tds/tds-login.asp" target="_blank" rel="noreferrer noopener">TDS certificates for GoI Bonds/ Senior Citizen Savings Scheme (SCSS)</a></li>
+                                        <li><a href="https://apps.idbi.bank.in/tds/tds-login.aspx" target="_blank" rel="noreferrer noopener">TDS Certificate</a></li>
+                                        <li><a href="https://apps.idbi.bank.in/deafaccount/" target="_blank" rel="noreferrer noopener">Unclaimed Deposits (10 years)</a></li>
+                                        <li><a href="disclaimer.aspx?lk=udgam" target="_blank" rel="noreferrer noopener">UDGAM Portal</a></li>
+                                        <li><a href="https://apps.idbi.bank.in/e-ihfl.asp" target="_blank" rel="noreferrer noopener">IDBI Home Finance Limited (IHFL)</a></li>
+                                        <li><a href="https://apps.idbi.bank.in/pensioner/pensioner-data.asp" target="_blank" rel="noreferrer noopener">Pension Pay Slip</a></li>
+                                        <li><a href="disclaimer.aspx?lk=JPYDLC" target="_blank" rel="noreferrer noopener">Certificate for Pensioners</a></li>
+					                    <li><a href="https://www.nseindia.com/companytracker/cmtracker.jsp?symbol=IDBI" target="_blank" rel="noreferrer noopener">NSE's Market Tracker</a></li>
+                                        <li><a href="disclaimer.aspx?lk=EPFO" target="_blank" rel="noreferrer noopener">EPFO</a></li>
+                                        <li><a href="disclaimer.aspx?lk=ESIC" target="_blank" rel="noreferrer noopener">ESIC</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <div class="footer-accordion">
+                                <div class="card-header collapsed">
+                                    <a class="card-title">Other Links</a>
+                                </div>
+                                <div class="card-body collapse">
+                                    <ul>
+				       <li><a href="https://ifinpro.idbibank.co.in/IfinPro/vendor-login" target="_blank" rel="noreferrer noopener">FinTech Registration - List your services/capability</a></li>
+                                       
+											
+											<li><a href="https://unauthorisedtran.idbibank.com/" target="_blank" rel="noreferrer noopener" class="message-popup">Reporting of unauthorized digital transactions</a></li>
+                                            
+											
+                                            
+                                            
+											
+                                           
+                                        <li><a href="https://apps.idbi.bank.in/iepf/unclaimed-bond-maturity.aspx" target="_blank" rel="noreferrer noopener">Details of Unclaimed Bonds Maturity, Bonds issued prior to October 01' 2004</a></li>
+                                        <li><a href="pdf/msme/MSME_Application_details_31_March_2022_value.pdf" target="_blank" rel="noreferrer noopener">MSME Loan Application Status</a></li>
+                                        <li><a href="pdf/Policy-revival-rehabilitation-MSME.pdf" target="_blank" rel="noreferrer noopener">Policy on revival and Rehabilitation of MSMEs</a></li>
+                                        <li><a href="pdf/Collection-Agency.pdf" target="_blank" rel="noreferrer noopener">List of Collection Agency’s</a></li>
+                                        <li><a href="pdf/Timelines-for-Credit-Decisions.pdf" target="_blank" rel="noreferrer noopener">Timeline for Credit Decisions</a></li>
+                                        <li><a href="pdf/visually_challenged_person.pdf" target="_blank" rel="noreferrer noopener">Accounts for Visually Challenged persons</a></li>
+                                        <li><a href="pdf/Consumer-Education-on-SMA-NPA.pdf" target="_blank" rel="noreferrer noopener">Consumer Education on SMA/NPA</a></li>
+                                        <li><a href="disclaimer.aspx?lk=A">RBI</a></li>
+                                        <li><a href="smart-odr.aspx">SMART ODR</a></li>
+                                        <li><a href="idbi-bank-rinn-samadhan-scheme.aspx">IDBI Rinn Samadhan Scheme (IRIS Scheme)</a></li>
+                                        <li><a href="idbi-bank-sugam-rinn-bhugtan-yojana.aspx">Sugam Rinn Bhugtan Yojana (SUGAM) -II Scheme Special OTS Scheme</a></li>
+
+					<li><a href="iba.aspx" target="_blank" rel="noreferrer noopener">IBA</a></li>
+                                        <li><a href="disclaimer.aspx?lk=ccilindia">Application for Legal Entity Identifier (LEI) Code</a></li>
+                                        <li><a href="pdf/Empanelment-of-Valuers.pdf">Application for Empanelment of Valuers </a></li>
+                                        <li><a href="pdf/Details-of-schemes-redeemed.pdf" target="_blank" rel="noreferrer noopener" title="Redeemed IDBI Bonds">Redeemed IDBI Bonds (Early Redemption/ Normal Maturity) </a></li>
+                                        <!--<li><a href="pdf/COVID-19-Resolution-Framework-2.pdf" target="_blank" rel="noreferrer noopener">Resolution Framework 2.0 for COVID-19 related stress</a></li>-->
+                                        <li><a href="pdf/TrackRecordofPublicIssues.pdf" target="_blank" rel="noreferrer noopener">Track Record of Public Issues</a> </li>
+                                        <li><a href="informative-videos.aspx">Informative Videos</a> </li>
+                                        <li><a href="https://www.gst.gov.in/" target="_blank" rel="noreferrer noopener">GST</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <div class="footer-accordion">
+                                <div class="card-header collapsed">
+                                    <a class="card-title">Tools & Calculators </a>
+                                </div>
+                                <div class="card-body collapse">
+                                    <ul>
+                                        <li><a href="https://apps.idbi.bank.in/loan-calculator.asp?prd=HL&token=">Home Loans Eligibility Calculator</a> </li>
+                                        <li><a href="https://apps.idbi.bank.in/loan-calculator.asp?prd=AL&token=">Auto Loan Eligibility Calculator</a> </li>
+                                        <li><a href="https://apps.idbi.bank.in/loan-calculator.asp?prd=PL&token=">Personal Loan Eligibility Calculator</a> </li>
+                                        <li><a href="term-deposit-calculator.aspx">Term Deposit Calculator</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="custom-container container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <p>© 2021 IDBI Bank Ltd. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <ul class="footer-bottom-links d-flex m-0" style="display: -webkit-inline-box !important;">
+                        <li><a href="idbi-bank-policies.aspx">Privacy </a></li>
+                        <li><a href="idbi-bank-policies-hyperlink.aspx">Hyperlink </a></li>
+                        <li><a href="idbi-bank-policies-copyright.aspx">Copyright </a></li>
+                        <li><a href="screen_reader_access.aspx">Screen Reader Access </a></li>
+                        <li><a href="main-disclaimer.aspx">Disclaimer</a> </li>
+                        <li><a href="mailto:webmaster@idbi.co.in">Webmaster</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal fade " id="attention" tabindex="-1" aria-labelledby="urgentAttentionShareholderModal" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center">
+                    <button type="button" class="close pos-abs" data-bs-dismiss="modal" aria-label="Close" style="top: 10px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-left">
+                    <p>“Due to technical reasons, the site is not available on 20-September-2024 from 7:00 PM to 9:00 PM". You are requested to contact customer care center. Sorry for the inconvenience caused”.</p>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+    <script>
+        const btnkyc = document.getElementById('kyc')
+if(btnkyc)
+{
+        btnkyc.addEventListener('click', function () {
+            var myModal = new bootstrap.Modal(document.getElementById('attention'));
+            myModal.show();
+        });
+       }
+    </script>
+
+
+<!-- ==================================================
+    	Footer Section End
+ ==================================================== -->
+
+
+    <!-- ==================================================
+    	Footer Section End
+ ==================================================== -->
+
+
+
+
+    <!-- ==================================================
+    	Right Side Sticky Nav Start
+ ==================================================== -->
+
+    
+    <div class="sticky-nav">
+        <ul>
+            <li>
+                <a href="apply-now.aspx">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28.436" height="23.129" viewBox="0 0 28.436 23.129">
+                            <defs>
+                                <style>
+                                    .ap {
+                                        fill: none;
+                                        stroke: #fff;
+                                        stroke-linecap: round;
+                                        stroke-linejoin: round;
+                                        stroke-width: 1.2px;
+                                    }
+                                </style>
+                            </defs>
+                            <g transform="translate(-363.572 -1210.747)">
+                                <g transform="translate(366.533 1211.347)">
+                                    <rect class="ap" width="22.515" height="16.102" />
+                                </g>
+                                <g transform="translate(364.172 1227.141)">
+                                    <path class="ap" d="M389.186,1232.378H366.394l-2.222,6.135h27.236Z"
+                                        transform="translate(-364.172 -1232.378)" />
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Apply Now
+                </a>
+            </li>
+            <li>
+                <a href="pay-online.aspx">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24.736" height="25" viewBox="0 0 24.736 25">
+                            <defs>
+                                <style>
+                                    .pay {
+                                        fill: #fff;
+                                    }
+                                </style>
+                            </defs>
+                            <g transform="translate(-234.574 -234.093)">
+                                <g transform="translate(234.574 234.093)">
+                                    <path class="pay"
+                                        d="M258.6,242.616a12.6,12.6,0,0,0-1.052-2.213,12.989,12.989,0,0,0-1.46-1.977,13.1,13.1,0,0,0-4.061-3.055,12.925,12.925,0,0,0-5.162-1.277h-.028a12.34,12.34,0,0,0-4.791,1.068,12.665,12.665,0,0,0-6.525,6.683,12.326,12.326,0,0,0,.036,9.555,12.662,12.662,0,0,0,6.519,6.608,12.346,12.346,0,0,0,4.76,1.054h.025a13.074,13.074,0,0,0,3.316-.537l-.55-1.894,0,0a4.3,4.3,0,0,1-2.254,1.139l0-4.555c.345.008.692.021,1.039.041l.055-.962q-.548-.032-1.095-.043l0-4.913h5.749a19.654,19.654,0,0,1-.182,1.968c0-.008,0-.018.005-.028l.941.21c0-.014.006-.029.008-.043a20.641,20.641,0,0,0,.193-2.106h4.249c0,.03,0,.06-.006.09a10.927,10.927,0,0,1-1.28,4.382l.852.452q.1-.185.191-.373a11.786,11.786,0,0,0,.517-9.275Zm-12.2,9.63a44.146,44.146,0,0,0-4.8.314,17.892,17.892,0,0,1-.971-5.22H246.4Zm0-5.87h-5.785a18.506,18.506,0,0,1,.867-5.648c.469.06.971.116,1.505.165,1.132.1,2.272.161,3.41.174Zm-.008-11.22,0,4.945c-1.233-.013-2.343-.079-3.294-.165q-.673-.061-1.279-.136a12.3,12.3,0,0,1,.7-1.457C243.588,236.473,244.946,235.36,246.389,235.156Zm-3.015.516a9.239,9.239,0,0,0-1.688,2.193,13.339,13.339,0,0,0-.849,1.8c-1.135-.169-2.018-.352-2.58-.483A11.646,11.646,0,0,1,243.373,235.672Zm-7.833,10.7a11.417,11.417,0,0,1,2.071-6.356c.485.124,1.488.357,2.9.573q-.177.561-.321,1.156a20.122,20.122,0,0,0-.543,4.627Zm2.121,6.814a11.418,11.418,0,0,1-2.1-5.85h4.1a19.83,19.83,0,0,0,.525,3.841q.188.781.435,1.5C239.22,252.881,238.162,253.086,237.662,253.19Zm.665.851c.6-.116,1.518-.278,2.634-.428l.013,0a13.067,13.067,0,0,0,.71,1.454,8.762,8.762,0,0,0,2.094,2.544A11.67,11.67,0,0,1,238.327,254.041Zm4.2.547a11.971,11.971,0,0,1-.552-1.1,42.756,42.756,0,0,1,4.431-.278l0,4.566C244.956,257.58,243.592,256.465,242.522,254.588Zm12.846-15.519.1.108c-.87.194-1.726.351-2.563.478a13.336,13.336,0,0,0-.845-1.79,9.341,9.341,0,0,0-1.608-2.116A12.016,12.016,0,0,1,255.368,239.069Zm-8.016-3.913c1.442.2,2.8,1.317,3.866,3.186a12.291,12.291,0,0,1,.7,1.448,40.911,40.911,0,0,1-4.562.31Zm.008,11.22,0-5.309q.86-.01,1.714-.054,1.608-.084,3.189-.292a18.5,18.5,0,0,1,.87,5.656Zm6.733,0a20.122,20.122,0,0,0-.543-4.627q-.145-.6-.325-1.168,1.474-.231,2.9-.568a11.427,11.427,0,0,1,2.21,6.363Z"
+                                        transform="translate(-234.574 -234.093)" />
+                                    <path class="pay" d="M624.958,557.936l0,.012Z" transform="translate(-606.605 -542.713)" />
+                                    <path class="pay"
+                                        d="M531.731,537.693l2.988,10.287,1.625-2.961,2.865,3.4,1.542-1.253-2.8-3.457,3.14-1.047Z"
+                                        transform="translate(-517.762 -523.421)" />
+                                    <path class="pay" d="M710.469,609.986l.944.5-.852-.452Z"
+                                        transform="translate(-688.097 -592.316)" />
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Pay Online
+                </a>
+            </li>
+            <li>
+                <a href="interest-rates.aspx">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26.042" height="26.042" viewBox="0 0 26.042 26.042">
+                            <defs>
+                                <style>
+                                    .inra {
+                                        fill: #fff;
+                                        stroke: #f37021;
+                                        stroke-width: 0.5px;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="inra"
+                                d="M8.837,18.066,21.758,5.145a1,1,0,0,0-1.411-1.411L7.426,16.655a1,1,0,1,0,1.411,1.411Zm10.918-1.055A2.993,2.993,0,1,0,16.762,20,3,3,0,0,0,19.755,17.011Zm-2,0a1,1,0,1,1-1-1A1,1,0,0,1,17.76,17.011ZM11.773,8.531A2.993,2.993,0,1,0,8.78,11.524,3,3,0,0,0,11.773,8.531Zm-2,0a1,1,0,1,1-1-1A1,1,0,0,1,9.778,8.531ZM21.8,21.8a12.688,12.688,0,0,0,3.741-9.03,12.815,12.815,0,0,0-.4-3.192,1,1,0,1,0-1.933.5,10.766,10.766,0,1,1-7.7-7.729,1,1,0,1,0,.506-1.93A12.772,12.772,0,1,0,21.8,21.8Z"
+                                transform="translate(0.25 0.25)" />
+                        </svg>
+                    </span>
+                    Interest Rates
+                </a>
+            </li>
+            <li>
+                <a href="term-deposit-calculator.aspx">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16.427" height="24.2" viewBox="0 0 16.427 24.2">
+                            <defs>
+                                <style>
+                                    .tools {
+                                        fill: #fff;
+                                        stroke: #fff;
+                                        stroke-width: 0.2px;
+                                    }
+                                </style>
+                            </defs>
+                            <g transform="translate(-582.4 -382.4)">
+                                <g transform="translate(582.5 382.5)">
+                                    <path class="tools"
+                                        d="M596.443,406.5h-11.66a2.286,2.286,0,0,1-2.283-2.283V384.783a2.286,2.286,0,0,1,2.283-2.283h11.66a2.286,2.286,0,0,1,2.283,2.283v19.433A2.286,2.286,0,0,1,596.443,406.5Zm-11.66-23.32a1.605,1.605,0,0,0-1.6,1.6v19.433a1.605,1.605,0,0,0,1.6,1.6h11.66a1.605,1.605,0,0,0,1.6-1.6V384.783a1.605,1.605,0,0,0-1.6-1.6Z"
+                                        transform="translate(-582.5 -382.5)" />
+                                </g>
+                                <g transform="translate(584.932 385.186)">
+                                    <path class="tools"
+                                        d="M717.784,525.625h-8.934a1.216,1.216,0,0,1-1.215-1.215v-2.482a1.216,1.216,0,0,1,1.215-1.215h8.934A1.216,1.216,0,0,1,719,521.929v2.482A1.216,1.216,0,0,1,717.784,525.625Zm-8.934-4.231a.535.535,0,0,0-.534.534v2.482a.535.535,0,0,0,.534.534h8.934a.535.535,0,0,0,.534-.534v-2.482a.535.535,0,0,0-.534-.534Z"
+                                        transform="translate(-707.636 -520.714)" />
+                                </g>
+                                <g transform="translate(584.932 391.745)">
+                                    <g transform="translate(0 0)">
+                                        <path class="tools"
+                                            d="M709.894,861.821h-1.043a1.216,1.216,0,0,1-1.215-1.215v-1.153a1.216,1.216,0,0,1,1.215-1.215h1.043a1.216,1.216,0,0,1,1.215,1.215v1.153A1.216,1.216,0,0,1,709.894,861.821Zm-1.043-2.9a.535.535,0,0,0-.534.534v1.153a.535.535,0,0,0,.534.534h1.043a.535.535,0,0,0,.534-.534v-1.153a.535.535,0,0,0-.534-.534Z"
+                                            transform="translate(-707.636 -858.239)" />
+                                        <g transform="translate(3.945)">
+                                            <path class="tools"
+                                                d="M912.919,861.821h-1.043a1.216,1.216,0,0,1-1.215-1.215v-1.153a1.216,1.216,0,0,1,1.215-1.215h1.043a1.216,1.216,0,0,1,1.215,1.215v1.153A1.216,1.216,0,0,1,912.919,861.821Zm-1.043-2.9a.535.535,0,0,0-.534.534v1.153a.535.535,0,0,0,.534.534h1.043a.535.535,0,0,0,.534-.534v-1.153a.535.535,0,0,0-.534-.534Z"
+                                                transform="translate(-910.661 -858.239)" />
+                                        </g>
+                                        <g transform="translate(7.891)">
+                                            <path class="tools"
+                                                d="M1115.944,861.821H1114.9a1.216,1.216,0,0,1-1.215-1.215v-1.153a1.216,1.216,0,0,1,1.215-1.215h1.043a1.216,1.216,0,0,1,1.215,1.215v1.153A1.216,1.216,0,0,1,1115.944,861.821Zm-1.043-2.9a.535.535,0,0,0-.534.534v1.153a.535.535,0,0,0,.534.534h1.043a.535.535,0,0,0,.534-.534v-1.153a.535.535,0,0,0-.534-.534Z"
+                                                transform="translate(-1113.686 -858.239)" />
+                                        </g>
+                                    </g>
+                                    <g transform="translate(0 8.531)">
+                                        <path class="tools"
+                                            d="M709.894,1300.8h-1.043a1.216,1.216,0,0,1-1.215-1.214v-1.153a1.216,1.216,0,0,1,1.215-1.215h1.043a1.216,1.216,0,0,1,1.215,1.215v1.153A1.216,1.216,0,0,1,709.894,1300.8Zm-1.043-2.9a.535.535,0,0,0-.534.534v1.153a.535.535,0,0,0,.534.534h1.043a.535.535,0,0,0,.534-.534v-1.153a.535.535,0,0,0-.534-.534Z"
+                                            transform="translate(-707.636 -1297.214)" />
+                                        <g transform="translate(3.945)">
+                                            <path class="tools"
+                                                d="M912.919,1300.8h-1.043a1.216,1.216,0,0,1-1.215-1.214v-1.153a1.216,1.216,0,0,1,1.215-1.215h1.043a1.216,1.216,0,0,1,1.215,1.215v1.153A1.216,1.216,0,0,1,912.919,1300.8Zm-1.043-2.9a.535.535,0,0,0-.534.534v1.153a.535.535,0,0,0,.534.534h1.043a.535.535,0,0,0,.534-.534v-1.153a.535.535,0,0,0-.534-.534Z"
+                                                transform="translate(-910.661 -1297.214)" />
+                                        </g>
+                                        <g transform="translate(7.891)">
+                                            <path class="tools"
+                                                d="M1115.944,1300.8H1114.9a1.216,1.216,0,0,1-1.215-1.214v-1.153a1.216,1.216,0,0,1,1.215-1.215h1.043a1.216,1.216,0,0,1,1.215,1.215v1.153A1.216,1.216,0,0,1,1115.944,1300.8Zm-1.043-2.9a.535.535,0,0,0-.534.534v1.153a.535.535,0,0,0,.534.534h1.043a.535.535,0,0,0,.534-.534v-1.153a.535.535,0,0,0-.534-.534Z"
+                                                transform="translate(-1113.686 -1297.214)" />
+                                        </g>
+                                    </g>
+                                    <g transform="translate(0 4.265)">
+                                        <path class="tools"
+                                            d="M709.894,1081.308h-1.043a1.216,1.216,0,0,1-1.215-1.215v-1.153a1.216,1.216,0,0,1,1.215-1.215h1.043a1.216,1.216,0,0,1,1.215,1.215v1.153A1.216,1.216,0,0,1,709.894,1081.308Zm-1.043-2.9a.535.535,0,0,0-.534.534v1.153a.535.535,0,0,0,.534.534h1.043a.535.535,0,0,0,.534-.534v-1.153a.535.535,0,0,0-.534-.534Z"
+                                            transform="translate(-707.636 -1077.726)" />
+                                        <g transform="translate(3.945)">
+                                            <path class="tools"
+                                                d="M912.919,1081.308h-1.043a1.216,1.216,0,0,1-1.215-1.215v-1.153a1.216,1.216,0,0,1,1.215-1.215h1.043a1.216,1.216,0,0,1,1.215,1.215v1.153A1.216,1.216,0,0,1,912.919,1081.308Zm-1.043-2.9a.535.535,0,0,0-.534.534v1.153a.535.535,0,0,0,.534.534h1.043a.535.535,0,0,0,.534-.534v-1.153a.535.535,0,0,0-.534-.534Z"
+                                                transform="translate(-910.661 -1077.726)" />
+                                        </g>
+                                        <g transform="translate(7.891)">
+                                            <path class="tools"
+                                                d="M1115.944,1081.308H1114.9a1.216,1.216,0,0,1-1.215-1.215v-1.153a1.216,1.216,0,0,1,1.215-1.215h1.043a1.216,1.216,0,0,1,1.215,1.215v1.153A1.216,1.216,0,0,1,1115.944,1081.308Zm-1.043-2.9a.535.535,0,0,0-.534.534v1.153a.535.535,0,0,0,.534.534h1.043a.535.535,0,0,0,.534-.534v-1.153a.535.535,0,0,0-.534-.534Z"
+                                                transform="translate(-1113.686 -1077.726)" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Tools & Calculator
+                </a>
+            </li>
+            <li>
+                <a href="https://apps.idbi.bank.in/idbiapp/branch-atm.aspx" target="_blank" rel="noreferrer noopener">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18.47" height="25" viewBox="0 0 18.47 25">
+                            <defs>
+                                <style>
+                                    .branch {
+                                        fill: #fff;
+                                    }
+                                </style>
+                            </defs>
+                            <g transform="translate(-2.41 -0.015)">
+                                <g transform="translate(2.41 0.015)">
+                                    <g transform="translate(0 0)">
+                                        <g transform="translate(0)">
+                                            <g transform="translate(0)">
+                                                <path class="branch"
+                                                    d="M57.315,0A9.245,9.245,0,0,0,48.08,9.235a10.655,10.655,0,0,0,.783,3.556,14.893,14.893,0,0,0,1.067,2l6.332,9.594a1.2,1.2,0,0,0,2.1,0L64.7,14.787a14.832,14.832,0,0,0,1.067-2,10.652,10.652,0,0,0,.783-3.556A9.245,9.245,0,0,0,57.315,0Zm7.451,12.369a13.646,13.646,0,0,1-.973,1.82L57.46,23.784c-.125.19-.165.19-.29,0l-6.333-9.595a13.652,13.652,0,0,1-.973-1.82,9.672,9.672,0,0,1-.7-3.133,8.149,8.149,0,0,1,16.3,0A9.68,9.68,0,0,1,64.766,12.369Z"
+                                                    transform="translate(-48.08)" />
+                                                <path class="branch"
+                                                    d="M116.969,64.008a4.889,4.889,0,1,0,4.889,4.889A4.895,4.895,0,0,0,116.969,64.008Zm0,8.692a3.8,3.8,0,1,1,3.8-3.8A3.807,3.807,0,0,1,116.969,72.7Z"
+                                                    transform="translate(-107.734 -59.662)" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Branch Locator
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- ==================================================
+    	Right Side Sticky Nav End
+ ==================================================== -->
+<div class="modal fade " id="complaint" tabindex="-1" aria-labelledby="urgentAttentionShareholderModal" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center">
+                    <button type="button" class="close pos-abs" data-bs-dismiss="modal" aria-label="Close" style="top: 10px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-left">
+                    <p>“Due to technical reasons, the site is not available from 22nd March 2025 07:00 PM to 23rd March 2025 06:00 AM. You are requested to contact customer care center. Sorry for the inconvenience caused”.</p>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+    <script>
+        const btnnew = document.getElementById('complaintbtn')
+        if(btnnew){
+            btnnew.addEventListener('click', function () {
+                var myModal = new bootstrap.Modal(document.getElementById('complaint'));
+                myModal.show();
+            });
+        }
+        const btnkyc1 = document.getElementById('complaintbtn1')
+        if(btnkyc1){
+            btnkyc1.addEventListener('click', function () {
+                var myModal = new bootstrap.Modal(document.getElementById('complaint'));
+                myModal.show();
+            });
+        }
+    </script>
+
+
+  <script src="newdata/jsevents.js" type="text/javascript" ></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+
+<title>404 - Error: 404</title>
+<link rel="stylesheet" href="/templates/g5_hydrogen/css/gantry-compiled.css" type="text/css" />
+<link rel="stylesheet" href="/templates/g5_hydrogen/css/fusionmenu.css" type="text/css" />
+<link rel="stylesheet" href="/templates/g5_hydrogen/css/typography.css" type="text/css" />
+<link rel="stylesheet" href="/templates/g5_hydrogen/css/font-awesome.css" type="text/css" />
+
+<!-- Adding Custom CSS -->
+<link rel="stylesheet" href="/templates/g5_hydrogen/css/gantry-custom.css" type="text/css" />
+<style>
+/* Custom Error */
+.custom-404 {text-align: center;}
+.custom-404 h1, .custom-404 h2 {border: none; box-shadow: none; margin: 0; padding: 0;}
+.custom-404 h1 {font-size: 8.0em; text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);}
+.custom-404 h2 {font-size: 2.0em; line-height: 2.0em;}
+</style>
+
+<div id="rt-error-body">
+  <div class="rt-container">
+    <div class="component-content">
+      <div class="rt-grid-12">
+        <div class="rt-block">
+          <div class="rt-error-box custom-404">
+            <div>
+            <h1 class="error-title title">404</h1>
+            <h2 class="error-message">Page not found</h2>
+            <div class="error-content">
+            <p>The page you requested cannot be found.</p>
+            <p><a href="https://cgwrd.in"><span>Return to the Homepage</span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e72631328e781de',t:'MTc3NTMyNzQ1NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>

@@ -1,0 +1,418 @@
+2026-04-05 17:13:56,217 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-05 17:13:56,217 [INFO] ingest: Starting ingestion from: pdfs
+2026-04-05 17:13:56,225 [INFO] ingest: Found 138 PDF file(s).
+2026-04-05 17:13:56,225 [INFO] ingest: Already-ingested file hashes in cache: 0
+2026-04-05 17:13:56,284 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-05 17:13:57,301 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-04-05 17:13:57,346 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-04-05 17:13:57,351 [INFO] ingest: Chunks already in vector store: 0
+2026-04-05 17:13:57,355 [INFO] ingest: Processing: french_1.pdf
+2026-04-05 17:13:59,226 [INFO] ingest:   Parsed 2 page(s) from french_1.pdf
+2026-04-05 17:13:59,681 [INFO] ingest:   Produced 17 chunk(s)
+2026-04-05 17:13:59,681 [INFO] utils.embedder: Loading embedding model: paraphrase-multilingual-mpnet-base-v2
+2026-04-05 17:13:59,682 [INFO] sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-04-05 17:13:59,682 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: paraphrase-multilingual-mpnet-base-v2
+2026-04-05 17:15:28,724 [INFO] utils.embedder: Embedding model loaded.
+2026-04-05 17:15:35,325 [INFO] ingest:   Added 17 new chunk(s) to vector store.
+2026-04-05 17:15:35,333 [INFO] ingest: Processing: french_11.pdf
+2026-04-05 17:15:36,078 [INFO] ingest:   Parsed 13 page(s) from french_11.pdf
+2026-04-05 17:15:36,761 [INFO] ingest:   Produced 23 chunk(s)
+2026-04-05 17:15:44,370 [INFO] ingest:   Added 23 new chunk(s) to vector store.
+2026-04-05 17:15:44,373 [INFO] ingest: Processing: french_13.pdf
+2026-04-05 17:15:44,374 [ERROR] utils.pdf_parser: Cannot open french_13.pdf: Cannot open empty file: filename='pdfs\\french_13.pdf'.
+2026-04-05 17:15:44,375 [WARNING] ingest: No extractable text pages in: french_13.pdf — skipping.
+2026-04-05 17:15:44,379 [INFO] ingest: Processing: french_14.pdf
+2026-04-05 17:15:44,388 [ERROR] utils.pdf_parser: Cannot open french_14.pdf: Failed to open file 'pdfs\\french_14.pdf'.
+2026-04-05 17:15:44,389 [WARNING] ingest: No extractable text pages in: french_14.pdf — skipping.
+2026-04-05 17:15:44,393 [INFO] ingest: Processing: french_15.pdf
+2026-04-05 17:15:44,970 [INFO] ingest:   Parsed 3 page(s) from french_15.pdf
+2026-04-05 17:15:45,029 [INFO] ingest:   Produced 9 chunk(s)
+2026-04-05 17:15:48,484 [INFO] ingest:   Added 9 new chunk(s) to vector store.
+2026-04-05 17:15:48,489 [INFO] ingest: Processing: french_17.pdf
+2026-04-05 17:15:48,494 [ERROR] utils.pdf_parser: Cannot open french_17.pdf: Failed to open file 'pdfs\\french_17.pdf'.
+2026-04-05 17:15:48,494 [WARNING] ingest: No extractable text pages in: french_17.pdf — skipping.
+2026-04-05 17:15:48,498 [INFO] ingest: Processing: french_2.pdf
+2026-04-05 17:15:48,502 [ERROR] utils.pdf_parser: Cannot open french_2.pdf: Failed to open file 'pdfs\\french_2.pdf'.
+2026-04-05 17:15:48,503 [WARNING] ingest: No extractable text pages in: french_2.pdf — skipping.
+2026-04-05 17:15:48,519 [INFO] ingest: Processing: french_21.pdf
+2026-04-05 17:16:43,046 [INFO] ingest:   Parsed 60 page(s) from french_21.pdf
+2026-04-05 17:16:43,507 [INFO] ingest:   Produced 425 chunk(s)
+2026-04-05 17:19:08,310 [INFO] ingest:   Added 425 new chunk(s) to vector store.
+2026-04-05 17:19:08,314 [INFO] ingest: Processing: french_24.pdf
+2026-04-05 17:19:08,317 [ERROR] utils.pdf_parser: Cannot open french_24.pdf: Failed to open file 'pdfs\\french_24.pdf'.
+2026-04-05 17:19:08,317 [WARNING] ingest: No extractable text pages in: french_24.pdf — skipping.
+2026-04-05 17:19:08,320 [INFO] ingest: Processing: french_25.pdf
+2026-04-05 17:19:08,323 [ERROR] utils.pdf_parser: Cannot open french_25.pdf: Failed to open file 'pdfs\\french_25.pdf'.
+2026-04-05 17:19:08,323 [WARNING] ingest: No extractable text pages in: french_25.pdf — skipping.
+2026-04-05 17:19:08,327 [INFO] ingest: SKIP (duplicate hash): french_26.pdf
+2026-04-05 17:19:08,329 [INFO] ingest: Processing: french_27.pdf
+2026-04-05 17:19:08,826 [INFO] ingest:   Parsed 2 page(s) from french_27.pdf
+2026-04-05 17:19:08,918 [INFO] ingest:   Produced 6 chunk(s)
+2026-04-05 17:19:11,343 [INFO] ingest:   Added 6 new chunk(s) to vector store.
+2026-04-05 17:19:11,350 [INFO] ingest: Processing: french_28.pdf
+2026-04-05 17:19:11,700 [INFO] ingest:   Parsed 2 page(s) from french_28.pdf
+2026-04-05 17:19:11,731 [INFO] ingest:   Produced 3 chunk(s)
+2026-04-05 17:19:13,100 [INFO] ingest:   Added 3 new chunk(s) to vector store.
+2026-04-05 17:19:13,120 [INFO] ingest: Processing: french_3.pdf
+2026-04-05 17:19:35,195 [INFO] ingest:   Parsed 117 page(s) from french_3.pdf
+2026-04-05 17:19:36,585 [INFO] ingest:   Produced 299 chunk(s)
+2026-04-05 17:21:21,484 [INFO] ingest:   Added 299 new chunk(s) to vector store.
+2026-04-05 17:21:21,491 [INFO] ingest: Processing: french_30.pdf
+2026-04-05 17:21:21,503 [ERROR] utils.pdf_parser: Cannot open french_30.pdf: Failed to open file 'pdfs\\french_30.pdf'.
+2026-04-05 17:21:21,504 [WARNING] ingest: No extractable text pages in: french_30.pdf — skipping.
+2026-04-05 17:21:21,508 [INFO] ingest: Processing: french_31.pdf
+2026-04-05 17:21:24,054 [INFO] ingest:   Parsed 2 page(s) from french_31.pdf
+2026-04-05 17:21:24,091 [INFO] ingest:   Produced 13 chunk(s)
+2026-04-05 17:21:28,858 [INFO] ingest:   Added 13 new chunk(s) to vector store.
+2026-04-05 17:21:28,862 [INFO] ingest: Processing: french_32.pdf
+2026-04-05 17:21:28,868 [ERROR] utils.pdf_parser: Cannot open french_32.pdf: Failed to open file 'pdfs\\french_32.pdf'.
+2026-04-05 17:21:28,868 [WARNING] ingest: No extractable text pages in: french_32.pdf — skipping.
+2026-04-05 17:21:28,873 [INFO] ingest: Processing: french_34.pdf
+2026-04-05 17:21:28,881 [ERROR] utils.pdf_parser: Cannot open french_34.pdf: Failed to open file 'pdfs\\french_34.pdf'.
+2026-04-05 17:21:28,882 [WARNING] ingest: No extractable text pages in: french_34.pdf — skipping.
+2026-04-05 17:21:28,887 [INFO] ingest: Processing: french_35.pdf
+2026-04-05 17:21:28,892 [WARNING] ingest: No extractable text pages in: french_35.pdf — skipping.
+2026-04-05 17:21:28,896 [INFO] ingest: Processing: french_36.pdf
+2026-04-05 17:21:33,819 [INFO] ingest:   Parsed 15 page(s) from french_36.pdf
+2026-04-05 17:21:34,029 [INFO] ingest:   Produced 110 chunk(s)
+2026-04-05 17:22:12,944 [INFO] ingest:   Added 110 new chunk(s) to vector store.
+2026-04-05 17:22:12,947 [INFO] ingest: SKIP (duplicate hash): french_37.pdf
+2026-04-05 17:22:12,948 [INFO] ingest: Processing: french_38.pdf
+2026-04-05 17:22:12,950 [ERROR] utils.pdf_parser: Cannot open french_38.pdf: Failed to open file 'pdfs\\french_38.pdf'.
+2026-04-05 17:22:12,951 [WARNING] ingest: No extractable text pages in: french_38.pdf — skipping.
+2026-04-05 17:22:12,957 [INFO] ingest: Processing: french_39.pdf
+2026-04-05 17:22:12,963 [ERROR] utils.pdf_parser: Cannot open french_39.pdf: Failed to open file 'pdfs\\french_39.pdf'.
+2026-04-05 17:22:12,964 [WARNING] ingest: No extractable text pages in: french_39.pdf — skipping.
+2026-04-05 17:22:12,968 [INFO] ingest: Processing: french_4.pdf
+2026-04-05 17:22:12,972 [ERROR] utils.pdf_parser: Cannot open french_4.pdf: Failed to open file 'pdfs\\french_4.pdf'.
+2026-04-05 17:22:12,973 [WARNING] ingest: No extractable text pages in: french_4.pdf — skipping.
+2026-04-05 17:22:12,980 [INFO] ingest: Processing: french_41.pdf
+2026-04-05 17:22:12,988 [WARNING] ingest: No extractable text pages in: french_41.pdf — skipping.
+2026-04-05 17:22:12,993 [INFO] ingest: Processing: french_42.pdf
+2026-04-05 17:22:13,200 [INFO] ingest:   Parsed 1 page(s) from french_42.pdf
+2026-04-05 17:22:13,216 [INFO] ingest:   Produced 5 chunk(s)
+2026-04-05 17:22:15,284 [INFO] ingest:   Added 5 new chunk(s) to vector store.
+2026-04-05 17:22:15,298 [INFO] ingest: Processing: french_43.pdf
+2026-04-05 17:22:19,314 [INFO] ingest:   Parsed 14 page(s) from french_43.pdf
+2026-04-05 17:22:19,512 [INFO] ingest:   Produced 52 chunk(s)
+2026-04-05 17:22:37,363 [INFO] ingest:   Added 52 new chunk(s) to vector store.
+2026-04-05 17:22:37,367 [INFO] ingest: Processing: french_44.pdf
+2026-04-05 17:22:37,370 [ERROR] utils.pdf_parser: Cannot open french_44.pdf: Failed to open file 'pdfs\\french_44.pdf'.
+2026-04-05 17:22:37,370 [WARNING] ingest: No extractable text pages in: french_44.pdf — skipping.
+2026-04-05 17:22:37,375 [INFO] ingest: Processing: french_45.pdf
+2026-04-05 17:22:38,315 [INFO] ingest:   Parsed 3 page(s) from french_45.pdf
+2026-04-05 17:22:38,390 [INFO] ingest:   Produced 20 chunk(s)
+2026-04-05 17:22:45,446 [INFO] ingest:   Added 20 new chunk(s) to vector store.
+2026-04-05 17:22:45,452 [INFO] ingest: Processing: french_46.pdf
+2026-04-05 17:22:45,710 [INFO] ingest:   Parsed 2 page(s) from french_46.pdf
+2026-04-05 17:22:45,741 [INFO] ingest:   Produced 4 chunk(s)
+2026-04-05 17:22:47,541 [INFO] ingest:   Added 4 new chunk(s) to vector store.
+2026-04-05 17:22:47,546 [INFO] ingest: Processing: french_47.pdf
+2026-04-05 17:22:47,550 [ERROR] utils.pdf_parser: Cannot open french_47.pdf: Failed to open file 'pdfs\\french_47.pdf'.
+2026-04-05 17:22:47,551 [WARNING] ingest: No extractable text pages in: french_47.pdf — skipping.
+2026-04-05 17:22:47,554 [INFO] ingest: Processing: french_5.pdf
+2026-04-05 17:22:47,558 [ERROR] utils.pdf_parser: Cannot open french_5.pdf: Failed to open file 'pdfs\\french_5.pdf'.
+2026-04-05 17:22:47,559 [WARNING] ingest: No extractable text pages in: french_5.pdf — skipping.
+2026-04-05 17:22:47,564 [INFO] ingest: Processing: french_6.pdf
+2026-04-05 17:22:48,147 [INFO] ingest:   Parsed 1 page(s) from french_6.pdf
+2026-04-05 17:22:48,186 [INFO] ingest:   Produced 6 chunk(s)
+2026-04-05 17:22:50,480 [INFO] ingest:   Added 6 new chunk(s) to vector store.
+2026-04-05 17:22:50,485 [INFO] ingest: Processing: french_7.pdf
+2026-04-05 17:22:51,517 [INFO] ingest:   Parsed 1 page(s) from french_7.pdf
+2026-04-05 17:22:51,539 [INFO] ingest:   Produced 10 chunk(s)
+2026-04-05 17:22:55,373 [INFO] ingest:   Added 10 new chunk(s) to vector store.
+2026-04-05 17:22:55,376 [INFO] ingest: Processing: french_8.pdf
+2026-04-05 17:22:55,381 [ERROR] utils.pdf_parser: Cannot open french_8.pdf: Failed to open file 'pdfs\\french_8.pdf'.
+2026-04-05 17:22:55,382 [WARNING] ingest: No extractable text pages in: french_8.pdf — skipping.
+2026-04-05 17:22:55,385 [INFO] ingest: Processing: french_9.pdf
+2026-04-05 17:22:55,388 [ERROR] utils.pdf_parser: Cannot open french_9.pdf: Failed to open file 'pdfs\\french_9.pdf'.
+2026-04-05 17:22:55,389 [WARNING] ingest: No extractable text pages in: french_9.pdf — skipping.
+2026-04-05 17:22:55,392 [INFO] ingest: Processing: hindi_0.pdf
+2026-04-05 17:22:55,397 [ERROR] utils.pdf_parser: Cannot open hindi_0.pdf: Failed to open file 'pdfs\\hindi_0.pdf'.
+2026-04-05 17:22:55,397 [WARNING] ingest: No extractable text pages in: hindi_0.pdf — skipping.
+2026-04-05 17:22:55,404 [INFO] ingest: Processing: hindi_1.pdf
+2026-04-05 17:22:57,587 [INFO] ingest:   Parsed 11 page(s) from hindi_1.pdf
+2026-04-05 17:22:57,882 [INFO] ingest:   Produced 45 chunk(s)
+2026-04-05 17:23:13,485 [INFO] ingest:   Added 45 new chunk(s) to vector store.
+2026-04-05 17:23:13,500 [INFO] ingest: Processing: hindi_10.pdf
+2026-04-05 17:23:13,514 [WARNING] ingest: No extractable text pages in: hindi_10.pdf — skipping.
+2026-04-05 17:23:13,518 [INFO] ingest: Processing: hindi_11.pdf
+2026-04-05 17:23:13,524 [ERROR] utils.pdf_parser: Cannot open hindi_11.pdf: Failed to open file 'pdfs\\hindi_11.pdf'.
+2026-04-05 17:23:13,524 [WARNING] ingest: No extractable text pages in: hindi_11.pdf — skipping.
+2026-04-05 17:23:13,528 [INFO] ingest: Processing: hindi_12.pdf
+2026-04-05 17:23:13,530 [ERROR] utils.pdf_parser: Cannot open hindi_12.pdf: Failed to open file 'pdfs\\hindi_12.pdf'.
+2026-04-05 17:23:13,531 [WARNING] ingest: No extractable text pages in: hindi_12.pdf — skipping.
+2026-04-05 17:23:13,536 [INFO] ingest: Processing: hindi_15.pdf
+2026-04-05 17:23:13,716 [INFO] ingest:   Parsed 3 page(s) from hindi_15.pdf
+2026-04-05 17:23:13,818 [INFO] ingest:   Produced 6 chunk(s)
+2026-04-05 17:23:16,267 [INFO] ingest:   Added 6 new chunk(s) to vector store.
+2026-04-05 17:23:16,271 [INFO] ingest: Processing: hindi_18.pdf
+2026-04-05 17:23:16,276 [ERROR] utils.pdf_parser: Cannot open hindi_18.pdf: Failed to open file 'pdfs\\hindi_18.pdf'.
+2026-04-05 17:23:16,277 [WARNING] ingest: No extractable text pages in: hindi_18.pdf — skipping.
+2026-04-05 17:23:16,282 [INFO] ingest: Processing: hindi_2.pdf
+2026-04-05 17:23:16,285 [ERROR] utils.pdf_parser: Cannot open hindi_2.pdf: Failed to open file 'pdfs\\hindi_2.pdf'.
+2026-04-05 17:23:16,287 [WARNING] ingest: No extractable text pages in: hindi_2.pdf — skipping.
+2026-04-05 17:23:16,296 [INFO] ingest: Processing: hindi_22.pdf
+2026-04-05 17:23:16,625 [INFO] ingest:   Parsed 3 page(s) from hindi_22.pdf
+2026-04-05 17:23:16,698 [INFO] ingest:   Produced 8 chunk(s)
+2026-04-05 17:23:19,656 [INFO] ingest:   Added 8 new chunk(s) to vector store.
+2026-04-05 17:23:19,663 [INFO] ingest: Processing: hindi_23.pdf
+2026-04-05 17:23:19,672 [WARNING] ingest: No extractable text pages in: hindi_23.pdf — skipping.
+2026-04-05 17:23:19,680 [INFO] ingest: Processing: hindi_26.pdf
+2026-04-05 17:23:19,689 [WARNING] ingest: No extractable text pages in: hindi_26.pdf — skipping.
+2026-04-05 17:23:19,692 [INFO] ingest: Processing: hindi_27.pdf
+2026-04-05 17:23:19,695 [ERROR] utils.pdf_parser: Cannot open hindi_27.pdf: Failed to open file 'pdfs\\hindi_27.pdf'.
+2026-04-05 17:23:19,696 [WARNING] ingest: No extractable text pages in: hindi_27.pdf — skipping.
+2026-04-05 17:23:19,700 [INFO] ingest: Processing: hindi_29.pdf
+2026-04-05 17:23:19,702 [ERROR] utils.pdf_parser: Cannot open hindi_29.pdf: Failed to open file 'pdfs\\hindi_29.pdf'.
+2026-04-05 17:23:19,703 [WARNING] ingest: No extractable text pages in: hindi_29.pdf — skipping.
+2026-04-05 17:23:19,709 [INFO] ingest: Processing: hindi_30.pdf
+2026-04-05 17:23:19,719 [WARNING] ingest: No extractable text pages in: hindi_30.pdf — skipping.
+2026-04-05 17:23:19,725 [INFO] ingest: Processing: hindi_31.pdf
+2026-04-05 17:23:19,728 [ERROR] utils.pdf_parser: Cannot open hindi_31.pdf: Failed to open file 'pdfs\\hindi_31.pdf'.
+2026-04-05 17:23:19,729 [WARNING] ingest: No extractable text pages in: hindi_31.pdf — skipping.
+2026-04-05 17:23:19,734 [INFO] ingest: Processing: hindi_35.pdf
+2026-04-05 17:23:19,737 [ERROR] utils.pdf_parser: Cannot open hindi_35.pdf: Failed to open file 'pdfs\\hindi_35.pdf'.
+2026-04-05 17:23:19,737 [WARNING] ingest: No extractable text pages in: hindi_35.pdf — skipping.
+2026-04-05 17:23:19,744 [INFO] ingest: Processing: hindi_36.pdf
+2026-04-05 17:23:19,774 [INFO] ingest:   Parsed 2 page(s) from hindi_36.pdf
+2026-04-05 17:23:19,818 [INFO] ingest:   Produced 2 chunk(s)
+2026-04-05 17:23:20,336 [INFO] ingest:   Added 2 new chunk(s) to vector store.
+2026-04-05 17:23:20,341 [INFO] ingest: Processing: hindi_37.pdf
+2026-04-05 17:23:20,348 [ERROR] utils.pdf_parser: Cannot open hindi_37.pdf: Failed to open file 'pdfs\\hindi_37.pdf'.
+2026-04-05 17:23:20,349 [WARNING] ingest: No extractable text pages in: hindi_37.pdf — skipping.
+2026-04-05 17:23:20,356 [INFO] ingest: Processing: hindi_38.pdf
+2026-04-05 17:23:22,113 [INFO] ingest:   Parsed 7 page(s) from hindi_38.pdf
+2026-04-05 17:23:22,248 [INFO] ingest:   Produced 29 chunk(s)
+2026-04-05 17:23:32,207 [INFO] ingest:   Added 29 new chunk(s) to vector store.
+2026-04-05 17:23:32,211 [INFO] ingest: Processing: hindi_39.pdf
+2026-04-05 17:23:32,214 [ERROR] utils.pdf_parser: Cannot open hindi_39.pdf: Failed to open file 'pdfs\\hindi_39.pdf'.
+2026-04-05 17:23:32,214 [WARNING] ingest: No extractable text pages in: hindi_39.pdf — skipping.
+2026-04-05 17:23:32,219 [INFO] ingest: Processing: hindi_42.pdf
+2026-04-05 17:23:32,227 [WARNING] ingest: No extractable text pages in: hindi_42.pdf — skipping.
+2026-04-05 17:23:32,237 [INFO] ingest: Processing: hindi_43.pdf
+2026-04-05 17:23:32,247 [WARNING] ingest: No extractable text pages in: hindi_43.pdf — skipping.
+2026-04-05 17:23:32,250 [INFO] ingest: Processing: hindi_44.pdf
+2026-04-05 17:23:32,252 [ERROR] utils.pdf_parser: Cannot open hindi_44.pdf: Failed to open file 'pdfs\\hindi_44.pdf'.
+2026-04-05 17:23:32,252 [WARNING] ingest: No extractable text pages in: hindi_44.pdf — skipping.
+2026-04-05 17:23:32,257 [INFO] ingest: SKIP (duplicate hash): hindi_45.pdf
+2026-04-05 17:23:32,260 [INFO] ingest: Processing: hindi_47.pdf
+2026-04-05 17:23:32,326 [INFO] ingest:   Parsed 1 page(s) from hindi_47.pdf
+2026-04-05 17:23:32,335 [INFO] ingest:   Produced 1 chunk(s)
+2026-04-05 17:23:32,852 [INFO] ingest:   Added 1 new chunk(s) to vector store.
+2026-04-05 17:23:32,860 [INFO] ingest: Processing: hindi_48.pdf
+2026-04-05 17:23:33,003 [INFO] ingest:   Parsed 2 page(s) from hindi_48.pdf
+2026-04-05 17:23:33,048 [INFO] ingest:   Produced 3 chunk(s)
+2026-04-05 17:23:34,237 [INFO] ingest:   Added 3 new chunk(s) to vector store.
+2026-04-05 17:23:34,254 [INFO] ingest: Processing: hindi_49.pdf
+2026-04-05 17:23:34,283 [WARNING] ingest: No extractable text pages in: hindi_49.pdf — skipping.
+2026-04-05 17:23:34,292 [INFO] ingest: Processing: hindi_5.pdf
+2026-04-05 17:23:34,610 [INFO] ingest:   Parsed 2 page(s) from hindi_5.pdf
+2026-04-05 17:23:34,647 [INFO] ingest:   Produced 5 chunk(s)
+2026-04-05 17:23:36,643 [INFO] ingest:   Added 5 new chunk(s) to vector store.
+2026-04-05 17:23:36,648 [INFO] ingest: SKIP (duplicate hash): hindi_7.pdf
+2026-04-05 17:23:36,655 [INFO] ingest: Processing: hindi_8.pdf
+2026-04-05 17:23:36,667 [WARNING] ingest: No extractable text pages in: hindi_8.pdf — skipping.
+2026-04-05 17:23:36,686 [INFO] ingest: Processing: hindi_9.pdf
+2026-04-05 17:23:37,543 [INFO] ingest:   Parsed 32 page(s) from hindi_9.pdf
+2026-04-05 17:23:37,794 [INFO] ingest:   Produced 31 chunk(s)
+2026-04-05 17:23:48,570 [INFO] ingest:   Added 31 new chunk(s) to vector store.
+2026-04-05 17:23:48,573 [INFO] ingest: Processing: kannada_0.pdf
+2026-04-05 17:23:48,576 [ERROR] utils.pdf_parser: Cannot open kannada_0.pdf: Failed to open file 'pdfs\\kannada_0.pdf'.
+2026-04-05 17:23:48,576 [WARNING] ingest: No extractable text pages in: kannada_0.pdf — skipping.
+2026-04-05 17:23:48,585 [INFO] ingest: Processing: kannada_1.pdf
+2026-04-05 17:23:49,705 [INFO] ingest:   Parsed 8 page(s) from kannada_1.pdf
+2026-04-05 17:23:49,941 [INFO] ingest:   Produced 30 chunk(s)
+2026-04-05 17:23:59,967 [INFO] ingest:   Added 30 new chunk(s) to vector store.
+2026-04-05 17:23:59,973 [INFO] ingest: Processing: kannada_10.pdf
+2026-04-05 17:23:59,981 [WARNING] ingest: No extractable text pages in: kannada_10.pdf — skipping.
+2026-04-05 17:23:59,986 [INFO] ingest: Processing: kannada_11.pdf
+2026-04-05 17:23:59,993 [WARNING] ingest: No extractable text pages in: kannada_11.pdf — skipping.
+2026-04-05 17:23:59,997 [INFO] ingest: SKIP (duplicate hash): kannada_12.pdf
+2026-04-05 17:24:00,001 [INFO] ingest: Processing: kannada_13.pdf
+2026-04-05 17:24:00,097 [INFO] ingest:   Parsed 1 page(s) from kannada_13.pdf
+2026-04-05 17:24:00,103 [INFO] ingest:   Produced 1 chunk(s)
+2026-04-05 17:24:00,626 [INFO] ingest:   Added 1 new chunk(s) to vector store.
+2026-04-05 17:24:00,632 [INFO] ingest: Processing: kannada_14.pdf
+2026-04-05 17:24:02,113 [INFO] ingest:   Parsed 16 page(s) from kannada_14.pdf
+2026-04-05 17:24:02,380 [INFO] ingest:   Produced 17 chunk(s)
+2026-04-05 17:24:08,497 [INFO] ingest:   Added 17 new chunk(s) to vector store.
+2026-04-05 17:24:08,503 [INFO] ingest: Processing: kannada_15.pdf
+2026-04-05 17:24:08,955 [INFO] ingest:   Parsed 7 page(s) from kannada_15.pdf
+2026-04-05 17:24:09,028 [INFO] ingest:   Produced 13 chunk(s)
+2026-04-05 17:24:13,886 [INFO] ingest:   Added 13 new chunk(s) to vector store.
+2026-04-05 17:24:13,890 [INFO] ingest: Processing: kannada_16.pdf
+2026-04-05 17:24:14,523 [INFO] ingest:   Parsed 9 page(s) from kannada_16.pdf
+2026-04-05 17:24:14,613 [INFO] ingest:   Produced 17 chunk(s)
+2026-04-05 17:24:20,753 [INFO] ingest:   Added 17 new chunk(s) to vector store.
+2026-04-05 17:24:20,764 [INFO] ingest: Processing: kannada_18.pdf
+2026-04-05 17:24:28,085 [INFO] ingest:   Parsed 41 page(s) from kannada_18.pdf
+2026-04-05 17:24:28,815 [INFO] ingest:   Produced 116 chunk(s)
+2026-04-05 17:25:07,783 [INFO] ingest:   Added 116 new chunk(s) to vector store.
+2026-04-05 17:25:07,788 [INFO] ingest: Processing: kannada_19.pdf
+2026-04-05 17:25:08,155 [INFO] ingest:   Parsed 3 page(s) from kannada_19.pdf
+2026-04-05 17:25:08,207 [INFO] ingest:   Produced 6 chunk(s)
+2026-04-05 17:25:10,541 [INFO] ingest:   Added 6 new chunk(s) to vector store.
+2026-04-05 17:25:10,739 [INFO] ingest: Processing: kannada_2.pdf
+2026-04-05 17:25:11,117 [WARNING] ingest: No extractable text pages in: kannada_2.pdf — skipping.
+2026-04-05 17:25:11,121 [INFO] ingest: Processing: kannada_21.pdf
+2026-04-05 17:25:11,124 [ERROR] utils.pdf_parser: Cannot open kannada_21.pdf: Failed to open file 'pdfs\\kannada_21.pdf'.
+2026-04-05 17:25:11,125 [WARNING] ingest: No extractable text pages in: kannada_21.pdf — skipping.
+2026-04-05 17:25:11,129 [INFO] ingest: Processing: kannada_22.pdf
+2026-04-05 17:25:11,135 [WARNING] ingest: No extractable text pages in: kannada_22.pdf — skipping.
+2026-04-05 17:25:11,138 [INFO] ingest: Processing: kannada_23.pdf
+2026-04-05 17:25:11,315 [INFO] ingest:   Parsed 4 page(s) from kannada_23.pdf
+2026-04-05 17:25:11,345 [INFO] ingest:   Produced 6 chunk(s)
+2026-04-05 17:25:13,590 [INFO] ingest:   Added 6 new chunk(s) to vector store.
+2026-04-05 17:25:13,600 [INFO] ingest: Processing: kannada_27.pdf
+2026-04-05 17:25:13,964 [INFO] ingest:   Parsed 9 page(s) from kannada_27.pdf
+2026-04-05 17:25:14,020 [INFO] ingest:   Produced 9 chunk(s)
+2026-04-05 17:25:17,480 [INFO] ingest:   Added 9 new chunk(s) to vector store.
+2026-04-05 17:25:17,486 [INFO] ingest: Processing: kannada_28.pdf
+2026-04-05 17:25:17,932 [INFO] ingest:   Parsed 6 page(s) from kannada_28.pdf
+2026-04-05 17:25:18,002 [INFO] ingest:   Produced 12 chunk(s)
+2026-04-05 17:25:22,536 [INFO] ingest:   Added 12 new chunk(s) to vector store.
+2026-04-05 17:25:22,544 [INFO] ingest: Processing: kannada_29.pdf
+2026-04-05 17:25:28,819 [INFO] utils.pdf_parser: kannada_29.pdf — 1/8 pages skipped (scanned images).
+2026-04-05 17:25:28,819 [INFO] ingest:   Parsed 7 page(s) from kannada_29.pdf
+2026-04-05 17:25:28,953 [INFO] ingest:   Produced 29 chunk(s)
+2026-04-05 17:25:38,734 [INFO] ingest:   Added 29 new chunk(s) to vector store.
+2026-04-05 17:25:38,828 [INFO] ingest: Processing: kannada_3.pdf
+2026-04-05 17:26:27,639 [INFO] utils.pdf_parser: kannada_3.pdf — 1/226 pages skipped (scanned images).
+2026-04-05 17:26:27,640 [INFO] ingest:   Parsed 225 page(s) from kannada_3.pdf
+2026-04-05 17:26:32,231 [INFO] ingest:   Produced 735 chunk(s)
+2026-04-05 17:30:37,183 [INFO] ingest:   Added 735 new chunk(s) to vector store.
+2026-04-05 17:30:37,193 [INFO] ingest: Processing: kannada_30.pdf
+2026-04-05 17:30:40,651 [INFO] ingest:   Parsed 9 page(s) from kannada_30.pdf
+2026-04-05 17:30:40,801 [INFO] ingest:   Produced 31 chunk(s)
+2026-04-05 17:30:51,487 [INFO] ingest:   Added 31 new chunk(s) to vector store.
+2026-04-05 17:30:51,497 [INFO] ingest: Processing: kannada_31.pdf
+2026-04-05 17:30:51,507 [WARNING] ingest: No extractable text pages in: kannada_31.pdf — skipping.
+2026-04-05 17:30:51,513 [INFO] ingest: Processing: kannada_33.pdf
+2026-04-05 17:30:51,525 [WARNING] ingest: No extractable text pages in: kannada_33.pdf — skipping.
+2026-04-05 17:30:51,537 [INFO] ingest: Processing: kannada_35.pdf
+2026-04-05 17:31:07,466 [INFO] ingest:   Parsed 51 page(s) from kannada_35.pdf
+2026-04-05 17:31:08,301 [INFO] ingest:   Produced 201 chunk(s)
+2026-04-05 17:32:15,859 [INFO] ingest:   Added 201 new chunk(s) to vector store.
+2026-04-05 17:32:15,866 [INFO] ingest: Processing: kannada_47.pdf
+2026-04-05 17:32:16,583 [INFO] ingest:   Parsed 7 page(s) from kannada_47.pdf
+2026-04-05 17:32:16,604 [INFO] ingest:   Produced 7 chunk(s)
+2026-04-05 17:32:19,288 [INFO] ingest:   Added 7 new chunk(s) to vector store.
+2026-04-05 17:32:19,293 [INFO] ingest: SKIP (duplicate hash): kannada_48.pdf
+2026-04-05 17:32:19,295 [INFO] ingest: SKIP (duplicate hash): kannada_49.pdf
+2026-04-05 17:32:19,299 [INFO] ingest: Processing: kannada_6.pdf
+2026-04-05 17:32:19,426 [INFO] ingest:   Parsed 2 page(s) from kannada_6.pdf
+2026-04-05 17:32:19,454 [INFO] ingest:   Produced 2 chunk(s)
+2026-04-05 17:32:20,300 [INFO] ingest:   Added 2 new chunk(s) to vector store.
+2026-04-05 17:32:20,309 [INFO] ingest: Processing: kannada_7.pdf
+2026-04-05 17:32:20,322 [WARNING] ingest: No extractable text pages in: kannada_7.pdf — skipping.
+2026-04-05 17:32:20,328 [INFO] ingest: Processing: kannada_8.pdf
+2026-04-05 17:32:20,337 [WARNING] ingest: No extractable text pages in: kannada_8.pdf — skipping.
+2026-04-05 17:32:20,345 [INFO] ingest: Processing: kannada_9.pdf
+2026-04-05 17:32:20,359 [WARNING] ingest: No extractable text pages in: kannada_9.pdf — skipping.
+2026-04-05 17:32:20,381 [INFO] ingest: Processing: marathi_0.pdf
+2026-04-05 17:33:05,620 [INFO] ingest:   Parsed 133 page(s) from marathi_0.pdf
+2026-04-05 17:33:09,148 [INFO] ingest:   Produced 811 chunk(s)
+2026-04-05 17:37:36,479 [INFO] ingest:   Added 811 new chunk(s) to vector store.
+2026-04-05 17:37:36,483 [INFO] ingest: Processing: marathi_1.pdf
+2026-04-05 17:37:36,487 [ERROR] utils.pdf_parser: Cannot open marathi_1.pdf: Failed to open file 'pdfs\\marathi_1.pdf'.
+2026-04-05 17:37:36,487 [WARNING] ingest: No extractable text pages in: marathi_1.pdf — skipping.
+2026-04-05 17:37:36,492 [INFO] ingest: SKIP (duplicate hash): marathi_10.pdf
+2026-04-05 17:37:36,494 [INFO] ingest: Processing: marathi_11.pdf
+2026-04-05 17:37:36,497 [ERROR] utils.pdf_parser: Cannot open marathi_11.pdf: Failed to open file 'pdfs\\marathi_11.pdf'.
+2026-04-05 17:37:36,498 [WARNING] ingest: No extractable text pages in: marathi_11.pdf — skipping.
+2026-04-05 17:37:36,504 [INFO] ingest: Processing: marathi_12.pdf
+2026-04-05 17:37:36,513 [WARNING] ingest: No extractable text pages in: marathi_12.pdf — skipping.
+2026-04-05 17:37:36,518 [INFO] ingest: Processing: marathi_13.pdf
+2026-04-05 17:37:36,596 [INFO] ingest:   Parsed 1 page(s) from marathi_13.pdf
+2026-04-05 17:37:36,606 [INFO] ingest:   Produced 1 chunk(s)
+2026-04-05 17:37:37,108 [INFO] ingest:   Added 1 new chunk(s) to vector store.
+2026-04-05 17:37:37,113 [INFO] ingest: Processing: marathi_15.pdf
+2026-04-05 17:37:37,202 [INFO] ingest:   Parsed 1 page(s) from marathi_15.pdf
+2026-04-05 17:37:37,242 [INFO] ingest:   Produced 1 chunk(s)
+2026-04-05 17:37:37,740 [INFO] ingest:   Added 1 new chunk(s) to vector store.
+2026-04-05 17:37:37,745 [INFO] ingest: Processing: marathi_16.pdf
+2026-04-05 17:37:37,749 [ERROR] utils.pdf_parser: Cannot open marathi_16.pdf: Failed to open file 'pdfs\\marathi_16.pdf'.
+2026-04-05 17:37:37,750 [WARNING] ingest: No extractable text pages in: marathi_16.pdf — skipping.
+2026-04-05 17:37:37,754 [INFO] ingest: SKIP (duplicate hash): marathi_17.pdf
+2026-04-05 17:37:37,757 [INFO] ingest: Processing: marathi_19.pdf
+2026-04-05 17:37:37,765 [WARNING] ingest: No extractable text pages in: marathi_19.pdf — skipping.
+2026-04-05 17:37:37,770 [INFO] ingest: Processing: marathi_21.pdf
+2026-04-05 17:37:37,781 [ERROR] utils.pdf_parser: Cannot open marathi_21.pdf: Failed to open file 'pdfs\\marathi_21.pdf'.
+2026-04-05 17:37:37,782 [WARNING] ingest: No extractable text pages in: marathi_21.pdf — skipping.
+2026-04-05 17:37:37,785 [INFO] ingest: SKIP (duplicate hash): marathi_22.pdf
+2026-04-05 17:37:37,788 [INFO] ingest: Processing: marathi_23.pdf
+2026-04-05 17:37:37,797 [ERROR] utils.pdf_parser: Cannot open marathi_23.pdf: Failed to open file 'pdfs\\marathi_23.pdf'.
+2026-04-05 17:37:37,797 [WARNING] ingest: No extractable text pages in: marathi_23.pdf — skipping.
+2026-04-05 17:37:37,801 [INFO] ingest: Processing: marathi_24.pdf
+2026-04-05 17:37:37,805 [ERROR] utils.pdf_parser: Cannot open marathi_24.pdf: Failed to open file 'pdfs\\marathi_24.pdf'.
+2026-04-05 17:37:37,806 [WARNING] ingest: No extractable text pages in: marathi_24.pdf — skipping.
+2026-04-05 17:37:37,809 [INFO] ingest: SKIP (duplicate hash): marathi_26.pdf
+2026-04-05 17:37:37,818 [INFO] ingest: Processing: marathi_27.pdf
+2026-04-05 17:37:38,007 [INFO] ingest:   Parsed 2 page(s) from marathi_27.pdf
+2026-04-05 17:37:38,057 [INFO] ingest:   Produced 5 chunk(s)
+2026-04-05 17:37:39,983 [INFO] ingest:   Added 5 new chunk(s) to vector store.
+2026-04-05 17:37:39,988 [INFO] ingest: SKIP (duplicate hash): marathi_28.pdf
+2026-04-05 17:37:39,992 [INFO] ingest: Processing: marathi_3.pdf
+2026-04-05 17:37:40,000 [WARNING] ingest: No extractable text pages in: marathi_3.pdf — skipping.
+2026-04-05 17:37:40,007 [INFO] ingest: Processing: marathi_30.pdf
+2026-04-05 17:37:40,013 [WARNING] ingest: No extractable text pages in: marathi_30.pdf — skipping.
+2026-04-05 17:37:40,018 [INFO] ingest: SKIP (duplicate hash): marathi_31.pdf
+2026-04-05 17:37:40,022 [INFO] ingest: Processing: marathi_32.pdf
+2026-04-05 17:37:40,029 [ERROR] utils.pdf_parser: Cannot open marathi_32.pdf: Failed to open file 'pdfs\\marathi_32.pdf'.
+2026-04-05 17:37:40,030 [WARNING] ingest: No extractable text pages in: marathi_32.pdf — skipping.
+2026-04-05 17:37:40,035 [INFO] ingest: Processing: marathi_33.pdf
+2026-04-05 17:37:40,041 [WARNING] ingest: No extractable text pages in: marathi_33.pdf — skipping.
+2026-04-05 17:37:40,046 [INFO] ingest: Processing: marathi_34.pdf
+2026-04-05 17:37:40,048 [ERROR] utils.pdf_parser: Cannot open marathi_34.pdf: Failed to open file 'pdfs\\marathi_34.pdf'.
+2026-04-05 17:37:40,049 [WARNING] ingest: No extractable text pages in: marathi_34.pdf — skipping.
+2026-04-05 17:37:40,054 [INFO] ingest: Processing: marathi_35.pdf
+2026-04-05 17:37:40,056 [ERROR] utils.pdf_parser: Cannot open marathi_35.pdf: Failed to open file 'pdfs\\marathi_35.pdf'.
+2026-04-05 17:37:40,057 [WARNING] ingest: No extractable text pages in: marathi_35.pdf — skipping.
+2026-04-05 17:37:40,060 [INFO] ingest: SKIP (duplicate hash): marathi_36.pdf
+2026-04-05 17:37:40,061 [INFO] ingest: Processing: marathi_37.pdf
+2026-04-05 17:37:40,065 [ERROR] utils.pdf_parser: Cannot open marathi_37.pdf: Failed to open file 'pdfs\\marathi_37.pdf'.
+2026-04-05 17:37:40,065 [WARNING] ingest: No extractable text pages in: marathi_37.pdf — skipping.
+2026-04-05 17:37:40,069 [INFO] ingest: Processing: marathi_38.pdf
+2026-04-05 17:37:40,073 [ERROR] utils.pdf_parser: Cannot open marathi_38.pdf: Failed to open file 'pdfs\\marathi_38.pdf'.
+2026-04-05 17:37:40,074 [WARNING] ingest: No extractable text pages in: marathi_38.pdf — skipping.
+2026-04-05 17:37:40,078 [INFO] ingest: Processing: marathi_39.pdf
+2026-04-05 17:37:40,084 [WARNING] ingest: No extractable text pages in: marathi_39.pdf — skipping.
+2026-04-05 17:37:40,089 [INFO] ingest: Processing: marathi_4.pdf
+2026-04-05 17:37:40,092 [ERROR] utils.pdf_parser: Cannot open marathi_4.pdf: Failed to open file 'pdfs\\marathi_4.pdf'.
+2026-04-05 17:37:40,093 [WARNING] ingest: No extractable text pages in: marathi_4.pdf — skipping.
+2026-04-05 17:37:40,099 [INFO] ingest: Processing: marathi_40.pdf
+2026-04-05 17:37:40,107 [WARNING] ingest: No extractable text pages in: marathi_40.pdf — skipping.
+2026-04-05 17:37:40,111 [INFO] ingest: Processing: marathi_41.pdf
+2026-04-05 17:37:40,115 [ERROR] utils.pdf_parser: Cannot open marathi_41.pdf: Failed to open file 'pdfs\\marathi_41.pdf'.
+2026-04-05 17:37:40,116 [WARNING] ingest: No extractable text pages in: marathi_41.pdf — skipping.
+2026-04-05 17:37:40,119 [INFO] ingest: SKIP (duplicate hash): marathi_42.pdf
+2026-04-05 17:37:40,126 [INFO] ingest: Processing: marathi_44.pdf
+2026-04-05 17:37:40,316 [INFO] ingest:   Parsed 2 page(s) from marathi_44.pdf
+2026-04-05 17:37:40,362 [INFO] ingest:   Produced 5 chunk(s)
+2026-04-05 17:37:42,269 [INFO] ingest:   Added 5 new chunk(s) to vector store.
+2026-04-05 17:37:42,273 [INFO] ingest: Processing: marathi_45.pdf
+2026-04-05 17:37:42,277 [ERROR] utils.pdf_parser: Cannot open marathi_45.pdf: Failed to open file 'pdfs\\marathi_45.pdf'.
+2026-04-05 17:37:42,278 [WARNING] ingest: No extractable text pages in: marathi_45.pdf — skipping.
+2026-04-05 17:37:42,282 [INFO] ingest: Processing: marathi_46.pdf
+2026-04-05 17:37:42,288 [ERROR] utils.pdf_parser: Cannot open marathi_46.pdf: Failed to open file 'pdfs\\marathi_46.pdf'.
+2026-04-05 17:37:42,289 [WARNING] ingest: No extractable text pages in: marathi_46.pdf — skipping.
+2026-04-05 17:37:42,293 [INFO] ingest: Processing: marathi_48.pdf
+2026-04-05 17:37:42,296 [ERROR] utils.pdf_parser: Cannot open marathi_48.pdf: Failed to open file 'pdfs\\marathi_48.pdf'.
+2026-04-05 17:37:42,297 [WARNING] ingest: No extractable text pages in: marathi_48.pdf — skipping.
+2026-04-05 17:37:42,300 [INFO] ingest: SKIP (duplicate hash): marathi_49.pdf
+2026-04-05 17:37:42,302 [INFO] ingest: SKIP (duplicate hash): marathi_5.pdf
+2026-04-05 17:37:42,308 [INFO] ingest: Processing: marathi_6.pdf
+2026-04-05 17:37:42,315 [WARNING] ingest: No extractable text pages in: marathi_6.pdf — skipping.
+2026-04-05 17:37:42,321 [INFO] ingest: SKIP (duplicate hash): marathi_9.pdf
+2026-04-05 17:37:42,327 [INFO] ingest: Processing: PDF_1.pdf
+2026-04-05 17:37:56,876 [INFO] ingest:   Parsed 19 page(s) from PDF_1.pdf
+2026-04-05 17:37:57,172 [INFO] ingest:   Produced 127 chunk(s)
+2026-04-05 17:38:39,627 [INFO] ingest:   Added 127 new chunk(s) to vector store.
+2026-04-05 17:38:39,630 [INFO] ingest: ════════════════════════════════════════════════════════════
+2026-04-05 17:38:39,630 [INFO] ingest: Ingestion complete.
+2026-04-05 17:38:39,631 [INFO] ingest:   PDFs processed  : 46
+2026-04-05 17:38:39,631 [INFO] ingest:   PDFs skipped    : 92 (duplicates / scanned)
+2026-04-05 17:38:39,631 [INFO] ingest:   Chunks added    : 3314
+2026-04-05 17:38:39,632 [INFO] ingest:   Vector store    : chroma_db
+2026-04-05 17:38:39,635 [INFO] ingest:   Total chunks in store: 3314
