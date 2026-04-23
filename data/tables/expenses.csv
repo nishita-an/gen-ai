@@ -1,0 +1,6 @@
+expense_id,employee,category,amount,date
+EXP001,Rahul,Travel,4500,2024-01-11
+EXP002,Anita,Food,1500,2024-01-12
+EXP003,Rahul,Office Supplies,2800,2024-01-15
+EXP004,Priya,Travel,5200,2024-02-02
+EXP005,Amit,Food,2200,2024-02-03

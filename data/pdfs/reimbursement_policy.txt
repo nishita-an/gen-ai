@@ -1,0 +1,21 @@
+Company Expense Reimbursement Policy
+
+Travel Expenses:
+Employees can claim reimbursement for travel expenses up to 5000 INR per trip.
+Eligible travel categories include flights, train tickets, taxis, and hotel stays.
+
+Meal Expenses:
+Meal expenses are reimbursable up to 2000 INR per day.
+Alcohol expenses are not reimbursable.
+
+Office Supplies:
+Office supply expenses are reimbursable up to 3000 INR per purchase.
+
+Approval Rules:
+All reimbursements above 3000 INR require manager approval.
+
+Required Documents:
+Receipt or invoice must be submitted for reimbursement processing.
+
+Processing Timeline:
+Approved reimbursements will be processed within 7 business days.

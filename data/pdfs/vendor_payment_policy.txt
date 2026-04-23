@@ -1,0 +1,24 @@
+Vendor Payment Policy
+
+Payment Terms:
+Standard vendor payment terms are Net 30 days from invoice date.
+
+Early Payment Discount:
+2% discount applicable if payment is completed within 10 days.
+
+Vendor Categories:
+IT Services
+Travel Services
+Food Services
+Office Supplies
+
+Invoice Requirements:
+Vendor invoice must include:
+Vendor Name
+Invoice ID
+Date
+Amount
+Tax details
+
+Late Payment:
+Late payments may incur 1% monthly penalty.

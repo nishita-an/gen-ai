@@ -1,0 +1,19 @@
+Procurement Policy
+
+Purchase Approval:
+All purchases above 10000 INR require director approval.
+
+Preferred Vendors:
+Preferred vendors are categorized based on reliability and pricing.
+
+Procurement Categories:
+Software
+Hardware
+Travel
+Office Supplies
+
+Purchase Order Requirement:
+Purchase order must be generated before vendor invoice is accepted.
+
+Budget Limits:
+Department monthly procurement budget is capped at 200000 INR.

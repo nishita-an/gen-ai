@@ -1,0 +1,21 @@
+[
+ {"question":"What is travel reimbursement limit?", "type":"fact"},
+
+ {"question":"Which expenses exceed reimbursement limit?", "type":"reasoning"},
+
+ {"question":"Which vendor has highest invoice amount?", "type":"multi-hop"},
+
+ {"question":"List unpaid invoices", "type":"filter"},
+
+ {"question":"Which food expenses are not eligible for reimbursement?", "type":"multi-hop"},
+
+ {"question":"What approval is needed for purchase above 10000?", "type":"fact"},
+
+ {"question":"Which vendor category has highest total invoice value?", "type":"multi-hop"},
+
+ {"question":"Show travel invoices above reimbursement limit", "type":"reasoning"},
+
+ {"question":"Which invoices are still pending payment?", "type":"filter"},
+
+ {"question":"Which vendors belong to IT Services category?", "type":"lookup"}
+]
